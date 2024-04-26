@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@mixin light {
+  --background: 0 0% 100%;
+  --foreground: 222.2 84% 4.9%;
+  --card: 225 10% 99%;
+  --card-foreground: 222.2 84% 4.9%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222.2 84% 4.9%;
+  --primary: 221.2 83.2% 53.3%;
+  --primary-foreground: 210 40% 98%;
+  --secondary: 210 40% 95%;
+  --secondary-foreground: 222.2 47.4% 11.2%;
+  --muted: 210 40% 96.1%;
+  --muted-foreground: 215.4 16.3% 46.9%;
+  --accent: 210 40% 96.1%;
+  --accent-foreground: 222.2 47.4% 11.2%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 214.3 31.8% 91.4%;
+  --input: 214.3 80.8% 86.4%;
+  --ring: 221.2 83.2% 53.3%;
+  --blue: 221.2 83.2% 53.3%;
+  --blue-foreground: 210 40% 98%;
+  --red: 346.8 77.2% 49.8%;
+  --red-foreground: 355.7 100% 97.3%;
+  --green: 142.1 76.2% 36.3%;
+  --green-foreground: 355.7 100% 97.3%;
+  --yellow: 47.9 95.8% 53.1%;
+  --yellow-foreground: 26 83.3% 14.1%;
+  --indigo: 263 90% 51%;
+  --teal: 162 73% 46%;
+  --cyan: 190 90% 50%;
+}
+@mixin dark {
+  --background: 222.2 84% 3.9%;
+  --foreground: 210 40% 100%;
+  --card: 230.2 90% 4.9%;
+  --card-foreground: 210 40% 100%;
+  --popover: 222.2 84% 6.9%;
+  --popover-foreground: 210 40% 100%;
+  --primary: 217.2 91.2% 59.8%;
+  --primary-foreground: 222.2 47.4% 11.2%;
+  --secondary: 217.2 32.6% 17.5%;
+  --secondary-foreground: 210 40% 98%;
+  --muted: 217.2 32.6% 17.5%;
+  --muted-foreground: 215 20.2% 65.1%;
+  --accent: 217.2 32.6% 17.5%;
+  --accent-foreground: 210 40% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 217.2 32.6% 19.5%;
+  --input: 217.2 45.6% 30.5%;
+  --ring: 224.3 76.3% 48%;
+  --blue: 217.2 91.2% 59.8%;
+  --blue-foreground: 222.2 47.4% 11.2%;
+  --red: 346.8 77.2% 49.8%;
+  --red-foreground: 355.7 100% 97.3%;
+  --green: 142.1 70.6% 45.3%;
+  --green-foreground: 144.9 80.4% 10%;
+  --yellow: 47.9 95.8% 53.1%;
+  --yellow-foreground: 26 83.3% 14.1%;
+}
+
+@layer base {
+  :root {
+    --2xs: 448px;
+    --xs: 512px;
+    --sm: 640px;
+    --md: 768px;
+    --lg: 1024px;
+    --xl: 1280px;
+    --2xl: 1536px;
+    --radius: 0.5rem;
+    @include light;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      @include dark;
+    }
+  }
+  .light {
+    @include light;
+  }
+  .dark {
+    @include dark;
+  }
+}

@@ -1,0 +1,34 @@
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 50;
+  width: 100%;
+  height: 3.5rem;
+  border-bottom: 1px solid hsl(var(--border) / 0.8);
+  .contents {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    max-width: var(--2xl);
+    margin: 0 auto;
+    padding: 0 2rem;
+    .left,
+    .right {
+      position: relative;
+      display: flex;
+      justify-items: flex-end;
+      align-items: center;
+      gap: 0 0.5rem;
+      height: 100%;
+    }
+    .left {
+      .label {
+        font-size: 1.125rem;
+        font-weight: 700;
+      }
+    }
+  }
+}

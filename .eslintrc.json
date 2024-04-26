@@ -1,0 +1,54 @@
+{
+  "extends": "next/core-web-vitals",
+  "plugins": ["unused-imports", "import"],
+  "rules": {
+    "unused-imports/no-unused-imports": "error",
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "always",
+        "jsx": "always",
+        "ts": "always",
+        "tsx": "always"
+      }
+    ],
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          "builtin",
+          "external",
+          "internal",
+          ["parent", "sibling"],
+          "index",
+          "object",
+          "type",
+          "unknown"
+        ],
+        "pathGroups": [
+          {
+            "pattern": "next",
+            "group": "builtin",
+            "position": "before"
+          },
+          {
+            "pattern": "**/*.tsx",
+            "group": "unknown",
+            "position": "after"
+          },
+          {
+            "pattern": "**/*.css.ts",
+            "group": "unknown",
+            "position": "after"
+          }
+        ],
+        "newlines-between": "always",
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        }
+      }
+    ]
+  }
+}

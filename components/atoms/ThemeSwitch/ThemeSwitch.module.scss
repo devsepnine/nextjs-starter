@@ -1,0 +1,34 @@
+html {
+  .theme-switch {
+    .light,
+    .dark {
+      width: 1.2rem;
+      height: 1.2rem;
+      transition: all 200ms;
+    }
+    .light {
+      transform: rotate(180deg) scale(1);
+    }
+    .dark {
+      position: absolute;
+      transform: rotate(180deg) scale(0);
+    }
+  }
+  .theme-content {
+    padding: 0.5rem;
+    .menu {
+      display: flex;
+      gap: 0.5rem;
+    }
+  }
+  &[class*='dark'] {
+    .theme-switch {
+      .light {
+        transform: rotate(0deg) scale(0);
+      }
+      .dark {
+        transform: rotate(0deg) scale(1);
+      }
+    }
+  }
+}
