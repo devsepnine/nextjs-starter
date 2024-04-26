@@ -1,0 +1,21 @@
+.info-pack {
+  padding: 1rem;
+  .title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+  .contents {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    .chips {
+      width: auto;
+      padding: 0.25rem 0.5rem;
+      border-radius: var(--radius);
+      font-weight: 500;
+      color: hsl(var(--secondary-foreground));
+      background-color: hsl(var(--secondary));
+    }
+  }
+}
