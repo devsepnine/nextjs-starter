@@ -19,12 +19,12 @@ export async function Header() {
         </div>
         <div className={styles['right']}>
           <Link href={'https://github.com/devsepnine'}>
-            <Button variant={'ghost'} size={'icon'}>
+            <Button variant={'ghost'} size={'icon'} aria-label={'github'}>
               <RiGithubFill size={15} />
             </Button>
           </Link>
           <Link href={'https://twitter.com/codenyang'}>
-            <Button variant={'ghost'} size={'icon'}>
+            <Button variant={'ghost'} size={'icon'} aria-label={'x(twitter)'} >
               <RiTwitterXFill size={15} />
             </Button>
           </Link>
