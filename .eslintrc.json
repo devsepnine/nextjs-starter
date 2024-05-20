@@ -1,6 +1,9 @@
 {
   "extends": "next/core-web-vitals",
-  "plugins": ["unused-imports", "import"],
+  "plugins": [
+    "unused-imports",
+    "import"
+  ],
   "rules": {
     "unused-imports/no-unused-imports": "error",
     "import/extensions": [
@@ -20,7 +23,10 @@
           "builtin",
           "external",
           "internal",
-          ["parent", "sibling"],
+          [
+            "parent",
+            "sibling"
+          ],
           "index",
           "object",
           "type",
