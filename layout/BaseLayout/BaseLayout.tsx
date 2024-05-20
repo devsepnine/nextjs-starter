@@ -4,7 +4,7 @@ import styles from './BaseLayout.module.scss';
 
 import { Header } from '@/layout/BaseLayout/Header/Header.tsx';
 
-export function BaseLayout({ children }: { children: React.ReactNode }) {
+export function BaseLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <div className={styles['base-layout']}>
       <Header />
