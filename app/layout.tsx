@@ -1,7 +1,5 @@
 import type { Metadata, Viewport } from 'next';
 
-export const dynamic = 'force-dynamic';
-
 import '@/styles/modern-css-reset.scss';
 import './globals.scss';
 
