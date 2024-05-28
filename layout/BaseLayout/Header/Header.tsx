@@ -6,7 +6,7 @@ import { createTranslation } from '@/i18n/server.ts';
 import styles from './Header.module.scss';
 
 import { ThemeSwitch } from '@/components/atoms/ThemeSwitch/ThemeSwitch.tsx';
-import { Button } from '@/components/ui/Button.tsx';
+import { Button } from '@/components/ui/button.tsx';
 import { UserMenu } from '@/layout/BaseLayout/Header/UserMenu/UserMenu.tsx';
 
 export async function Header() {
@@ -24,7 +24,7 @@ export async function Header() {
             </Button>
           </Link>
           <Link href={'https://twitter.com/codenyang'}>
-            <Button variant={'ghost'} size={'icon'} aria-label={'x(twitter)'} >
+            <Button variant={'ghost'} size={'icon'} aria-label={'x(twitter)'}>
               <RiTwitterXFill size={15} />
             </Button>
           </Link>
