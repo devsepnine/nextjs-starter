@@ -42,6 +42,12 @@ export function getOptions(lang = FALLBACK_LANG, ns = 'common'): InitOptions {
     fallbackLng: FALLBACK_LANG,
     lng: lang,
     ns,
+    react: {
+      useSuspense: false,
+    },
+    backend: {
+      loadPath: '/locales/{{lng}}/{{ns}}.json',
+    },
   };
 }
 

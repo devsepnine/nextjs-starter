@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 
 import '@/styles/modern-css-reset.scss';
-import './globals.scss';
+import '../styles/globals.scss';
 
 import React from 'react';
 
