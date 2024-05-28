@@ -16,3 +16,5 @@ yarn dev
 - [x] PWA
 - [x] SCSS
 - [x] TailwindCSS
+- [X] Typescript
+- [X] Shadcn/ui

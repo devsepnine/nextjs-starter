@@ -4,13 +4,13 @@ import { createTranslation } from '@/i18n/server.ts';
 
 import styles from './Something.module.scss';
 
-import { Button } from '@/components/ui/Button.tsx';
-import { Card } from '@/components/ui/Card.tsx';
+import { Button } from '@/components/ui/button.tsx';
+import { Card } from '@/components/ui/card.tsx';
 import {
   Dialog,
   DialogContent,
   DialogTrigger,
-} from '@/components/ui/Dialog.tsx';
+} from '@/components/ui/dialog.tsx';
 
 export async function Something() {
   const { t } = await createTranslation('common');

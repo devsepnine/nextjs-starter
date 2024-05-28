@@ -9,7 +9,7 @@ import {
   DropdownMenuPortal,
   DropdownMenuSubContent,
   DropdownMenuSubTrigger,
-} from '@/components/ui/DropdownMenu.tsx';
+} from '@/components/ui/dropdown-menu.tsx';
 
 export function TranslateMenu() {
   const { i18n } = useTranslation('common');

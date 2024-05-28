@@ -2,13 +2,13 @@ import Link from 'next/link';
 
 import styles from './InfoPack.module.scss';
 
-import { Card } from '@/components/ui/Card.tsx';
+import { Card } from '@/components/ui/card.tsx';
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from '@/components/ui/Tooltip.tsx';
+} from '@/components/ui/tooltip.tsx';
 
 export function InfoPack() {
   return (
