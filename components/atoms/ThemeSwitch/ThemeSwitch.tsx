@@ -8,13 +8,13 @@ import { useEffect, useState } from 'react';
 
 import styles from './ThemeSwitch.module.scss';
 
-import { Button } from '@/components/ui/Button.tsx';
+import { Button } from '@/components/ui/button.tsx';
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from '@/components/ui/DropdownMenu.tsx';
+} from '@/components/ui/dropdown-menu.tsx';
 
 export function ThemeSwitch() {
   const [mounted, setMounted] = useState(false);
@@ -37,9 +37,11 @@ export function ThemeSwitch() {
           size="icon"
           className={clsx(styles['theme-switch'])}
         >
-          <RiSunFill className={clsx(styles['light'])} size={15} />
-          <RiMoonClearFill className={clsx(styles['dark'])} size={15} />
-          <span className="sr-only">Toggle theme</span>
+          <div className={styles['trigger']}>
+            <RiSunFill className={clsx(styles['light'])} size={15} />
+            <RiMoonClearFill className={clsx(styles['dark'])} size={15} />
+            <span className="sr-only">Toggle theme</span>
+          </div>
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" className={styles['theme-content']}>

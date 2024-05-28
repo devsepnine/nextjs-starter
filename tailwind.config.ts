@@ -58,24 +58,12 @@ const config = {
         },
         red: {
           DEFAULT: 'hsl(var(--red))',
-          foreground: 'hsl(var(--red-foreground))',
         },
         green: {
           DEFAULT: 'hsl(var(--green))',
-          foreground: 'hsl(var(--green-foreground))',
         },
-        yellow: {
-          DEFAULT: 'hsl(var(--yellow))',
-          foreground: 'hsl(var(--yellow-foreground))',
-        },
-        indigo: {
-          DEFAULT: 'hsl(var(--indigo))',
-        },
-        teal: {
-          DEFAULT: 'hsl(var(--teal))',
-        },
-        cyan: {
-          DEFAULT: 'hsl(var(--cyan))',
+        gray: {
+          DEFAULT: 'hsl(var(--gray))',
         },
       },
       borderRadius: {
