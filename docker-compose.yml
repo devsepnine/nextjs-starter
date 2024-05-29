@@ -2,11 +2,12 @@ version: '3'
 
 services:
   nextjs:
+    container_name: nextjs14-starterd
     image: nextjs14-starter
     build:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "3333:3000"
+      - '19300:3000'
     environment:
       - NODE_ENV=production
