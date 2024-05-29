@@ -5,7 +5,7 @@
   align-items: center;
   grid-column: 1/2;
   padding: 1rem;
-  @media (min-width: 768px) {
+  @media ($media-screen-md) {
     grid-column: 1/3;
   }
 

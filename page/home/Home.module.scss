@@ -4,7 +4,7 @@
   padding: 1rem;
   margin: auto;
   gap: 0.5rem;
-  @media (min-width: 768px) {
+  @media ($media-screen-md) {
     grid-template-columns: 1fr 1fr;
   }
 }
