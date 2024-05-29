@@ -1,5 +1,7 @@
 FROM node:20.12.2-alpine
 
+RUN npm insatll -g pnpm
+
 WORKDIR /usr/src/app
 
 COPY package.json ./
