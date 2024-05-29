@@ -1,0 +1,27 @@
+name: deploy test nextjs
+
+on:
+  push:
+    branches:
+      - gh
+
+jobs:
+  build-and-deploy:
+    runs-on: self-hosted
+
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v1
+
+    - name: Log in to the Docker registry
+      run: echo "Logging in is not needed since we are using local Docker registry"
+
+    - name: Build and run Docker container
+      run: |
+        docker-compose down
+        docker-compose build
+        docker-compose up -d
