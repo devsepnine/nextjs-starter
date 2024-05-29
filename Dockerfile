@@ -1,6 +1,6 @@
 FROM node:20.12.2-alpine
 
-RUN npm insatll -g pnpm
+RUN npm i -g pnpm
 
 WORKDIR /usr/src/app
 
