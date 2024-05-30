@@ -1,12 +1,4 @@
-## Getting Started
-```bash
-# (recommend)
-pnpm dev
-# or 
-npm run dev
-# or
-yarn dev
-```
+
 
 # Features
 
