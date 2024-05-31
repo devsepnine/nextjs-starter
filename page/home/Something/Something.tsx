@@ -20,7 +20,7 @@ export async function Something() {
       <div>{t('JustMock')}</div>
 
       <Dialog>
-        <DialogTrigger>
+        <DialogTrigger asChild>
           <Button variant={'outline'}>{t('Boop')} !!</Button>
         </DialogTrigger>
         <DialogContent>

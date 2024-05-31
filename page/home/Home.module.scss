@@ -1,10 +1,13 @@
-.home {
-  display: grid;
-  grid-template-columns: 1fr;
-  padding: 1rem;
-  margin: auto;
-  gap: 0.5rem;
-  @media ($media-screen-md) {
-    grid-template-columns: 1fr 1fr;
+html {
+  .home {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 1rem;
+    margin: auto;
+    gap: 0.5rem;
+    @media ($media-screen-md) {
+      grid-template-columns: 1fr 1fr;
+    }
   }
+
 }
