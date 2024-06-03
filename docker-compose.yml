@@ -4,6 +4,7 @@ services:
   nextjs:
     container_name: nextjs14-starterd
     image: nextjs14-starter
+    restart: unless-stopped
     build:
       context: .
       dockerfile: Dockerfile
