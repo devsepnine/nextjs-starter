@@ -1,0 +1,18 @@
+services:
+  nextjs:
+    container_name: nextjs-starterd
+    image: nextjs-starter:latest
+    restart: unless-stopped
+    build:
+      context: ../
+      dockerfile: ./ci/Dockerfile
+      x-bake:
+        tags:
+          - nextjs-starter:latest
+        platforms:
+          - linux/amd64
+          - linux/arm64
+    ports:
+      - '19300:3000'
+    environment:
+      - NODE_ENV=production
