@@ -21,6 +21,7 @@ jobs:
 
       - name: Build and run Docker container
         run: |
-          docker-compose down
+          cd ci
+          docker-compose down -v
           docker-compose build
           docker-compose up -d
