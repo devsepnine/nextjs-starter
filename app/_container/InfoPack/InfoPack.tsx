@@ -33,6 +33,7 @@ export function InfoPack() {
         </TooltipProvider>
         <span className={styles['chips']}>Dark Mode</span>
         <span className={styles['chips']}>I18n</span>
+        <span className={styles['chips']}>Zustand</span>
         <TooltipProvider>
           <Tooltip>
             <TooltipTrigger asChild>
