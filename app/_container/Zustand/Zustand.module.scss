@@ -1,0 +1,27 @@
+.root {
+  padding: 1rem;
+
+  .title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+  }
+
+  .contents {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    .button-area {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      button {
+        width: 100%;
+        flex-shrink: 0;
+      }
+    }
+  }
+
+}
