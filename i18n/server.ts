@@ -24,7 +24,7 @@ async function initI18next(lang: Locales, namespace: string) {
 }
 
 export async function createTranslation(ns: string) {
-  const lang = getLocale();
+  const lang = await getLocale();
   const i18nextInstance = await initI18next(lang, ns);
 
   return {
@@ -32,6 +32,7 @@ export async function createTranslation(ns: string) {
   };
 }
 
-export function getLocale() {
-  return (cookies().get(LANGUAGE_COOKIE)?.value ?? FALLBACK_LANG) as Locales;
+export async function getLocale() {
+  const c = await cookies();
+  return c.get(LANGUAGE_COOKIE)?.value ?? FALLBACK_LANG;
 }

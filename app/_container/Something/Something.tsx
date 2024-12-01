@@ -9,6 +9,7 @@ import { Card } from '@/components/ui/card.tsx';
 import {
   Dialog,
   DialogContent,
+  DialogTitle,
   DialogTrigger,
 } from '@/components/ui/dialog.tsx';
 
@@ -23,7 +24,8 @@ export async function Something() {
         <DialogTrigger asChild>
           <Button variant={'outline'}>{t('Boop')} !!</Button>
         </DialogTrigger>
-        <DialogContent>
+        <DialogContent aria-describedby={undefined}>
+          <DialogTitle className={'hidden'}>pop</DialogTitle>
           <div className={'flex justify-center'}>{t('Pop')}!</div>
         </DialogContent>
       </Dialog>
