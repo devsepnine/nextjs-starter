@@ -23,7 +23,7 @@ export async function Header() {
               <RiGithubFill size={15} />
             </Button>
           </Link>
-          <Link href={'https://twitter.com/codenyang'}>
+          <Link href={'https://twitter.com/n0ch4t'}>
             <Button variant={'ghost'} size={'icon'} aria-label={'x(twitter)'}>
               <RiTwitterXFill size={15} />
             </Button>
