@@ -63,7 +63,7 @@
     --radius: 0.5rem;
     @include light;
   }
-  @media ($media-theme-dark) {
+  @media (prefers-color-scheme: dark) {
     :root {
       @include dark;
     }

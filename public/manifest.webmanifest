@@ -4,9 +4,9 @@
   "display": "standalone",
   "scope": "/",
   "start_url": "/",
-  "name": "codenyang",
-  "short_name": "codenyang",
-  "description": "codenyang starter",
+  "name": "n0ch4t",
+  "short_name": "n0ch4t",
+  "description": "n0ch4t starter",
   "icons": [
     {
       "src": "/assets/pwa-icons/icon-192x192.png",

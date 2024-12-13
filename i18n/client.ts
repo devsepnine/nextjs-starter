@@ -10,10 +10,10 @@ import {
 } from 'react-i18next';
 
 import {
+  getOptions,
   LANGUAGE_COOKIE,
   Locales,
   SUPPORTED_LNGS,
-  getOptions,
 } from '@/i18n/settings.ts';
 
 import { useLocale } from '@/hooks/locale-provider.tsx';
@@ -46,16 +46,18 @@ export function useTranslation(ns: string) {
   const translator = useTransAlias(ns);
   const { i18n } = translator;
 
-  if (runsOnServerSide && lng && i18n.resolvedLanguage !== lng) {
-    i18n.changeLanguage(lng).then();
-  } else {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    useCustomTranslationImplem(i18n, lng);
-  }
+  useEffect(() => {
+    if (runsOnServerSide && lng && i18n.resolvedLanguage !== lng) {
+      i18n.changeLanguage(lng).then();
+    }
+  }, [lng, i18n]);
+
+  useCustomTranslationImpl(i18n, lng);
+
   return translator;
 }
 
-function useCustomTranslationImplem(i18n: i18n, lng: Locales) {
+function useCustomTranslationImpl(i18n: i18n, lng: Locales) {
   useEffect(() => {
     if (!lng || i18n.resolvedLanguage === lng) return;
     i18n.changeLanguage(lng).then();

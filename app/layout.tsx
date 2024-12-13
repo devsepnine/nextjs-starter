@@ -16,8 +16,8 @@ export const viewport: Viewport = {
   themeColor: '#000000',
 };
 export const metadata: Metadata = {
-  title: 'Codenyang Stater Kit',
-  description: 'Next.js 14 Starter Kit - codenyang',
+  title: 'n0ch4t Stater Kit',
+  description: 'Next.js 14 Starter Kit - n0ch4t',
   manifest: '/manifest.webmanifest',
   icons: {
     other: [
@@ -31,13 +31,13 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   // i18n init
-  const lng = langInitializer();
+  const lng = await langInitializer();
   // initial theme
   const ti = themeInitial();
 
