@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - gh
+      - release
 
 jobs:
   build-and-deploy:
