@@ -20,9 +20,8 @@ const nextConfig = {
   },
   reactStrictMode: false,
   sassOptions: {
-    silenceDeprecations: ['legacy-js-api'],
     includePaths: [path.join(__dirname, 'styles')],
-    prependData: "@import 'styles/common/_variables.scss';",
+    prependData: "@use 'styles/common/variables' as *;",
   },
 };
 
