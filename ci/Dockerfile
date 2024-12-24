@@ -1,4 +1,4 @@
-FROM node:20.14.0-slim AS builder
+FROM node:22.12.0-slim AS builder
 
 WORKDIR /usr/src/app
 
@@ -21,7 +21,7 @@ COPY --from=builder /usr/src/app/public ./public
 
 RUN corepack enable \
     && pnpm i --frozen-lockfile --prod \
-    && du -sh */ \
+    && du -sh ./*/ \
     && ls -ahl
 
 EXPOSE 3000
