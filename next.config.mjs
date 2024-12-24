@@ -8,6 +8,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const wp = withPWA({
+  disable: process.env.NODE_ENV === 'development',
   dest: 'public',
 });
 
