@@ -1,15 +1,15 @@
-FROM node:22.12.0-slim AS builder
+FROM node:22.15.0-alpine AS builder
 
 WORKDIR /usr/src/app
 
 COPY . .
 
-RUN corepack enable pnpm \
+RUN npm install -g --ignore-scripts pnpm \
     && pnpm i --frozen-lockfile \
     && pnpm run build \
     && rm -rf .next/cache
 
-FROM node:20.14.0-slim AS runner
+FROM node:20.15.0-alpine AS runner
 
 WORKDIR /usr/src/app
 
@@ -19,7 +19,7 @@ COPY --from=builder /usr/src/app/next.config.mjs ./next.config.mjs
 COPY --from=builder /usr/src/app/.next ./.next
 COPY --from=builder /usr/src/app/public ./public
 
-RUN corepack enable \
+RUN npm install -g --ignore-scripts pnpm \
     && pnpm i --frozen-lockfile --prod \
     && du -sh ./*/ \
     && ls -ahl
