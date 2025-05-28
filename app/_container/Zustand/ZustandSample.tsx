@@ -20,10 +20,10 @@ const ZustandSample = () => {
       <div className={styles['contents']}>
         <div>{number}</div>
         <div className={styles['button-area']}>
-          <Button size={'sm'} variant={'green'} onClick={increase}>
+          <Button size={'sm'} variant={'default'} onClick={increase}>
             {t('Add')}
           </Button>
-          <Button size={'sm'} variant={'red'} onClick={decrease}>
+          <Button size={'sm'} variant={'destructive'} onClick={decrease}>
             {t('Subtract')}
           </Button>
         </div>
