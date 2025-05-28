@@ -14,8 +14,8 @@
       padding: 0.25rem 0.5rem;
       border-radius: var(--radius);
       font-weight: 500;
-      color: hsl(var(--secondary-foreground));
-      background-color: hsl(var(--secondary));
+      color: var(--secondary-foreground);
+      background-color: var(--secondary);
     }
   }
 }
