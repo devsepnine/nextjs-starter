@@ -24,6 +24,4 @@ jobs:
       - name: Build and run Docker container
         run: |
           cd ci
-          docker-compose down -v
-          docker-compose build
-          docker-compose up -d
+          docker-compose up -d --build --force-recreate --remove-orphans
