@@ -15,7 +15,7 @@ export async function Header() {
     <header className={styles['header']}>
       <div className={styles['contents']}>
         <div className={styles['left']}>
-          <span className={styles['label']}>Next 14 {t('StarterKit')}</span>
+          <span className={styles['label']}>Next 15 {t('StarterKit')}</span>
         </div>
         <div className={styles['right']}>
           <Link href={'https://github.com/devsepnine'}>
