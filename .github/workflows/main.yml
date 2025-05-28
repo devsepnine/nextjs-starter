@@ -5,6 +5,7 @@ on:
     branches:
       - gh
       - release
+      - main
 
 jobs:
   build-and-deploy:
