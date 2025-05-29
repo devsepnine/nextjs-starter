@@ -7,6 +7,6 @@
 - [x] I18n
 - [x] PWA
 - [x] SCSS
-- [x] TailwindCSS
+- [x] TailwindCSS V4
 - [X] Typescript
 - [X] Shadcn/ui
