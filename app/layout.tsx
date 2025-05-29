@@ -18,7 +18,7 @@ export const viewport: Viewport = {
 };
 export const metadata: Metadata = {
   title: 'n0ch4t Stater Kit',
-  description: 'Next.js 14 Starter Kit - n0ch4t',
+  description: 'Next.js Starter Kit - n0ch4t',
   manifest: '/manifest.webmanifest',
   icons: {
     other: [
