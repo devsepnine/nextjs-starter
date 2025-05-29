@@ -1,3 +1,4 @@
+import { Icon } from '@iconify/react';
 import Link from 'next/link';
 
 import styles from './InfoPack.module.scss';
@@ -15,14 +16,28 @@ export function InfoPack() {
     <Card className={styles['info-pack']}>
       <div className={styles['title']}>library list</div>
       <div className={styles['contents']}>
-        <span className={styles['chips']}>Next.js</span>
-        <span className={styles['chips']}>React.js</span>
-        <span className={styles['chips']}>SCSS</span>
-        <span className={styles['chips']}>PWA</span>
+        <span className={styles['chips']}>
+          <Icon icon={'logos:nextjs-icon'} width={15} height={15} /> Next.js
+        </span>
+        <span className={styles['chips']}>
+          <Icon icon={'logos:react'} width={15} height={15} />
+          React.js
+        </span>
+        <span className={styles['chips']}>
+          <Icon icon={'logos:sass'} width={15} height={15} />
+          SCSS
+        </span>
+        <span className={styles['chips']}>
+          <Icon icon={'logos:pwa'} width={15} height={15} />
+          PWA
+        </span>
         <TooltipProvider>
           <Tooltip>
             <TooltipTrigger asChild>
-              <span className={styles['chips']}>Tailwind CSS</span>
+              <span className={styles['chips']}>
+                <Icon icon={'logos:tailwindcss-icon'} width={15} height={15} />
+                Tailwind CSS
+              </span>
             </TooltipTrigger>
             <TooltipContent>
               <div className={'underline'}>
@@ -31,17 +46,28 @@ export function InfoPack() {
             </TooltipContent>
           </Tooltip>
         </TooltipProvider>
-        <span className={styles['chips']}>Dark Mode</span>
-        <span className={styles['chips']}>I18n</span>
-        <span className={styles['chips']}>Zustand</span>
+        <span className={styles['chips']}>
+          <Icon icon={'icon-park-solid:dark-mode'} width={15} height={15} /> DarkMode
+        </span>
+        <span className={styles['chips']}>
+          <Icon icon={'material-symbols:language'} width={15} height={15} />
+          i18n
+        </span>
+        <span className={styles['chips']}>
+          <Icon icon={'icon-park-twotone:disk'} width={15} height={15} />
+          Zustand
+        </span>
         <TooltipProvider>
           <Tooltip>
             <TooltipTrigger asChild>
-              <span className={styles['chips']}>Remix Icon</span>
+              <span className={styles['chips']}>
+                <Icon icon={'line-md:iconify2-static-twotone'} width={15} height={15} />
+                Iconify
+              </span>
             </TooltipTrigger>
             <TooltipContent>
               <div className={'underline'}>
-                <Link href={'https://remixicon.com/'}>Icon List</Link>
+                <Link href={'https://icon-sets.iconify.design/'}>Icon List</Link>
               </div>
             </TooltipContent>
           </Tooltip>
@@ -49,7 +75,10 @@ export function InfoPack() {
         <TooltipProvider>
           <Tooltip>
             <TooltipTrigger asChild>
-              <span className={styles['chips']}>Shardcn/UI</span>
+              <span className={styles['chips']}>
+                <Icon icon={'mdi:design'} width={15} height={15} />
+                Shardcn/UI
+              </span>
             </TooltipTrigger>
             <TooltipContent>
               <div className={'underline'}>

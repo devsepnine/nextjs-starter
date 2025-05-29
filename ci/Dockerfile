@@ -4,10 +4,19 @@ WORKDIR /usr/src/app
 
 COPY . .
 
-RUN npm install -g --ignore-scripts pnpm \
-    && pnpm i --frozen-lockfile \
-    && pnpm run build \
-    && rm -rf .next/cache
+# --- install pnpm & change user ---------------------------------
+RUN npm install -g --ignore-scripts pnpm  \
+    && pnpm -v \
+    && (id node || adduser --disabled-password --gecos "" node) \
+    && chown -R node:node /usr/src/app
+USER node
+
+# --- install package & build ------------------------------------
+RUN pnpm i --frozen-lockfile --ignore-scripts \
+    && pnpm build \
+    && rm -rf .next/cache \
+    && echo "Build completed"
+
 
 FROM node:20.15.0-alpine AS runner
 
@@ -19,10 +28,13 @@ COPY --from=builder /usr/src/app/next.config.js ./next.config.js
 COPY --from=builder /usr/src/app/.next ./.next
 COPY --from=builder /usr/src/app/public ./public
 
-RUN npm install -g --ignore-scripts pnpm \
+# --- install pnpm & change user ---------------------------------
+RUN npm install -g --ignore-scripts pnpm  \
+    && pnpm -v \
     && pnpm i --frozen-lockfile --prod \
-    && du -sh ./*/ \
-    && ls -ahl
+    && (id node || adduser --disabled-password --gecos "" node) \
+    && chown -R node:node /usr/src/app
+USER node
 
 EXPOSE 3000
 

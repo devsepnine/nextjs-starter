@@ -1,0 +1,82 @@
+name: 'Create Draft Release Branch'
+
+on:
+  workflow_dispatch:
+    inputs:
+      branch_type:
+        type: choice
+        description: 'The branch type you want to make'
+        required: true
+        options:
+          - release
+          - hotfix
+        default: 'release'
+      version:
+        type: string
+        description: 'Name of version (ie 1.0.0)'
+        required: true
+
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    permissions: write-all
+    outputs:
+      baseBranch: ${{ steps.variables.outputs.baseBranch }}
+    steps:
+      - name: Set Variable
+        id: variables
+        run: |
+          if [ "${{ github.ref }}" == "refs/heads/master" ]; then
+            echo "baseBranch=master" >> $GITHUB_OUTPUT
+          else
+            echo "baseBranch=${{ github.ref }}" >> $GITHUB_OUTPUT
+          fi
+
+  draft-new-release:
+    runs-on: ubuntu-latest
+    permissions: write-all
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Create Draft Release
+        id: draft-release
+        uses: release-drafter/release-drafter@v5.22.0
+        with:
+          publish: false
+          config-name: release-drafter-config.yml
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Create release branch with draft version
+        run: git checkout -b ${{inputs.branch_type}}/${{ inputs.version || steps.draft-release.outputs.name }}
+
+      - name: Add empty commit if branch type is hotfix and master branch
+        if: ${{ inputs.branch_type == 'hotfix' && needs.setup.outputs.baseBranch == 'master' }}
+        run: |
+          git config user.name "c0zycr473"
+          git config user.email "devsepnine@hotmail.com"
+          git commit --allow-empty -m "Empty commit for hotfix ${{ inputs.version }} PR creation"
+
+      - name: Create Release
+        run: |
+          git config user.name "c0zycr473"
+          git config user.email "devsepnine@hotmail.com"
+
+          git push origin ${{inputs.branch_type}}/${{ inputs.version || steps.draft-release.outputs.name }}
+
+      - name: Create pull request
+        uses: thomaseizinger/create-pull-request@1.3.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          head: ${{inputs.branch_type}}/${{ inputs.version || steps.draft-release.outputs.name }}
+          base: master
+          title: Merge ${{inputs.branch_type}} version ${{inputs.version || steps.draft-release.outputs.name }} into master
+          body: |
+            ## Merge the PR into master @${{ github.actor }}!
+
+            이 PR은 https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}에서 워크플로우 트리거에 의한 응답으로 생성되었습니다.
+            이 커밋에서 변경 로그를 업데이트하고 매니페스트 파일의 버전을 변경했습니다.
+
+            이 PR을 병합하면 GitHub 릴리즈가 생성되고 릴리즈 빌드의 일부로 생성된 모든 자산이 업로드됩니다.
