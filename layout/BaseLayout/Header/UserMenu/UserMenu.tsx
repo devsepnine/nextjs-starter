@@ -1,4 +1,4 @@
-import { PersonIcon } from '@radix-ui/react-icons';
+import { Icon } from '@iconify/react';
 
 import { Button } from '@/components/ui/button.tsx';
 import {
@@ -14,7 +14,7 @@ export function UserMenu() {
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button variant={'ghost'} size={'icon'} aria-label={'personal-menu'}>
-          <PersonIcon />
+          <Icon icon={'mingcute:menu-fill'} width={15} height={15} />
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align={'end'}>
