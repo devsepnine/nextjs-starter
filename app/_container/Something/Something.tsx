@@ -1,4 +1,4 @@
-import { RiBaseStationFill } from '@remixicon/react';
+import { Icon } from '@iconify/react';
 
 import { createTranslation } from '@/i18n/server.ts';
 
@@ -6,18 +6,13 @@ import styles from './Something.module.scss';
 
 import { Button } from '@/components/ui/button.tsx';
 import { Card } from '@/components/ui/card.tsx';
-import {
-  Dialog,
-  DialogContent,
-  DialogTitle,
-  DialogTrigger,
-} from '@/components/ui/dialog.tsx';
+import { Dialog, DialogContent, DialogTitle, DialogTrigger } from '@/components/ui/dialog.tsx';
 
 export async function Something() {
   const { t } = await createTranslation('common');
   return (
     <Card className={styles['something']}>
-      <RiBaseStationFill size={34} />
+      <Icon icon={'line-md:hazard-lights-loop'} width={50} height={50} />
       <div>{t('JustMock')}</div>
 
       <Dialog>

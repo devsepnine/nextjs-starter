@@ -1,5 +1,7 @@
 'use client';
 
+import { Icon } from '@iconify/react';
+
 import { useTranslation } from '@/i18n/client.ts';
 import useSampleStore from '@/store/sampleStore.ts';
 
@@ -18,12 +20,14 @@ const ZustandSample = () => {
       <div className={styles['title']}>Zustand</div>
 
       <div className={styles['contents']}>
-        <div>{number}</div>
+        <div className={styles['number']}>{number}</div>
         <div className={styles['button-area']}>
-          <Button size={'sm'} variant={'green'} onClick={increase}>
+          <Button size={'sm'} variant={'default'} onClick={increase}>
+            <Icon icon={'mingcute:plus-fill'} width={15} height={15} />
             {t('Add')}
           </Button>
-          <Button size={'sm'} variant={'red'} onClick={decrease}>
+          <Button size={'sm'} variant={'destructive'} onClick={decrease}>
+            <Icon icon={'mingcute:minus-square-fill'} width={15} height={15} />
             {t('Subtract')}
           </Button>
         </div>

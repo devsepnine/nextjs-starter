@@ -1,28 +1,40 @@
-FROM node:22.12.0-slim AS builder
+FROM node:22.15.0-alpine AS builder
 
 WORKDIR /usr/src/app
 
 COPY . .
 
-RUN corepack enable pnpm \
-    && pnpm i --frozen-lockfile \
-    && pnpm run build \
-    && rm -rf .next/cache
+# --- install pnpm & change user ---------------------------------
+RUN npm install -g --ignore-scripts pnpm  \
+    && pnpm -v \
+    && (id node || adduser --disabled-password --gecos "" node) \
+    && chown -R node:node /usr/src/app
+USER node
 
-FROM node:20.14.0-slim AS runner
+# --- install package & build ------------------------------------
+RUN pnpm i --frozen-lockfile --ignore-scripts \
+    && pnpm build \
+    && rm -rf .next/cache \
+    && echo "Build completed"
+
+
+FROM node:20.15.0-alpine AS runner
 
 WORKDIR /usr/src/app
 
 COPY --from=builder /usr/src/app/package.json ./package.json
 COPY --from=builder /usr/src/app/pnpm-lock.yaml ./pnpm-lock.yaml
-COPY --from=builder /usr/src/app/next.config.mjs ./next.config.mjs
+COPY --from=builder /usr/src/app/next.config.js ./next.config.js
 COPY --from=builder /usr/src/app/.next ./.next
 COPY --from=builder /usr/src/app/public ./public
 
-RUN corepack enable \
+# --- install pnpm & change user ---------------------------------
+RUN npm install -g --ignore-scripts pnpm  \
+    && pnpm -v \
     && pnpm i --frozen-lockfile --prod \
-    && du -sh ./*/ \
-    && ls -ahl
+    && (id node || adduser --disabled-password --gecos "" node) \
+    && chown -R node:node /usr/src/app
+USER node
 
 EXPOSE 3000
 
