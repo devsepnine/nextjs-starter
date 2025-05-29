@@ -27,6 +27,9 @@
     }
     .left {
       .label {
+        display: flex;
+        align-items: center;
+        gap: 0 0.5rem;
         font-size: 1.125rem;
         font-weight: 700;
       }
