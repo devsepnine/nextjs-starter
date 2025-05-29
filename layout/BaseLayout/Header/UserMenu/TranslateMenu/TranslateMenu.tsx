@@ -1,5 +1,7 @@
 'use client';
 
+import { Icon } from '@iconify/react';
+
 import { switchLocaleAction } from '@/actions/switch-locale.ts';
 import { useTranslation } from '@/i18n/client.ts';
 import { SUPPORTED_LANGUAGES } from '@/i18n/settings.ts';
@@ -17,7 +19,10 @@ export function TranslateMenu() {
   return (
     <>
       <DropdownMenuSubTrigger>
-        Translate ({i18n.resolvedLanguage})
+        <div className={'flex items-center gap-x-2 w-full'}>
+          <Icon icon={'mingcute:earth-2-fill'} width={15} height={15} />
+          <div>{i18n.resolvedLanguage?.toUpperCase()}</div>
+        </div>
       </DropdownMenuSubTrigger>
       <DropdownMenuPortal>
         <DropdownMenuSubContent>

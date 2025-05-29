@@ -5,6 +5,7 @@ on:
     branches:
       - gh
       - release
+      - main
 
 jobs:
   build-and-deploy:
@@ -14,15 +15,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4.1.6
 
-      - name: Docker Setup Buildx
-        uses: docker/setup-buildx-action@v3.3.0
-
-      - name: Log in to the Docker registry
-        run: echo "Logging in is not needed since we are using local Docker registry"
-
       - name: Build and run Docker container
         run: |
           cd ci
-          docker-compose down -v
-          docker-compose build
-          docker-compose up -d
+          docker-compose up -d --build --force-recreate --remove-orphans

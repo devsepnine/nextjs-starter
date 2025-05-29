@@ -1,6 +1,6 @@
 'use client';
 
-import { RiMacbookFill, RiMoonClearFill, RiSunFill } from '@remixicon/react';
+import { Icon } from '@iconify/react';
 import { clsx } from 'clsx';
 import { useTheme } from 'next-themes';
 import * as React from 'react';
@@ -32,38 +32,43 @@ export function ThemeSwitch() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button
-          variant="ghost"
-          size="icon"
-          className={clsx(styles['theme-switch'])}
-        >
+        <Button variant="ghost" size="icon" className={clsx(styles['theme-switch'])}>
           <div className={styles['trigger']}>
-            <RiSunFill className={clsx(styles['light'])} size={15} />
-            <RiMoonClearFill className={clsx(styles['dark'])} size={15} />
+            <Icon
+              icon={'line-md:moon-filled-alt-to-sunny-filled-loop-transition'}
+              width={15}
+              height={15}
+              className={clsx(styles['light'])}
+            />
+            <Icon
+              icon={'line-md:sunny-filled-loop-to-moon-filled-loop-transition'}
+              width={15}
+              height={15}
+              className={clsx(styles['dark'])}
+            />
             <span className="sr-only">Toggle theme</span>
           </div>
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" className={styles['theme-content']}>
-        <DropdownMenuItem
-          onClick={() => setTheme('light')}
-          className={styles['menu']}
-        >
-          <RiSunFill size={15} />
+        <DropdownMenuItem onClick={() => setTheme('light')} className={styles['menu']}>
+          <Icon
+            icon={'line-md:moon-filled-alt-to-sunny-filled-loop-transition'}
+            width={15}
+            height={15}
+          />
           <span>Light</span>
         </DropdownMenuItem>
-        <DropdownMenuItem
-          onClick={() => setTheme('dark')}
-          className={styles['menu']}
-        >
-          <RiMoonClearFill size={15} />
+        <DropdownMenuItem onClick={() => setTheme('dark')} className={styles['menu']}>
+          <Icon
+            icon={'line-md:sunny-filled-loop-to-moon-filled-loop-transition'}
+            width={15}
+            height={15}
+          />
           <span>Dark</span>
         </DropdownMenuItem>
-        <DropdownMenuItem
-          onClick={() => setTheme('system')}
-          className={styles['menu']}
-        >
-          <RiMacbookFill size={15} />
+        <DropdownMenuItem onClick={() => setTheme('system')} className={styles['menu']}>
+          <Icon icon={'line-md:cog-filled-loop'} width={15} height={15} />
           <span>System</span>
         </DropdownMenuItem>
       </DropdownMenuContent>
