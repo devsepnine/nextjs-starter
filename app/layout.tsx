@@ -17,8 +17,8 @@ export const viewport: Viewport = {
   themeColor: '#000000',
 };
 export const metadata: Metadata = {
-  title: 'n0ch4t Stater Kit',
-  description: 'Next.js Starter Kit - n0ch4t',
+  title: 'c0zyCr473 Stater Kit',
+  description: 'Next.js Starter Kit - c0zyCr473',
   manifest: '/manifest.webmanifest',
   icons: {
     other: [
