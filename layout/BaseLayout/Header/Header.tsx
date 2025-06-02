@@ -21,7 +21,7 @@ export async function Header() {
           </span>
         </div>
         <div className={styles['right']}>
-          <Link href={'https://github.com/devsepnine'}>
+          <Link href={'https://github.com/devsepnine/nextjs-starter'}>
             <Button variant={'ghost'} size={'icon'} aria-label={'github'}>
               <Icon icon={'mingcute:github-fill'} width={15} height={15} />
             </Button>
