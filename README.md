@@ -1,12 +1,14 @@
 ![image](/.github/image.png)
 [demo](https://nextjs-starter.codenyang.com)
+
 # Features
 
---------
+---
+
 - [x] Dark Mode
 - [x] I18n
 - [x] PWA
 - [x] SCSS
 - [x] TailwindCSS V4
-- [X] Typescript
-- [X] Shadcn/ui
+- [x] Typescript
+- [x] Shadcn/ui

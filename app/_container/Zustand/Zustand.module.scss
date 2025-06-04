@@ -1,4 +1,6 @@
 .root {
+  width: 100%;
+  height: 100%;
   padding: 1rem;
 
   .title {
@@ -13,20 +15,22 @@
     justify-content: center;
     align-items: center;
     gap: 0.5rem;
+
     .number {
-        font-size: 1.5rem;
-        font-weight: 700;
-        color: hsl(var(--primary));
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: hsl(var(--primary));
     }
+
     .button-area {
       display: flex;
       justify-content: center;
       gap: 8px;
+
       button {
         width: 100%;
         flex-shrink: 0;
       }
     }
   }
-
 }
