@@ -5,7 +5,7 @@ import { createTranslation } from '@/i18n/server.ts';
 
 import styles from './Header.module.scss';
 
-import { ThemeSwitch } from '@/components/atoms/ThemeSwitch/ThemeSwitch.tsx';
+import { ThemeSwitch } from '@/components/template/ThemeSwitch/ThemeSwitch.tsx';
 import { Button } from '@/components/ui/button.tsx';
 import { UserMenu } from '@/layout/BaseLayout/Header/UserMenu/UserMenu.tsx';
 
