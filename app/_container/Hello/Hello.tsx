@@ -8,7 +8,7 @@ import styles from './Hello.module.scss';
 export async function Hello() {
   const { t } = await createTranslation('common');
   return (
-    <div className={styles['hello']}>
+    <div className={styles['root']}>
       <div className={styles['title']}>
         <Icon icon={'mdi:human-hello-variant'} width={30} height={30} />
         {t('HelloNext')}

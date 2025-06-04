@@ -1,7 +1,11 @@
 /** @type {import('next').NextConfig} */
-const path = require('path');
+import path from 'path';
+import { fileURLToPath } from 'url';
 
-const withPWA = require('next-pwa');
+import withPWA from 'next-pwa';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const wp = withPWA({
   disable: process.env.NODE_ENV === 'development',
@@ -45,4 +49,4 @@ const nextConfig = {
   },
 };
 
-module.exports = wp(nextConfig);
+export default wp(nextConfig);
