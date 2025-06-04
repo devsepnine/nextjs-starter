@@ -1,14 +1,19 @@
-.info-pack {
+.root {
+  width: 100%;
+  height: 100%;
   padding: 1rem;
+
   .title {
     font-size: 1.25rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
   }
+
   .contents {
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
+
     .chips {
       display: flex;
       align-items: center;

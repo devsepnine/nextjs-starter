@@ -13,7 +13,7 @@ import {
 
 export function InfoPack() {
   return (
-    <Card className={styles['info-pack']}>
+    <Card className={styles['root']}>
       <div className={styles['title']}>library list</div>
       <div className={styles['contents']}>
         <span className={styles['chips']}>

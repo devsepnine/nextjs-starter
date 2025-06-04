@@ -28,9 +28,7 @@ export const SUPPORTED_LANGUAGES: ILocale[] = [
   },
 ];
 export const FALLBACK_LANG = SUPPORTED_LANGUAGES[0].language;
-export const SUPPORTED_LNGS = SUPPORTED_LANGUAGES.map(
-  (locale) => locale.language,
-);
+export const SUPPORTED_LNGS = SUPPORTED_LANGUAGES.map((locale) => locale.language);
 export type Locales = (typeof SUPPORTED_LNGS)[number];
 
 export const LANGUAGE_COOKIE = 'scorn';
