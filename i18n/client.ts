@@ -4,17 +4,9 @@ import i18next, { i18n } from 'i18next';
 import languageDetector from 'i18next-browser-languagedetector';
 import resourcesToBackend from 'i18next-resources-to-backend';
 import { useEffect } from 'react';
-import {
-  initReactI18next,
-  useTranslation as useTransAlias,
-} from 'react-i18next';
+import { initReactI18next, useTranslation as useTransAlias } from 'react-i18next';
 
-import {
-  getOptions,
-  LANGUAGE_COOKIE,
-  Locales,
-  SUPPORTED_LNGS,
-} from '@/i18n/settings.ts';
+import { getOptions, LANGUAGE_COOKIE, Locales, SUPPORTED_LNGS } from '@/i18n/settings.ts';
 
 import { useLocale } from '@/hooks/locale-provider.tsx';
 
@@ -23,11 +15,7 @@ const runsOnServerSide = typeof window === 'undefined';
 i18next
   .use(initReactI18next)
   .use(languageDetector)
-  .use(
-    resourcesToBackend(
-      (lang: string, ns: string) => import(`./locales/${lang}/${ns}.json`),
-    ),
-  )
+  .use(resourcesToBackend((lang: string, ns: string) => import(`./locales/${lang}/${ns}.json`)))
   .init({
     ...getOptions(),
     lng: undefined,
