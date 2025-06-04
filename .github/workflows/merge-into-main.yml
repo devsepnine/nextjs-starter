@@ -1,19 +1,19 @@
-name: "Merge into master Branch"
+name: 'Merge into master Branch'
 
 # 이 워크플로우는 'release/' 또는 'hotfix/' 브랜치가 master 브랜치로 머지될 때 자동으로 릴리스를 생성하고 태그를 부여합니다.
 
 on:
   pull_request:
     branches:
-      - master    # master 브랜치로의 PR이 발생할 때
+      - master # master 브랜치로의 PR이 발생할 때
     types:
-      - closed  # PR이 닫힐 때 (머지 또는 거부)
+      - closed # PR이 닫힐 때 (머지 또는 거부)
 
 jobs:
   publish-release-and-tag:
     name: Publish release and tag
     runs-on: ubuntu-latest
-    permissions: write-all  # GitHub API 작업을 위한 전체 권한 부여
+    permissions: write-all # GitHub API 작업을 위한 전체 권한 부여
 
     # release/ 또는 hotfix/ 브랜치가 master으로 머지된 경우에만 실행
     if: github.event.pull_request.merged == true &&
@@ -44,18 +44,18 @@ jobs:
       # release-drafter를 사용하여 릴리스 노트 생성 및 태그 적용
       - name: Update Release Draft
         id: draft-release
-        uses: release-drafter/release-drafter@v5.22.0  # release-drafter 액션 사용
+        uses: release-drafter/release-drafter@v5.22.0 # release-drafter 액션 사용
         with:
-          name: ${{ env.BRANCH_NAME }} ${{ env.RELEASE_VERSION }}  # 릴리스 이름 (예: "Release v1.2.3")
-          tag: ${{ env.RELEASE_VERSION }}  # 태그 이름 (예: "v1.2.3")
-          publish: true  # 자동으로 릴리스 게시
-          config-name: release-drafter-config.yml  # release-drafter 설정 파일
+          name: ${{ env.BRANCH_NAME }} ${{ env.RELEASE_VERSION }} # 릴리스 이름 (예: "Release v1.2.3")
+          tag: ${{ env.RELEASE_VERSION }} # 태그 이름 (예: "v1.2.3")
+          publish: true # 자동으로 릴리스 게시
+          config-name: release-drafter-config.yml # release-drafter 설정 파일
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # GitHub API 접근을 위한 토큰
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # GitHub API 접근을 위한 토큰
 
   merge-master-into-develop:
     name: Create PR and add merger as reviewer
-    needs: [ publish-release-and-tag ]
+    needs: [publish-release-and-tag]
     runs-on: ubuntu-latest
     permissions: write-all
     outputs:
@@ -75,7 +75,7 @@ jobs:
             const prBody = "Automated PR to merge master into develop branch.";
             const base = "develop";
             const head = "master";
-            
+
             const { data: prs } = await github.rest.pulls.list({
               owner: context.repo.owner,
               repo: context.repo.repo,
@@ -83,7 +83,7 @@ jobs:
               base: base,
               head: `${context.repo.owner}:${head}`,
             });
-            
+
             let pr;
             if (prs.length > 0) {
               console.log("PR already exists. Using existing PR.");

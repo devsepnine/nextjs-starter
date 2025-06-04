@@ -11,7 +11,7 @@ import { Dialog, DialogContent, DialogTitle, DialogTrigger } from '@/components/
 export async function Something() {
   const { t } = await createTranslation('common');
   return (
-    <Card className={styles['something']}>
+    <Card className={styles['root']}>
       <Icon icon={'line-md:hazard-lights-loop'} width={50} height={50} />
       <div>{t('JustMock')}</div>
 
