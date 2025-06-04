@@ -2,7 +2,7 @@
 
 import { MotionValue } from 'motion';
 import { motion, useSpring, useTransform } from 'motion/react';
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 
 import { cn } from '@/lib/utils.ts';
 
@@ -21,9 +21,14 @@ export const AnimatedNumber = ({
 }: AnimatedNumberProps) => {
   const height = fontSize + padding;
 
+  if (isNaN(value)) return 0;
+
   let digits = String(value).split('');
   const minusSign = digits[0] === '-' ? '-' : null;
   if (minusSign) digits = digits.slice(1);
+  if (digits.length === 0 || (!value && value !== 0)) {
+    return <Digit value={0} height={height} />;
+  }
   return (
     <div
       style={{ fontSize }}
@@ -31,7 +36,7 @@ export const AnimatedNumber = ({
     >
       {minusSign && <span>-</span>}
       {digits.map((digit, index) => (
-        <Digit key={`${index}`} value={Number(digit)} height={height} />
+        <Digit key={`${index}-n`} value={Number(digit)} height={height} />
       ))}
     </div>
   );
@@ -43,12 +48,15 @@ interface DigitProps {
 }
 
 const Digit = ({ value, height }: DigitProps) => {
-  let valueRoundedToPlace = Math.floor(value);
-  let animatedValue = useSpring(valueRoundedToPlace);
+  const previousValue = useRef<number | null>(null);
+  let animatedValue = useSpring(0);
 
   useEffect(() => {
-    animatedValue.set(valueRoundedToPlace);
-  }, [animatedValue, valueRoundedToPlace]);
+    if (previousValue.current !== value) {
+      animatedValue.set(value);
+      previousValue.current = value;
+    }
+  }, [value, animatedValue]);
 
   return (
     <div style={{ height }} className="relative w-[1ch] tabular-nums">
