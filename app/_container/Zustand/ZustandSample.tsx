@@ -7,6 +7,7 @@ import useSampleStore from '@/store/sampleStore.ts';
 
 import styles from './Zustand.module.scss';
 
+import { AnimatedNumber } from '@/components/template/AnimatedNumber.tsx';
 import { Button } from '@/components/ui/button.tsx';
 import { Card } from '@/components/ui/card.tsx';
 
@@ -20,7 +21,9 @@ const ZustandSample = () => {
       <div className={styles['title']}>Zustand</div>
 
       <div className={styles['contents']}>
-        <div className={styles['number']}>{number}</div>
+        <div className={styles['number']}>
+          <AnimatedNumber value={number} />
+        </div>
         <div className={styles['button-area']}>
           <Button size={'sm'} variant={'default'} onClick={increase}>
             <Icon icon={'mingcute:plus-fill'} width={15} height={15} />
