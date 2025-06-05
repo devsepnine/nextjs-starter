@@ -23,12 +23,16 @@
     }
 
     .button-area {
+      position: relative;
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
       gap: 8px;
+      width: 100%;
 
       button {
-        width: 100%;
+        position: relative;
+        width: calc(50% - 4px);
         flex-shrink: 0;
       }
     }
