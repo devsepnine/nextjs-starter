@@ -15,7 +15,10 @@
     height: 100%;
     max-width: var(--2xl);
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 1rem;
+    @media ($media-screen-sm) {
+      padding: 0 2rem;
+    }
     .left,
     .right {
       position: relative;
@@ -27,11 +30,15 @@
     }
     .left {
       .label {
-        display: flex;
+        display: none;
         align-items: center;
         gap: 0 0.5rem;
         font-size: 1.125rem;
         font-weight: 700;
+
+        @media ($media-screen-xs) {
+          display: flex;
+        }
       }
     }
   }
