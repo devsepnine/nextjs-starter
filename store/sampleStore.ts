@@ -4,7 +4,7 @@ interface SampleStore {
   number: number;
 }
 
-const useSampleStore = create<SampleStore>((set) => ({
+const useSampleStore = create<SampleStore>(() => ({
   number: 0,
   number2: '0',
 }));
