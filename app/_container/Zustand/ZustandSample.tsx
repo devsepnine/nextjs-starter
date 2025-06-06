@@ -1,6 +1,7 @@
 'use client';
 
 import { Icon } from '@iconify/react';
+import { motion } from 'motion/react';
 
 import { AnimatedNumber } from '@/components/template/AnimatedNumber';
 import { Button } from '@/components/ui/button';
@@ -24,14 +25,42 @@ const ZustandSample = () => {
           <AnimatedNumber value={number.toString()} />
         </div>
         <div className={styles['button-area']}>
-          <Button size={'sm'} variant={'default'} onClick={increase}>
-            <Icon icon={'mingcute:plus-fill'} width={15} height={15} />
-            {t('Add')}
-          </Button>
-          <Button size={'sm'} variant={'destructive'} onClick={decrease}>
-            <Icon icon={'mingcute:minus-square-fill'} width={15} height={15} />
-            {t('Subtract')}
-          </Button>
+          <motion.div
+            whileHover={{ scale: 1.1, transition: { duration: 0.2 } }}
+            whileTap={{ scale: 0.8 }}
+          >
+            <Button
+              size={'sm'}
+              variant={'default'}
+              className={'w-full font-bold'}
+              onClick={increase}
+            >
+              <Icon icon={'mingcute:plus-fill'} width={15} height={15} className={'min-w-4 mr-1'} />
+              {t('Add').toUpperCase()}
+            </Button>
+          </motion.div>
+          <motion.div
+            whileHover={{ scale: 1.1, transition: { duration: 0.2 } }}
+            whileTap={{
+              scale: 0.8,
+              transition: { duration: 0.2 },
+            }}
+          >
+            <Button
+              size={'sm'}
+              variant={'destructive'}
+              className={'w-full font-bold'}
+              onClick={decrease}
+            >
+              <Icon
+                icon={'mingcute:minus-square-fill'}
+                width={15}
+                height={15}
+                className={'min-w-4 mr-1'}
+              />
+              {t('Subtract').toUpperCase()}
+            </Button>
+          </motion.div>
         </div>
       </div>
     </Card>
