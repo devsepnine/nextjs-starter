@@ -1,13 +1,13 @@
 import { Icon } from '@iconify/react';
 
-import { Button } from '@/components/ui/button.tsx';
+import { Button } from '@/components/ui/button';
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuSub,
   DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu.tsx';
-import { TranslateMenu } from '@/layout/BaseLayout/Header/UserMenu/TranslateMenu/TranslateMenu.tsx';
+} from '@/components/ui/dropdown-menu';
+import { TranslateMenu } from '@/layout/BaseLayout/Header/UserMenu/TranslateMenu/TranslateMenu';
 
 export function UserMenu() {
   return (

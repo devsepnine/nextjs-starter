@@ -1,11 +1,12 @@
 import * as motion from 'motion/react-client';
 
-import styles from './Home.module.scss';
+import { Hello } from '@/app/_container/Hello/Hello';
+import { InfoPack } from '@/app/_container/InfoPack/InfoPack';
+import NumberAnimate from '@/app/_container/NumberAnimate/NumberAnimate';
+import { Something } from '@/app/_container/Something/Something';
+import ZustandSample from '@/app/_container/Zustand/ZustandSample';
 
-import { Hello } from '@/app/_container/Hello/Hello.tsx';
-import { InfoPack } from '@/app/_container/InfoPack/InfoPack.tsx';
-import { Something } from '@/app/_container/Something/Something.tsx';
-import ZustandSample from '@/app/_container/Zustand/ZustandSample.tsx';
+import styles from './Home.module.scss';
 
 export function Home() {
   return (
@@ -45,6 +46,15 @@ export function Home() {
         exit={{ opacity: 0, y: -20 }}
       >
         <ZustandSample />
+      </motion.div>
+      <motion.div
+        className={'w-full h-full'}
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.5 }}
+        exit={{ opacity: 0, y: -20 }}
+      >
+        <NumberAnimate />
       </motion.div>
     </div>
   );

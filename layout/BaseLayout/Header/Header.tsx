@@ -1,13 +1,12 @@
 import { Icon } from '@iconify/react';
 import Link from 'next/link';
 
-import { createTranslation } from '@/i18n/server.ts';
+import { ThemeSwitch } from '@/components/template/ThemeSwitch/ThemeSwitch';
+import { Button } from '@/components/ui/button';
+import { createTranslation } from '@/i18n/server';
+import { UserMenu } from '@/layout/BaseLayout/Header/UserMenu/UserMenu';
 
 import styles from './Header.module.scss';
-
-import { ThemeSwitch } from '@/components/template/ThemeSwitch/ThemeSwitch.tsx';
-import { Button } from '@/components/ui/button.tsx';
-import { UserMenu } from '@/layout/BaseLayout/Header/UserMenu/UserMenu.tsx';
 
 export async function Header() {
   const { t } = await createTranslation('common');
