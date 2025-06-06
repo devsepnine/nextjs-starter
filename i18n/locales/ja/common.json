@@ -7,5 +7,9 @@
   "Boop": "ブープ",
   "Pop": "ポップ",
   "Add": "追加",
-  "Subtract": "減算"
+  "Subtract": "減算",
+  "Input": "入力",
+  "Right": "右",
+  "Left": "左",
+  "Center": "中央"
 }

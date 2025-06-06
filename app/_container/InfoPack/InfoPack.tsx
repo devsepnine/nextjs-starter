@@ -1,15 +1,10 @@
 import { Icon } from '@iconify/react';
 import Link from 'next/link';
 
-import styles from './InfoPack.module.scss';
+import { Card } from '@/components/ui/card';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 
-import { Card } from '@/components/ui/card.tsx';
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from '@/components/ui/tooltip.tsx';
+import styles from './InfoPack.module.scss';
 
 export function InfoPack() {
   return (

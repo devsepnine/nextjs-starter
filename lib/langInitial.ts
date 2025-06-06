@@ -1,6 +1,6 @@
 import { cookies, headers } from 'next/headers';
 
-import { LANGUAGE_COOKIE, setLanguageCookie } from '@/i18n/settings.ts';
+import { LANGUAGE_COOKIE, setLanguageCookie } from '@/i18n/settings';
 
 export async function langInitializer(): Promise<string> {
   let lng: string;
