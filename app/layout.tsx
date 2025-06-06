@@ -6,12 +6,11 @@ import '@/styles/globals.css';
 
 import React from 'react';
 
-import { langInitializer } from '@/lib/langInitial.ts';
-import { themeInitial } from '@/lib/themeInitial.ts';
-
-import { LocaleProvider } from '@/hooks/locale-provider.tsx';
-import { BaseLayout } from '@/layout/BaseLayout/BaseLayout.tsx';
-import { ThemeProvider } from '@/layout/ThemeProvider/ThemeProvider.tsx';
+import { LocaleProvider } from '@/hooks/locale-provider';
+import { BaseLayout } from '@/layout/BaseLayout/BaseLayout';
+import { ThemeProvider } from '@/layout/ThemeProvider/ThemeProvider';
+import { langInitializer } from '@/lib/langInitial';
+import { themeInitial } from '@/lib/themeInitial';
 
 export const viewport: Viewport = {
   themeColor: '#000000',

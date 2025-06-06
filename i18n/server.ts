@@ -3,7 +3,7 @@ import resourcesToBackend from 'i18next-resources-to-backend';
 import { cookies } from 'next/headers';
 import { initReactI18next } from 'react-i18next/initReactI18next';
 
-import { FALLBACK_LANG, getOptions, LANGUAGE_COOKIE, Locales } from '@/i18n/settings.ts';
+import { FALLBACK_LANG, getOptions, LANGUAGE_COOKIE, Locales } from '@/i18n/settings';
 
 async function initI18next(lang: Locales, namespace: string) {
   const i18nInstance = createInstance();
