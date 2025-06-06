@@ -13,6 +13,8 @@ import { Button } from '@/components/ui/button.tsx';
 import { Card } from '@/components/ui/card.tsx';
 import { Input } from '@/components/ui/input.tsx';
 
+const NUM_REGEX = /^-?(\d+\.?\d*|\.\d+)$/;
+
 const ZustandSample = () => {
   const { t } = useTranslation('common');
 
@@ -20,11 +22,12 @@ const ZustandSample = () => {
   const [tempNumber, setTempNumber] = useState<string>('0');
 
   const handleInput = () => {
-    const value = Number(tempNumber);
-    if (!isNaN(value)) {
+    const value = tempNumber;
+
+    if (NUM_REGEX.test(value)) {
       setNumber2(value);
     } else {
-      setNumber2(0);
+      setNumber2('0');
     }
   };
 
@@ -34,7 +37,7 @@ const ZustandSample = () => {
 
       <div className={styles['contents']}>
         <div className={styles['number']}>
-          <AnimatedNumber value={number} />
+          <AnimatedNumber value={number.toString()} />
         </div>
         <div className={styles['button-area']}>
           <Button size={'sm'} variant={'default'} onClick={increase}>
@@ -56,8 +59,7 @@ const ZustandSample = () => {
               onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
                 const value = e.target.value;
                 // regex only number matching include minus sign first
-                const regex = /^-?\d*$/;
-                if (regex.test(value)) {
+                if (NUM_REGEX.test(value) || value === '') {
                   setTempNumber(value);
                 }
               }}
@@ -69,7 +71,7 @@ const ZustandSample = () => {
             />
             <Button onClick={handleInput}>Input!</Button>
           </div>
-          <AnimatedNumber value={Number(number2)} />
+          <AnimatedNumber value={number2} className={'relative flex-wrap'} />
         </div>
       </div>
     </Card>
