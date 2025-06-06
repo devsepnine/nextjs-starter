@@ -7,7 +7,7 @@ import { useEffect, useRef } from 'react';
 import { cn } from '@/lib/utils.ts';
 
 export interface AnimatedNumberProps {
-  value: number;
+  value: string;
   fontSize?: number;
   padding?: number;
   className?: string;
@@ -21,23 +21,37 @@ export const AnimatedNumber = ({
 }: AnimatedNumberProps) => {
   const height = fontSize + padding;
 
-  if (isNaN(value)) return 0;
+  if (!value) {
+    return <Digit value={0} height={height} />;
+  }
+
+  const regex = /^-?(\d+\.?\d*|\.\d+)$/;
+  if (!regex.test(value)) {
+    console.warn('Invalid value for AnimatedNumber:', value);
+    return <Digit value={0} height={height} />;
+  }
 
   let digits = String(value).split('');
   const minusSign = digits[0] === '-' ? '-' : null;
   if (minusSign) digits = digits.slice(1);
-  if (digits.length === 0 || (!value && value !== 0)) {
+  if (digits.length === 0 || !value) {
     return <Digit value={0} height={height} />;
   }
   return (
     <div
       style={{ fontSize }}
-      className={cn('overflow-hidden flex space-x-1 leading-none', className)}
+      className={cn('overflow-hidden flex space-x-0.5 leading-none', className)}
     >
       {minusSign && <span>-</span>}
-      {digits.map((digit, index) => (
-        <Digit key={`${index}-n`} value={Number(digit)} height={height} />
-      ))}
+      {digits.map((digit, index) => {
+        return digit === '.' ? (
+          <span key={`${index}-dot`} style={{ height }}>
+            .
+          </span>
+        ) : (
+          <Digit key={`${index}-n`} value={Number(digit)} height={height} />
+        );
+      })}
     </div>
   );
 };
@@ -59,7 +73,7 @@ const Digit = ({ value, height }: DigitProps) => {
   }, [value, animatedValue]);
 
   return (
-    <div style={{ height }} className="relative w-[1ch] tabular-nums">
+    <div style={{ height }} className="overflow-hidden relative w-[1ch] tabular-nums">
       {[...Array(10).keys()].map((i) => (
         <MotionNumber key={i} mv={animatedValue} number={i} height={height} />
       ))}
