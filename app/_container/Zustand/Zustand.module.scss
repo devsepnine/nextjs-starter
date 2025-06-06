@@ -27,12 +27,14 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 8px;
+      gap: 1rem;
       width: 100%;
 
-      button {
+      > div {
         position: relative;
-        width: calc(50% - 4px);
+        display: flex;
+        justify-content: center;
+        width: 7.5rem;
         flex-shrink: 0;
       }
     }

@@ -7,5 +7,9 @@
   "Boop": "boop",
   "Pop": "pop",
   "Add": "Add",
-  "Subtract": "Subtract"
+  "Subtract": "Subtract",
+  "Input": "Input",
+  "Right": "Right",
+  "Left": "Left",
+  "Center": "Center"
 }
