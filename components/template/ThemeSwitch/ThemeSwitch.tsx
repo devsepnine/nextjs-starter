@@ -6,15 +6,15 @@ import { useTheme } from 'next-themes';
 import * as React from 'react';
 import { useEffect, useState } from 'react';
 
-import styles from './ThemeSwitch.module.scss';
-
-import { Button } from '@/components/ui/button.tsx';
+import { Button } from '@/components/ui/button';
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu.tsx';
+} from '@/components/ui/dropdown-menu';
+
+import styles from './ThemeSwitch.module.scss';
 
 export function ThemeSwitch() {
   const [mounted, setMounted] = useState(false);

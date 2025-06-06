@@ -2,7 +2,7 @@
 
 import React, { createContext, useContext } from 'react';
 
-import { FALLBACK_LANG, Locales } from '@/i18n/settings.ts';
+import { FALLBACK_LANG, Locales } from '@/i18n/settings';
 
 const Context = createContext<Locales>(FALLBACK_LANG);
 

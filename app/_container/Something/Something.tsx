@@ -1,12 +1,11 @@
 import { Icon } from '@iconify/react';
 
-import { createTranslation } from '@/i18n/server.ts';
+import { Button } from '@/components/ui/button';
+import { Card } from '@/components/ui/card';
+import { Dialog, DialogContent, DialogTitle, DialogTrigger } from '@/components/ui/dialog';
+import { createTranslation } from '@/i18n/server';
 
 import styles from './Something.module.scss';
-
-import { Button } from '@/components/ui/button.tsx';
-import { Card } from '@/components/ui/card.tsx';
-import { Dialog, DialogContent, DialogTitle, DialogTrigger } from '@/components/ui/dialog.tsx';
 
 export async function Something() {
   const { t } = await createTranslation('common');

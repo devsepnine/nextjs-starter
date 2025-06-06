@@ -2,16 +2,15 @@
 
 import { Icon } from '@iconify/react';
 
-import { switchLocaleAction } from '@/actions/switch-locale.ts';
-import { useTranslation } from '@/i18n/client.ts';
-import { SUPPORTED_LANGUAGES } from '@/i18n/settings.ts';
-
+import { switchLocaleAction } from '@/actions/switch-locale';
 import {
   DropdownMenuItem,
   DropdownMenuPortal,
   DropdownMenuSubContent,
   DropdownMenuSubTrigger,
-} from '@/components/ui/dropdown-menu.tsx';
+} from '@/components/ui/dropdown-menu';
+import { useTranslation } from '@/i18n/client';
+import { SUPPORTED_LANGUAGES } from '@/i18n/settings';
 
 export function TranslateMenu() {
   const { i18n } = useTranslation('common');

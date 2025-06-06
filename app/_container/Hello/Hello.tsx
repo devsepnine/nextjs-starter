@@ -1,7 +1,7 @@
 import { Icon } from '@iconify/react';
 import { clsx } from 'clsx';
 
-import { createTranslation } from '@/i18n/server.ts';
+import { createTranslation } from '@/i18n/server';
 
 import styles from './Hello.module.scss';
 

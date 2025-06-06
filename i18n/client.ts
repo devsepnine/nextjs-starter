@@ -6,9 +6,8 @@ import resourcesToBackend from 'i18next-resources-to-backend';
 import { useEffect } from 'react';
 import { initReactI18next, useTranslation as useTransAlias } from 'react-i18next';
 
-import { getOptions, LANGUAGE_COOKIE, Locales, SUPPORTED_LNGS } from '@/i18n/settings.ts';
-
-import { useLocale } from '@/hooks/locale-provider.tsx';
+import { useLocale } from '@/hooks/locale-provider';
+import { getOptions, LANGUAGE_COOKIE, Locales, SUPPORTED_LNGS } from '@/i18n/settings';
 
 const runsOnServerSide = typeof window === 'undefined';
 
