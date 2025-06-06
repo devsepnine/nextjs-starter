@@ -4,20 +4,20 @@ import { MotionValue } from 'motion';
 import { motion, useSpring, useTransform } from 'motion/react';
 import { useEffect, useRef } from 'react';
 
-import { cn } from '@/lib/utils.ts';
+import { cn } from '@/lib/utils';
 
 export interface AnimatedNumberProps {
   value: string;
-  fontSize?: number;
-  padding?: number;
+  fontSize?: number; // rem
+  padding?: number; // rem
   className?: string;
 }
 
 export const AnimatedNumber = ({
   value,
   className,
-  fontSize = 24,
-  padding = 2,
+  fontSize = 1.5,
+  padding = 0.125,
 }: AnimatedNumberProps) => {
   const height = fontSize + padding;
 
@@ -30,8 +30,16 @@ export const AnimatedNumber = ({
     console.warn('Invalid value for AnimatedNumber:', value);
     return <Digit value={0} height={height} />;
   }
+  let digits: string[];
 
-  let digits = String(value).split('');
+  if (value.includes('.')) {
+    const [integerPart, decimalPart] = value.split('.');
+    const integer = BigInt(integerPart).toString(10);
+    const decimal = BigInt(decimalPart).toString(10);
+    digits = [...integer, '.', ...decimal];
+  } else {
+    digits = [...BigInt(value).toString(10)];
+  }
   const minusSign = digits[0] === '-' ? '-' : null;
   if (minusSign) digits = digits.slice(1);
   if (digits.length === 0 || !value) {
@@ -39,7 +47,7 @@ export const AnimatedNumber = ({
   }
   return (
     <div
-      style={{ fontSize }}
+      style={{ fontSize: `${fontSize}rem` }}
       className={cn('overflow-hidden flex space-x-0.5 leading-none', className)}
     >
       {minusSign && <span>-</span>}
@@ -73,7 +81,10 @@ const Digit = ({ value, height }: DigitProps) => {
   }, [value, animatedValue]);
 
   return (
-    <div style={{ height }} className="overflow-hidden relative w-[1ch] tabular-nums">
+    <div
+      style={{ height: `${height}rem` }}
+      className="overflow-hidden relative w-[1ch] tabular-nums"
+    >
       {[...Array(10).keys()].map((i) => (
         <MotionNumber key={i} mv={animatedValue} number={i} height={height} />
       ))}
@@ -98,7 +109,7 @@ const MotionNumber = ({ mv, number, height }: NumberProps) => {
       memo -= 10 * height;
     }
 
-    return memo;
+    return `${memo}rem`;
   });
 
   return (

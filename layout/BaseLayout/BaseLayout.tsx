@@ -1,8 +1,8 @@
 import React from 'react';
 
-import styles from './BaseLayout.module.scss';
+import { Header } from '@/layout/BaseLayout/Header/Header';
 
-import { Header } from '@/layout/BaseLayout/Header/Header.tsx';
+import styles from './BaseLayout.module.scss';
 
 export function BaseLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
