@@ -1,6 +1,6 @@
 {
   "name": "starter-pack",
-  "version": "0.0.14",
+  "version": "0.0.15",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -58,5 +58,10 @@
   },
   "volta": {
     "node": "22.15.0"
-  }
+  },
+  "browserslist": [
+    "> 0.5%",
+    "last 2 versions",
+    "not dead"
+  ]
 }

@@ -2,11 +2,15 @@
 import path from 'path';
 import { fileURLToPath } from 'url';
 
-import withBundleAnalyzer from '@next/bundle-analyzer';
 import withPWA from 'next-pwa';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+
+const withBundleAnalyzer =
+  process.env.ANALYZE === 'true'
+    ? (await import('@next/bundle-analyzer')).default({ enabled: true })
+    : (config) => config;
 
 const wp = withPWA({
   disable: process.env.NODE_ENV === 'development',
@@ -19,60 +23,16 @@ const nextConfig = {
       dynamic: 0,
       static: 180,
     },
+    forceSwcTransforms: true,
   },
 
   reactStrictMode: true,
-
   compress: true, // Gzip Enabled (Next.js 기본값)
   poweredByHeader: false, // X-Powered-By Header remove
 
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
     prependData: "@use 'styles/common/variables' as *;",
-  },
-
-  webpack: (config, { dev, isServer }) => {
-    if (!dev && !isServer) {
-      config.optimization = {
-        ...config.optimization,
-        splitChunks: {
-          chunks: 'all',
-          cacheGroups: {
-            vendor: {
-              test: /[\\/]node_modules[\\/]/,
-              name: 'vendors',
-              chunks: 'all',
-              priority: 10,
-            },
-
-            motion: {
-              test: /[\\/]node_modules[\\/](motion|framer-motion)[\\/]/,
-              name: 'motion',
-              chunks: 'all',
-              priority: 20,
-            },
-
-            radix: {
-              test: /[\\/]node_modules[\\/]@radix-ui[\\/]/,
-              name: 'radix',
-              chunks: 'all',
-              priority: 20,
-            },
-
-            i18n: {
-              test: /[\\/]node_modules[\\/](i18next|react-i18next)[\\/]/,
-              name: 'i18n',
-              chunks: 'all',
-              priority: 20,
-            },
-          },
-        },
-        // Tree Shaking
-        usedExports: true, // usedExports 활성화
-        sideEffects: false, // side effects 없는 모듈로 가정하여 더 공격적인 최적화
-      };
-    }
-    return config;
   },
 
   // HTTP 헤더 설정
@@ -103,10 +63,5 @@ const nextConfig = {
   },
 };
 
-// 번들 분석기 설정 - ANALYZE=true 환경변수로 활성화
-const bundleAnalyzer = withBundleAnalyzer({
-  enabled: process.env.ANALYZE === 'true',
-});
-
 // 설정 조합: 번들분석기 → PWA → Next.js 설정
-export default bundleAnalyzer(wp(nextConfig));
+export default withBundleAnalyzer(wp(nextConfig));

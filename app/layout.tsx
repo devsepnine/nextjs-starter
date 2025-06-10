@@ -4,6 +4,7 @@ import '@/styles/modern-css-reset.scss';
 import '@/styles/preset.scss';
 import '@/styles/globals.css';
 
+import Head from 'next/head';
 import React from 'react';
 
 import { LocaleProvider } from '@/hooks/locale-provider';
@@ -43,6 +44,9 @@ export default async function RootLayout({
 
   return (
     <html lang={lng} suppressHydrationWarning={true}>
+      <Head>
+        <link rel="preconnect" href="https://api.iconify.design" crossOrigin="anonymous" />
+      </Head>
       <body>
         <script dangerouslySetInnerHTML={{ __html: ti }} />
         <LocaleProvider value={lng}>
