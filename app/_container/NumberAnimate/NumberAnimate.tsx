@@ -46,12 +46,12 @@ const NumberAnimate = () => {
           />
         </div>
 
-        <div className={'flex gap-x-2 items-center'}>
+        <div className={'flex flex-wrap gap-2 items-center'}>
           <Input
             name={'number-input'}
             aria-label={'Number Input'}
             type={'text'}
-            className={'w-full h-10'}
+            className={'w-full max-w-full h-10 sm:max-w-4/6'}
             value={tempNumber}
             onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
               const value = e.target.value;
@@ -65,11 +65,15 @@ const NumberAnimate = () => {
               }
             }}
           />
-          <Button onClick={handleInput} aria-label={t('Input')}>
+          <Button
+            onClick={handleInput}
+            aria-label={t('Input')}
+            className={'w-full sm:max-w-2/6 sm:shrink sm:w-auto sm:grow '}
+          >
             {t('Input').toUpperCase()}!!
           </Button>
           <Select value={position} onValueChange={setPosition}>
-            <SelectTrigger className={'w-44'} size={'semi-lg'} aria-label={'Position'}>
+            <SelectTrigger className={'min-w-44 grow'} size={'semi-lg'} aria-label={'Position'}>
               <SelectValue placeholder={'Select'} />
             </SelectTrigger>
             <SelectContent>
@@ -79,7 +83,7 @@ const NumberAnimate = () => {
             </SelectContent>
           </Select>
           <Select value={size.toString()} onValueChange={(value) => setSize(Number(value))}>
-            <SelectTrigger className={'w-44'} aria-label={'Size'} size={'semi-lg'}>
+            <SelectTrigger className={'min-w-44 grow'} aria-label={'Size'} size={'semi-lg'}>
               <SelectValue placeholder={'Size'} />
             </SelectTrigger>
             <SelectContent>
