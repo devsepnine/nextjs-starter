@@ -48,6 +48,8 @@ const NumberAnimate = () => {
 
         <div className={'flex gap-x-2 items-center'}>
           <Input
+            name={'number-input'}
+            aria-label={'Number Input'}
             type={'text'}
             className={'w-full h-10'}
             value={tempNumber}
@@ -63,9 +65,11 @@ const NumberAnimate = () => {
               }
             }}
           />
-          <Button onClick={handleInput}>{t('Input').toUpperCase()}!!</Button>
+          <Button onClick={handleInput} aria-label={t('Input')}>
+            {t('Input').toUpperCase()}!!
+          </Button>
           <Select value={position} onValueChange={setPosition}>
-            <SelectTrigger className={'w-44'}>
+            <SelectTrigger className={'w-44'} size={'semi-lg'} aria-label={'Position'}>
               <SelectValue placeholder={'Select'} />
             </SelectTrigger>
             <SelectContent>
@@ -75,7 +79,7 @@ const NumberAnimate = () => {
             </SelectContent>
           </Select>
           <Select value={size.toString()} onValueChange={(value) => setSize(Number(value))}>
-            <SelectTrigger className={'w-44'}>
+            <SelectTrigger className={'w-44'} aria-label={'Size'} size={'semi-lg'}>
               <SelectValue placeholder={'Size'} />
             </SelectTrigger>
             <SelectContent>
