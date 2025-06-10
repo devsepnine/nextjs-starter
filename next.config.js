@@ -23,6 +23,7 @@ const nextConfig = {
       dynamic: 0,
       static: 180,
     },
+    forceSwcTransforms: true,
   },
 
   reactStrictMode: true,
@@ -32,78 +33,6 @@ const nextConfig = {
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
     prependData: "@use 'styles/common/variables' as *;",
-  },
-
-  webpack: (config, { dev, isServer }) => {
-    if (!dev && !isServer) {
-      config.optimization = {
-        ...config.optimization,
-        splitChunks: {
-          chunks: 'all',
-          minSize: 20000,
-          maxSize: 200000,
-          cacheGroups: {
-            default: false,
-            vendors: false,
-            
-            // React/Next.js core
-            react: {
-              test: /[\\/]node_modules[\\/](react|react-dom|next)[\\/]/,
-              name: 'react',
-              chunks: 'all',
-              priority: 40,
-              enforce: true,
-            },
-
-            // Motion library - only load when needed
-            motion: {
-              test: /[\\/]node_modules[\\/](motion|framer-motion)[\\/]/,
-              name: 'motion',
-              chunks: 'async',
-              priority: 30,
-              enforce: true,
-            },
-
-            // UI libraries
-            radix: {
-              test: /[\\/]node_modules[\\/]@radix-ui[\\/]/,
-              name: 'radix',
-              chunks: 'all',
-              priority: 25,
-            },
-
-            // Icons - lazy load
-            icons: {
-              test: /[\\/]node_modules[\\/](@iconify|lucide-react)[\\/]/,
-              name: 'icons',
-              chunks: 'async',
-              priority: 25,
-            },
-
-            // i18n
-            i18n: {
-              test: /[\\/]node_modules[\\/](i18next|react-i18next)[\\/]/,
-              name: 'i18n',
-              chunks: 'all',
-              priority: 20,
-            },
-
-            // Other vendor libraries
-            common: {
-              test: /[\\/]node_modules[\\/]/,
-              name: 'common',
-              chunks: 'all',
-              priority: 10,
-              minChunks: 2,
-            },
-          },
-        },
-        usedExports: true,
-        sideEffects: false,
-        moduleIds: 'deterministic',
-      };
-    }
-    return config;
   },
 
   // HTTP 헤더 설정
