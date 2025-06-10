@@ -19,7 +19,6 @@ const nextConfig = {
       dynamic: 0,
       static: 180,
     },
-    optimizeCss: true,
   },
 
   reactStrictMode: true,
