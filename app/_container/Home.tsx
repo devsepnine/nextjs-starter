@@ -1,17 +1,23 @@
-import * as motion from 'motion/react-client';
+import { div as MotionDiv } from 'motion/react-client';
+import dynamic from 'next/dynamic';
 
 import { Hello } from '@/app/_container/Hello/Hello';
-import { InfoPack } from '@/app/_container/InfoPack/InfoPack';
-import NumberAnimate from '@/app/_container/NumberAnimate/NumberAnimate';
-import { Something } from '@/app/_container/Something/Something';
-import ZustandSample from '@/app/_container/Zustand/ZustandSample';
+
+const InfoPack = dynamic(() =>
+  import('@/app/_container/InfoPack/InfoPack').then((mod) => ({ default: mod.InfoPack }))
+);
+const NumberAnimate = dynamic(() => import('@/app/_container/NumberAnimate/NumberAnimate'));
+const Something = dynamic(() =>
+  import('@/app/_container/Something/Something').then((mod) => ({ default: mod.Something }))
+);
+const ZustandSample = dynamic(() => import('@/app/_container/Zustand/ZustandSample'));
 
 import styles from './Home.module.scss';
 
 export function Home() {
   return (
     <div className={styles['home']}>
-      <motion.div
+      <MotionDiv
         className={'md:col-span-2'}
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -19,8 +25,8 @@ export function Home() {
         exit={{ opacity: 0, y: -20 }}
       >
         <Hello />
-      </motion.div>
-      <motion.div
+      </MotionDiv>
+      <MotionDiv
         className={'w-full h-full bp:col-span-2'}
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -28,8 +34,8 @@ export function Home() {
         exit={{ opacity: 0, y: -20 }}
       >
         <InfoPack />
-      </motion.div>
-      <motion.div
+      </MotionDiv>
+      <MotionDiv
         className={'w-full h-full'}
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -37,8 +43,8 @@ export function Home() {
         exit={{ opacity: 0, y: -20 }}
       >
         <Something />
-      </motion.div>
-      <motion.div
+      </MotionDiv>
+      <MotionDiv
         className={'w-full h-full'}
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -46,8 +52,8 @@ export function Home() {
         exit={{ opacity: 0, y: -20 }}
       >
         <ZustandSample />
-      </motion.div>
-      <motion.div
+      </MotionDiv>
+      <MotionDiv
         className={'w-full h-full'}
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -55,7 +61,7 @@ export function Home() {
         exit={{ opacity: 0, y: -20 }}
       >
         <NumberAnimate />
-      </motion.div>
+      </MotionDiv>
     </div>
   );
 }
