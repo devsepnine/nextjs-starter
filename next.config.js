@@ -1,4 +1,5 @@
 /** @type {import('next').NextConfig} */
+import { createRequire } from 'module';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
@@ -6,6 +7,8 @@ import withPWA from 'next-pwa';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+const require = createRequire(import.meta.url);
+const { version } = require('./package.json');
 
 const withBundleAnalyzer =
   process.env.ANALYZE === 'true'
@@ -35,6 +38,15 @@ const nextConfig = {
     prependData: "@use 'styles/common/variables' as *;",
   },
 
+  webpack(config, { isServer }) {
+    if (!isServer) {
+      config.output.filename =
+        'static/chunks/[name]-v' + version.replace(/\./g, '_') + '-[contenthash].js';
+      config.output.chunkFilename = `static/chunks/[name]-v${version.replace(/\./g, '_')}-[contenthash].js`;
+    }
+    return config;
+  },
+
   // HTTP 헤더 설정
   headers: async () => {
     return [
@@ -47,6 +59,15 @@ const nextConfig = {
           },
         ],
         source: '/:path*',
+      },
+      {
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=86400, immutable', // 24시간 캐시
+          },
+        ],
+        source: '/_next/static/chunks/:path*',
       },
       {
         // 정적 자산에 장기 캐시 헤더 적용 (이미지, 폰트, 오디오, 비디오)
