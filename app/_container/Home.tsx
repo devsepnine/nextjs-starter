@@ -12,6 +12,8 @@ const Something = dynamic(() =>
 );
 const ZustandSample = dynamic(() => import('@/app/_container/Zustand/ZustandSample'));
 
+const GoSecondPage = dynamic(() => import('@/app/_container/GoSencondPage/GoSecondPage'));
+
 import styles from './Home.module.scss';
 
 export function Home() {
@@ -62,6 +64,7 @@ export function Home() {
       >
         <NumberAnimate />
       </MotionDiv>
+      <GoSecondPage />
     </div>
   );
 }
