@@ -1,8 +1,8 @@
 html {
-  .home {
+  .root {
     display: grid;
     grid-template-columns: 1fr;
-    padding: 1rem;
+    padding: 0 1rem;
     margin: auto;
     gap: 0.5rem;
     @media ($media-screen-md) {
