@@ -3,26 +3,22 @@ import dynamic from 'next/dynamic';
 
 import { Hello } from '@/app/_container/Hello/Hello';
 
-const InfoPack = dynamic(() =>
-  import('@/app/_container/InfoPack/InfoPack').then((mod) => ({ default: mod.InfoPack }))
-);
+const InfoPack = dynamic(() => import('@/app/_container/InfoPack/InfoPack'));
 const NumberAnimate = dynamic(() => import('@/app/_container/NumberAnimate/NumberAnimate'));
-const Something = dynamic(() =>
-  import('@/app/_container/Something/Something').then((mod) => ({ default: mod.Something }))
-);
+const Something = dynamic(() => import('@/app/_container/Something/Something'));
 const ZustandSample = dynamic(() => import('@/app/_container/Zustand/ZustandSample'));
+const GoSecondPage = dynamic(() => import('@/app/_container/GoSecondPage/GoSecondPage'));
 
 import styles from './Home.module.scss';
 
 export function Home() {
   return (
-    <div className={styles['home']}>
+    <div className={styles['root']}>
       <MotionDiv
         className={'md:col-span-2'}
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.1 }}
-        exit={{ opacity: 0, y: -20 }}
       >
         <Hello />
       </MotionDiv>
@@ -31,7 +27,6 @@ export function Home() {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.2 }}
-        exit={{ opacity: 0, y: -20 }}
       >
         <InfoPack />
       </MotionDiv>
@@ -40,7 +35,6 @@ export function Home() {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.3 }}
-        exit={{ opacity: 0, y: -20 }}
       >
         <Something />
       </MotionDiv>
@@ -49,7 +43,6 @@ export function Home() {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.4 }}
-        exit={{ opacity: 0, y: -20 }}
       >
         <ZustandSample />
       </MotionDiv>
@@ -58,9 +51,16 @@ export function Home() {
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.5 }}
-        exit={{ opacity: 0, y: -20 }}
       >
         <NumberAnimate />
+      </MotionDiv>
+      <MotionDiv
+        className={'w-full h-full'}
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.6 }}
+      >
+        <GoSecondPage />
       </MotionDiv>
     </div>
   );

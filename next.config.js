@@ -38,11 +38,15 @@ const nextConfig = {
     prependData: "@use 'styles/common/variables' as *;",
   },
 
-  webpack(config, { isServer }) {
+  webpack(config, { isServer, dev }) {
     if (!isServer) {
-      config.output.filename =
-        'static/chunks/[name]-v' + version.replace(/\./g, '_') + '-[contenthash].js';
-      config.output.chunkFilename = `static/chunks/[name]-v${version.replace(/\./g, '_')}-[contenthash].js`;
+      if (!dev) {
+        config.output.filename = `static/chunks/[name]-v${version.replace(/\./g, '_')}-[contenthash].js`;
+        config.output.chunkFilename = `static/chunks/[name]-v${version.replace(/\./g, '_')}-[contenthash].js`;
+      } else {
+        config.output.filename = `static/chunks/[name]-v${version.replace(/\./g, '_')}-[hash].js`;
+        config.output.chunkFilename = `static/chunks/[name]-v${version.replace(/\./g, '_')}-[hash].js`;
+      }
     }
     return config;
   },
