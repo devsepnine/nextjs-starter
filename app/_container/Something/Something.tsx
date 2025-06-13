@@ -7,7 +7,7 @@ import { createTranslation } from '@/i18n/server';
 
 import styles from './Something.module.scss';
 
-export async function Something() {
+const Something = async () => {
   const { t } = await createTranslation('common');
   return (
     <Card className={styles['root']}>
@@ -25,4 +25,6 @@ export async function Something() {
       </Dialog>
     </Card>
   );
-}
+};
+
+export default Something;
