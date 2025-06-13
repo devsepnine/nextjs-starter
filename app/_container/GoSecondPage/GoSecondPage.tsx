@@ -8,6 +8,7 @@ const GoSecondPage = () => {
   const router = useRouter();
   return (
     <Button
+      className={'w-full'}
       onClick={() => {
         router.push('/second');
       }}
