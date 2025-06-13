@@ -6,7 +6,7 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/comp
 
 import styles from './InfoPack.module.scss';
 
-export function InfoPack() {
+const InfoPack = () => {
   return (
     <Card className={styles['root']}>
       <div className={styles['title']}>library list</div>
@@ -85,4 +85,6 @@ export function InfoPack() {
       </div>
     </Card>
   );
-}
+};
+
+export default InfoPack;
