@@ -55,13 +55,13 @@ jobs:
       - name: Add empty commit if branch type is hotfix and master branch
         if: ${{ inputs.branch_type == 'hotfix' && needs.setup.outputs.baseBranch == 'master' }}
         run: |
-          git config user.name "c0zycr473"
+          git config user.name "HIBICanvas"
           git config user.email "devsepnine@hotmail.com"
           git commit --allow-empty -m "Empty commit for hotfix ${{ inputs.version }} PR creation"
 
       - name: Create Release
         run: |
-          git config user.name "c0zycr473"
+          git config user.name "HIBICanvas"
           git config user.email "devsepnine@hotmail.com"
 
           git push origin ${{inputs.branch_type}}/${{ inputs.version || steps.draft-release.outputs.name }}

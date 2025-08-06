@@ -80,11 +80,14 @@ importers:
       tailwindcss:
         specifier: ^4.1.11
         version: 4.1.11
+      temporal-polyfill:
+        specifier: ^0.3.0
+        version: 0.3.0
       zustand:
         specifier: ^5.0.7
         version: 5.0.7(@types/react@19.1.9)(react@19.1.1)
     devDependencies:
-      '@c0zycr473/prettier-config':
+      '@hibicanvas/prettier-config':
         specifier: ^1.0.57
         version: 1.0.57(prettier@3.6.2)
       '@iconify/react':
@@ -644,11 +647,6 @@ packages:
     resolution: {integrity: sha512-ruv7Ae4J5dUYULmeXw1gmb7rYRz57OWCPM57pHojnLq/3Z1CK2lNSLTCVjxVk1F/TZHwOZZrOWi0ur95BbLxNQ==}
     engines: {node: '>=6.9.0'}
 
-  '@c0zycr473/prettier-config@1.0.57':
-    resolution: {integrity: sha512-Qr5ZaNz+baJHqmb8FLMvKWCqR1Du4N91pdg32wbJQ0nPbgANHONYpHJmm8NiufDBEOolW/OiVQqXCM0/OTJtCA==}
-    peerDependencies:
-      prettier: '>=3.0.0'
-
   '@discoveryjs/json-ext@0.5.7':
     resolution: {integrity: sha512-dBVuXR082gk3jsFp7Rd/JI4kytwGHecnCoTtXFb7DB6CNHp4rg5k1bhg0nWdLGLnOV71lmDzGQaLMy8iPLY0pw==}
     engines: {node: '>=10.0.0'}
@@ -714,6 +712,11 @@ packages:
 
   '@floating-ui/utils@0.2.10':
     resolution: {integrity: sha512-aGTxbpbg8/b5JfU1HXSrbH3wXZuLPJcNEcZQFMxLs3oSzgtVu6nFPkbbGGUvBcUjKV2YyB9Wxxabo+HEH9tcRQ==}
+
+  '@hibicanvas/prettier-config@1.0.57':
+    resolution: {integrity: sha512-jZ4jYEdNPAJCCFqVJSWO0Pf+lAgO5b9bMKvmouOK8n5duM3JsST/FrLFUMvKXw8dv7m7GAVPO2R/OnP+pDvxow==}
+    peerDependencies:
+      prettier: '>=3.0.0'
 
   '@humanfs/core@0.19.1':
     resolution: {integrity: sha512-5DyQ4+1JEUzejeK1JGICcideyfUbGixgS9jNgex5nqkW+cY7WZhxBigmieN5Qnw9ZosSNVC9KQKyb+GUaGyKUA==}
@@ -3612,6 +3615,12 @@ packages:
     resolution: {integrity: sha512-aoBAniQmmwtcKp/7BzsH8Cxzv8OL736p7v1ihGb5e9DJ9kTwGWHrQrVB5+lfVDzfGrdRzXch+ig7LHaY1JTOrg==}
     engines: {node: '>=8'}
 
+  temporal-polyfill@0.3.0:
+    resolution: {integrity: sha512-qNsTkX9K8hi+FHDfHmf22e/OGuXmfBm9RqNismxBrnSmZVJKegQ+HYYXT+R7Ha8F/YSm2Y34vmzD4cxMu2u95g==}
+
+  temporal-spec@0.3.0:
+    resolution: {integrity: sha512-n+noVpIqz4hYgFSMOSiINNOUOMFtV5cZQNCmmszA6GiVFVRt3G7AqVyhXjhCSmowvQn+NsGn+jMDMKJYHd3bSQ==}
+
   tempy@0.6.0:
     resolution: {integrity: sha512-G13vtMYPT/J8A4X2SjdtBTphZlrp1gKv6hZiOjw14RCWg6GbHuQBGtjlx75xLbYV/wEc0D7G5K4rxKP/cXk8Bw==}
     engines: {node: '>=10'}
@@ -4595,10 +4604,6 @@ snapshots:
       '@babel/helper-string-parser': 7.27.1
       '@babel/helper-validator-identifier': 7.27.1
 
-  '@c0zycr473/prettier-config@1.0.57(prettier@3.6.2)':
-    dependencies:
-      prettier: 3.6.2
-
   '@discoveryjs/json-ext@0.5.7': {}
 
   '@emnapi/core@1.4.5':
@@ -4677,6 +4682,10 @@ snapshots:
       react-dom: 19.1.1(react@19.1.1)
 
   '@floating-ui/utils@0.2.10': {}
+
+  '@hibicanvas/prettier-config@1.0.57(prettier@3.6.2)':
+    dependencies:
+      prettier: 3.6.2
 
   '@humanfs/core@0.19.1': {}
 
@@ -7680,6 +7689,12 @@ snapshots:
       yallist: 5.0.0
 
   temp-dir@2.0.0: {}
+
+  temporal-polyfill@0.3.0:
+    dependencies:
+      temporal-spec: 0.3.0
+
+  temporal-spec@0.3.0: {}
 
   tempy@0.6.0:
     dependencies:
