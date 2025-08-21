@@ -17,8 +17,8 @@ export const viewport: Viewport = {
   themeColor: '#000000',
 };
 export const metadata: Metadata = {
-  title: 'c0zyCr473 Stater Kit',
-  description: 'Next.js Starter Kit - c0zyCr473',
+  title: 'HIBICanvas Stater Kit',
+  description: 'Next.js Starter Kit - HIBICanvas',
   manifest: '/manifest.webmanifest',
   icons: {
     other: [

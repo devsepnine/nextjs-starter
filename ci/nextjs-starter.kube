@@ -1,0 +1,16 @@
+# Podman Kube YAML for nextjs-starter
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nextjs-starter
+spec:
+  containers:
+  - name: nextjs-starter
+    image: nextjs-starter:latest
+    ports:
+    - containerPort: 3000
+      hostPort: 19300
+    env:
+    - name: NODE_ENV
+      value: "production"
+  restartPolicy: Always

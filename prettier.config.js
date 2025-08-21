@@ -1,4 +1,4 @@
-import preset from '@c0zycr473/prettier-config';
+import preset from '@hibicanvas/prettier-config';
 
 const config = {
   ...preset,
