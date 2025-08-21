@@ -1,7 +1,7 @@
 # ==================================
 # Builder Stage
 # ==================================
-FROM node:22-alpine AS builder
+FROM node:22-slim AS builder
 
 WORKDIR /usr/src/app
 
@@ -22,7 +22,7 @@ RUN npm install -g --ignore-scripts pnpm \
 # ==================================
 # Runner Stage
 # ==================================
-FROM node:20-alpine AS runner
+FROM node:20-slim AS runner
 
 WORKDIR /usr/src/app
 
