@@ -1,13 +1,14 @@
 import { div as MotionDiv } from 'motion/react-client';
 import dynamic from 'next/dynamic';
 
-import { Hello } from '@/app/_container/Hello/Hello';
-
 const InfoPack = dynamic(() => import('@/app/_container/InfoPack/InfoPack'));
 const NumberAnimate = dynamic(() => import('@/app/_container/NumberAnimate/NumberAnimate'));
 const Something = dynamic(() => import('@/app/_container/Something/Something'));
 const ZustandSample = dynamic(() => import('@/app/_container/Zustand/ZustandSample'));
 const GoSecondPage = dynamic(() => import('@/app/_container/GoSecondPage/GoSecondPage'));
+
+import { Hello } from '@/app/_container/Hello/Hello';
+import TemporalTest from '@/app/_container/TemporalTest/TemporalTest';
 
 import styles from './Home.module.scss';
 
@@ -61,6 +62,14 @@ export function Home() {
         transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.6 }}
       >
         <GoSecondPage />
+      </MotionDiv>
+      <MotionDiv
+        className={'w-full h-full'}
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.7 }}
+      >
+        <TemporalTest />
       </MotionDiv>
     </div>
   );
