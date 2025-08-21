@@ -6,12 +6,6 @@ services:
     build:
       context: ../
       dockerfile: ./ci/Dockerfile
-      x-bake:
-        tags:
-          - nextjs-starter:latest
-        platforms:
-          - linux/amd64
-          - linux/arm64
     ports:
       - '19300:3000'
     environment:
