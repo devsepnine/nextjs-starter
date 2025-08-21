@@ -5,9 +5,10 @@ WORKDIR /usr/src/app
 COPY . .
 
 # --- install pnpm & change user ---------------------------------
-RUN npm install -g --ignore-scripts pnpm  \
+# Alpine Linux에서 systemd 통신을 피하기 위해 -D 플래그를 사용합니다.
+RUN npm install -g --ignore-scripts pnpm \
     && pnpm -v \
-    && (id node || adduser --disabled-password --gecos "" node) \
+    && adduser -D -h /usr/src/app node \
     && chown -R node:node /usr/src/app
 USER node
 
@@ -32,8 +33,8 @@ COPY --from=builder /usr/src/app/public ./public
 RUN npm install -g --ignore-scripts pnpm  \
     && pnpm -v \
     && pnpm i --frozen-lockfile --prod \
-    && (id node || adduser --disabled-password --gecos "" node) \
-    && chown -R node:node /usr/src/app
+    && adduser -D -h /usr/src/app node \
+        && chown -R node:node /usr/src/app
 USER node
 
 EXPOSE 3000
