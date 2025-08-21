@@ -13,16 +13,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Build and deploy with Podman
+      - name: Build and run Docker container
         run: |
-          # Build the image
-          podman build --isolation chroot --security-opt label=disable -t nextjs-starter:latest -f ci/Dockerfile .
-          
-          # Stop existing pod if running
-          podman kube down ci/nextjs-starter.kube || true
-          
-          # Deploy with podman kube and register as systemd service
-          podman kube play ci/nextjs-starter.kube --service-type=systemd
-          
-          # Enable and start the service
-          systemctl --user enable --now pod-nextjs-starter.service
+          cd ci
+          podman compose up -d --build --force-recreate
