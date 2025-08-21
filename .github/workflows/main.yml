@@ -16,4 +16,4 @@ jobs:
       - name: Build and deploy with Podman
         run: |
           cd ci
-          docker-compose up -d --build --force-recreate
+          docker compose up -d --build --force-recreate
