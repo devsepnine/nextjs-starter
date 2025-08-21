@@ -16,7 +16,7 @@ jobs:
       - name: Build and deploy with Podman
         run: |
           # Build the image
-          podman build --isolation chroot -t nextjs-starter:latest -f ci/Dockerfile .
+          podman build --isolation chroot --security-opt label=disable -t nextjs-starter:latest -f ci/Dockerfile .
           
           # Stop existing pod if running
           podman kube down ci/nextjs-starter.kube || true
