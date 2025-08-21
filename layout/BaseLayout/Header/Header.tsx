@@ -25,7 +25,7 @@ export async function Header() {
               <Icon icon={'mingcute:github-fill'} width={15} height={15} />
             </Button>
           </Link>
-          <Link href={'https://x.com/c0zycr473'}>
+          <Link href={'https://x.com/HIBICanvas'}>
             <Button variant={'ghost'} size={'icon'} aria-label={'x(twitter)'}>
               <Icon icon={'mingcute:social-x-line'} width={15} height={15} />
             </Button>

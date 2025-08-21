@@ -1,4 +1,4 @@
-FROM node:22.16.0-alpine AS builder
+FROM node:22.18.0-alpine AS builder
 
 WORKDIR /usr/src/app
 
@@ -18,7 +18,7 @@ RUN pnpm i --frozen-lockfile --ignore-scripts \
     && echo "Build completed"
 
 
-FROM node:20.15.0-alpine AS runner
+FROM node:20.18.0-alpine AS runner
 
 WORKDIR /usr/src/app
 
