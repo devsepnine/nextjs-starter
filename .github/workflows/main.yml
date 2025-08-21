@@ -16,4 +16,4 @@ jobs:
       - name: Build and run Docker container
         run: |
           cd ci
-          docker-compose up -d --build --force-recreate
+          podman compose up -d --build --force-recreate
