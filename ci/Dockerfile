@@ -31,7 +31,7 @@ COPY --from=builder /usr/src/app/public ./public
 # --- install pnpm & change user ---------------------------------
 RUN npm install -g --ignore-scripts pnpm  \
     && pnpm -v \
-    && pnpm i --frozen-lockfile --prod \
+    && pnpm i --frozen-lockfile --prod --ignore-scripts \
     && (id node || adduser --disabled-password --gecos "" node) \
     && chown -R node:node /usr/src/app
 USER node
