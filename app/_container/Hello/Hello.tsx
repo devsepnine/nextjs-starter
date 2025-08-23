@@ -1,20 +1,25 @@
 import { Icon } from '@iconify/react';
+import { msg } from '@lingui/core/macro';
 import { clsx } from 'clsx';
 
-import { createTranslation } from '@/i18n/server';
+import { getServerTranslations } from '@/lib/server-locale';
 
 import styles from './Hello.module.scss';
 
 export async function Hello() {
-  const { t } = await createTranslation('common');
+  const { t } = await getServerTranslations();
   return (
     <div className={styles['root']}>
       <div className={styles['title']}>
         <Icon icon={'mdi:human-hello-variant'} width={30} height={30} />
-        {t('HelloNext')}
+        {t(msg`Hello Next.js`)}
       </div>
-      <div className={styles['description']}>{t('MainDescription')}</div>
-      <div className={clsx(styles['description'], styles['sub'])}>{t('MainDescription2')}</div>
+      <div className={styles['description']}>
+        {t(msg`This is a project configured for convenient and fast start of next.js projects.`)}
+      </div>
+      <div className={clsx(styles['description'], styles['sub'])}>
+        {t(msg`Please let me know any improvements or feedback, and I will incorporate them.`)}
+      </div>
     </div>
   );
 }

@@ -25,8 +25,8 @@ export const AnimatedNumber = ({
     return <Digit value={0} height={height} />;
   }
 
-  const regex = /^-?(\d+\.?\d*|\.\d+)$/;
-  if (!regex.test(value)) {
+  const num = Number(value);
+  if (isNaN(num) || !isFinite(num)) {
     console.warn('Invalid value for AnimatedNumber:', value);
     return <Digit value={0} height={height} />;
   }

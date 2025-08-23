@@ -1,0 +1,67 @@
+msgid ""
+msgstr ""
+"POT-Creation-Date: 2025-08-23 19:29+0900\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: @lingui/cli\n"
+"Language: zh-cn\n"
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Plural-Forms: \n"
+
+#: app/_container/Zustand/ZustandSample.tsx:39
+msgid "Add"
+msgstr "添加"
+
+#: app/_container/Something/Something.tsx:21
+msgid "boop"
+msgstr "啵"
+
+#: app/_container/NumberAnimate/NumberAnimate.tsx:81
+msgid "Center"
+msgstr "居中"
+
+#: app/_container/Hello/Hello.tsx:15
+msgid "Hello Next.js"
+msgstr "你好 Next.js"
+
+#: app/_container/NumberAnimate/NumberAnimate.tsx:70
+#: app/_container/NumberAnimate/NumberAnimate.tsx:73
+msgid "Input"
+msgstr "输入"
+
+#: app/_container/Something/Something.tsx:17
+msgid "Just Sample Design"
+msgstr "示例设计演示"
+
+#: app/_container/NumberAnimate/NumberAnimate.tsx:80
+msgid "Left"
+msgstr "左对齐"
+
+#: app/_container/Hello/Hello.tsx:21
+msgid "Please let me know any improvements or feedback, and I will incorporate them."
+msgstr "如有任何改进建议或反馈，请告诉我，我会采纳的！"
+
+#: app/_container/Something/Something.tsx:25
+msgid "pop"
+msgstr "弹出"
+
+#: app/_container/NumberAnimate/NumberAnimate.tsx:82
+msgid "Right"
+msgstr "右对齐"
+
+#: layout/BaseLayout/Header/Header.tsx:20
+msgid "Starter kit"
+msgstr "起始套件"
+
+#: app/_container/Zustand/ZustandSample.tsx:61
+msgid "Subtract"
+msgstr "减少"
+
+#: app/_container/Hello/Hello.tsx:18
+msgid "This is a project configured for convenient and fast start of next.js projects."
+msgstr "这是一个为便捷快速启动 Next.js 项目而配置的起始模板。EOF < /dev/null"
