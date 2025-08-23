@@ -1,22 +1,23 @@
+import { msg } from '@lingui/core/macro';
 import { Icon } from '@iconify/react';
 import Link from 'next/link';
 
 import { ThemeSwitch } from '@/components/template/ThemeSwitch/ThemeSwitch';
 import { Button } from '@/components/ui/button';
-import { createTranslation } from '@/i18n/server';
+import { getServerTranslations } from '@/lib/server-locale';
 import { UserMenu } from '@/layout/BaseLayout/Header/UserMenu/UserMenu';
 
 import styles from './Header.module.scss';
 
 export async function Header() {
-  const { t } = await createTranslation('common');
+  const { t } = await getServerTranslations();
   return (
     <header className={styles['header']}>
       <div className={styles['contents']}>
         <div className={styles['left']}>
           <span className={styles['label']}>
             <Icon icon={'logos:nextjs-icon'} width={20} height={20} />
-            Next.js {t('StarterKit')}
+            Next.js {t(msg`Starter kit`)}
           </span>
         </div>
         <div className={styles['right']}>

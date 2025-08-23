@@ -1,0 +1,67 @@
+msgid ""
+msgstr ""
+"POT-Creation-Date: 2025-08-23 19:29+0900\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: @lingui/cli\n"
+"Language: ko\n"
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Plural-Forms: \n"
+
+#: app/_container/Zustand/ZustandSample.tsx:39
+msgid "Add"
+msgstr "추가"
+
+#: app/_container/Something/Something.tsx:21
+msgid "boop"
+msgstr "부프"
+
+#: app/_container/NumberAnimate/NumberAnimate.tsx:81
+msgid "Center"
+msgstr "중앙"
+
+#: app/_container/Hello/Hello.tsx:15
+msgid "Hello Next.js"
+msgstr "안녕하세요 Next.js"
+
+#: app/_container/NumberAnimate/NumberAnimate.tsx:70
+#: app/_container/NumberAnimate/NumberAnimate.tsx:73
+msgid "Input"
+msgstr "입력"
+
+#: app/_container/Something/Something.tsx:17
+msgid "Just Sample Design"
+msgstr "샘플 디자인 데모"
+
+#: app/_container/NumberAnimate/NumberAnimate.tsx:80
+msgid "Left"
+msgstr "왼쪽"
+
+#: app/_container/Hello/Hello.tsx:21
+msgid "Please let me know any improvements or feedback, and I will incorporate them."
+msgstr "개선사항이나 피드백을 알려주시면 반영하겠습니다\\!"
+
+#: app/_container/Something/Something.tsx:25
+msgid "pop"
+msgstr "팝"
+
+#: app/_container/NumberAnimate/NumberAnimate.tsx:82
+msgid "Right"
+msgstr "오른쪽"
+
+#: layout/BaseLayout/Header/Header.tsx:20
+msgid "Starter kit"
+msgstr "스타터 키트"
+
+#: app/_container/Zustand/ZustandSample.tsx:61
+msgid "Subtract"
+msgstr "빼기"
+
+#: app/_container/Hello/Hello.tsx:18
+msgid "This is a project configured for convenient and fast start of next.js projects."
+msgstr "편리하고 빠른 Next.js 프로젝트 시작을 위해 구성된 스타터 템플릿입니다.EOF < /dev/null"
