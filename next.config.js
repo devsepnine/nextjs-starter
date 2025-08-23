@@ -27,6 +27,8 @@ const nextConfig = {
       static: 180,
     },
     forceSwcTransforms: true,
+    // Lingui SWC 플러그인 설정
+    swcPlugins: [['@lingui/swc-plugin', {}]],
   },
 
   reactStrictMode: true,
@@ -39,6 +41,14 @@ const nextConfig = {
   },
 
   webpack(config, { isServer, dev }) {
+    // Lingui .po 파일 로더 설정
+    config.module.rules.push({
+      test: /\.po$/,
+      use: {
+        loader: '@lingui/loader',
+      },
+    });
+
     if (!isServer) {
       if (!dev) {
         config.output.filename = `static/chunks/[name]-v${version.replace(/\./g, '_')}-[contenthash].js`;

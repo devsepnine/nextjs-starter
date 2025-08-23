@@ -4,13 +4,12 @@ import '@/styles/modern-css-reset.scss';
 import '@/styles/preset.scss';
 import '@/styles/globals.css';
 
-import Head from 'next/head';
 import React from 'react';
 
-import { LocaleProvider } from '@/hooks/locale-provider';
+import LinguiProvider from '@/components/providers/LinguiProvider';
 import { BaseLayout } from '@/layout/BaseLayout/BaseLayout';
 import { ThemeProvider } from '@/layout/ThemeProvider/ThemeProvider';
-import { langInitializer } from '@/lib/langInitial';
+import { getLocaleFromCookie } from '@/lib/browser-locale';
 import { themeInitial } from '@/lib/themeInitial';
 
 export const viewport: Viewport = {
@@ -37,23 +36,24 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // i18n init
-  const lng = await langInitializer();
+  // i18n init - 미들웨어에서 설정된 쿠키 읽기
+  const lng = await getLocaleFromCookie();
   // initial theme
   const ti = themeInitial();
 
   return (
     <html lang={lng} suppressHydrationWarning={true}>
-      <Head>
+      <head>
         <link rel="preconnect" href="https://api.iconify.design" crossOrigin="anonymous" />
-      </Head>
+        <title>HIVICanvas Starter Kit</title>
+      </head>
       <body>
         <script dangerouslySetInnerHTML={{ __html: ti }} />
-        <LocaleProvider value={lng}>
+        <LinguiProvider locale={lng}>
           <ThemeProvider>
             <BaseLayout>{children}</BaseLayout>
           </ThemeProvider>
-        </LocaleProvider>
+        </LinguiProvider>
       </body>
     </html>
   );

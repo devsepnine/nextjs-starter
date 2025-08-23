@@ -2,7 +2,7 @@
 
 import { cookies } from 'next/headers';
 
-import { LANGUAGE_COOKIE } from '@/i18n/settings';
+import { LANGUAGE_COOKIE } from '@/lib/i18n';
 
 export async function switchLocaleAction(value: string) {
   const c = await cookies();
