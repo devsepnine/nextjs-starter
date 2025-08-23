@@ -44,7 +44,7 @@ msgstr "왼쪽"
 
 #: app/_container/Hello/Hello.tsx:21
 msgid "Please let me know any improvements or feedback, and I will incorporate them."
-msgstr "개선사항이나 피드백을 알려주시면 반영하겠습니다\\!"
+msgstr "개선사항이나 피드백을 알려주시면 반영하겠습니다!"
 
 #: app/_container/Something/Something.tsx:25
 msgid "pop"
@@ -64,4 +64,4 @@ msgstr "빼기"
 
 #: app/_container/Hello/Hello.tsx:18
 msgid "This is a project configured for convenient and fast start of next.js projects."
-msgstr "편리하고 빠른 Next.js 프로젝트 시작을 위해 구성된 스타터 템플릿입니다.EOF < /dev/null"
+msgstr "편리하고 빠른 Next.js 프로젝트 시작을 위해 구성된 스타터 템플릿입니다."

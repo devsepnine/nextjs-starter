@@ -64,4 +64,4 @@ msgstr "减少"
 
 #: app/_container/Hello/Hello.tsx:18
 msgid "This is a project configured for convenient and fast start of next.js projects."
-msgstr "这是一个为便捷快速启动 Next.js 项目而配置的起始模板。EOF < /dev/null"
+msgstr "这是一个为便捷快速启动 Next.js 项目而配置的起始模板。"
