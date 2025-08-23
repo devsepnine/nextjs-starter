@@ -1,17 +1,24 @@
 {
   "name": "starter-pack",
-  "version": "0.0.34",
+  "version": "0.0.35",
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "lingui extract --clean && lingui compile && next build",
     "start": "next start",
     "lint": "next lint",
     "format": "prettier --write .",
-    "analyze": "ANALYZE=true npm run build"
+    "analyze": "ANALYZE=true npm run build",
+    "lingui:extract": "lingui extract --clean",
+    "lingui:compile": "lingui compile",
+    "lingui:watch": "lingui extract --watch"
   },
   "type": "module",
   "dependencies": {
+    "@lingui/core": "^5.4.1",
+    "@lingui/loader": "^5.4.1",
+    "@lingui/macro": "^5.4.1",
+    "@lingui/react": "^5.4.1",
     "@radix-ui/react-checkbox": "^1.3.3",
     "@radix-ui/react-dialog": "^1.1.15",
     "@radix-ui/react-dropdown-menu": "^2.1.16",
@@ -22,9 +29,6 @@
     "@tailwindcss/postcss": "^4.1.12",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
-    "i18next": "^25.4.0",
-    "i18next-browser-languagedetector": "^8.2.0",
-    "i18next-resources-to-backend": "^1.2.1",
     "lucide-react": "^0.540.0",
     "motion": "^12.23.12",
     "next": "^15.5.0",
@@ -33,7 +37,6 @@
     "postcss": "^8.5.6",
     "react": "19.1.1",
     "react-dom": "19.1.1",
-    "react-i18next": "^15.7.1",
     "tailwind-merge": "^3.3.1",
     "tailwindcss": "^4.1.12",
     "temporal-polyfill": "^0.3.0",
@@ -42,6 +45,7 @@
   "devDependencies": {
     "@hibicanvas/prettier-config": "^1.0.57",
     "@iconify/react": "^6.0.0",
+    "@lingui/cli": "^5.4.1",
     "@next/bundle-analyzer": "^15.5.0",
     "@types/node": "^24.3.0",
     "@types/react": "^19.1.10",
@@ -55,7 +59,8 @@
     "prettier": "^3.6.2",
     "sass": "^1.90.0",
     "tw-animate-css": "^1.3.7",
-    "typescript": "^5.9.2"
+    "typescript": "^5.9.2",
+    "@lingui/swc-plugin": "^5.4.1"
   },
   "volta": {
     "node": "22.18.0"

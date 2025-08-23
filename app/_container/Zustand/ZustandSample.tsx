@@ -1,18 +1,18 @@
 'use client';
 
 import { Icon } from '@iconify/react';
+import { useLingui } from '@lingui/react/macro';
 import { motion } from 'motion/react';
 
 import { AnimatedNumber } from '@/components/template/AnimatedNumber';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
-import { useTranslation } from '@/i18n/client';
 import { decrease, increase, useSampleStore } from '@/store/sampleStore';
 
 import styles from './Zustand.module.scss';
 
 const ZustandSample = () => {
-  const { t } = useTranslation('common');
+  const { t } = useLingui();
 
   const { number } = useSampleStore();
 
@@ -36,7 +36,7 @@ const ZustandSample = () => {
               onClick={increase}
             >
               <Icon icon={'mingcute:plus-fill'} width={15} height={15} className={'min-w-4 mr-1'} />
-              {t('Add').toUpperCase()}
+              {t`Add`.toUpperCase()}
             </Button>
           </motion.div>
           <motion.div
@@ -58,7 +58,7 @@ const ZustandSample = () => {
                 height={15}
                 className={'min-w-4 mr-1'}
               />
-              {t('Subtract').toUpperCase()}
+              {t`Subtract`.toUpperCase()}
             </Button>
           </motion.div>
         </div>

@@ -1,5 +1,6 @@
 'use client';
 
+import { useLingui } from '@lingui/react/macro';
 import { useState } from 'react';
 
 import { AnimatedNumber } from '@/components/template/AnimatedNumber';
@@ -13,12 +14,11 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
-import { useTranslation } from '@/i18n/client';
 import { NUM_REGEX } from '@/lib/constants';
 import { cn } from '@/lib/utils';
 
 const NumberAnimate = () => {
-  const { t } = useTranslation('common');
+  const { t } = useLingui();
   const [tempNumber, setTempNumber] = useState<string>('0');
   const [number, setNumber] = useState<string>('0');
 
@@ -67,19 +67,19 @@ const NumberAnimate = () => {
           />
           <Button
             onClick={handleInput}
-            aria-label={t('Input')}
+            aria-label={t`Input`}
             className={'h-10 col-span-6 sm:col-span-2'}
           >
-            {t('Input').toUpperCase()}!!
+            {t`Input`.toUpperCase()}!!
           </Button>
           <Select value={position} onValueChange={setPosition}>
             <SelectTrigger className={'w-full col-span-3'} size={'semi-lg'} aria-label={'Position'}>
               <SelectValue placeholder={'Select'} />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value={'justify-start'}>{t('Left').toUpperCase()}</SelectItem>
-              <SelectItem value={'justify-center'}>{t('Center').toUpperCase()}</SelectItem>
-              <SelectItem value={'justify-end'}>{t('Right').toUpperCase()}</SelectItem>
+              <SelectItem value={'justify-start'}>{t`Left`.toUpperCase()}</SelectItem>
+              <SelectItem value={'justify-center'}>{t`Center`.toUpperCase()}</SelectItem>
+              <SelectItem value={'justify-end'}>{t`Right`.toUpperCase()}</SelectItem>
             </SelectContent>
           </Select>
           <Select value={size.toString()} onValueChange={(value) => setSize(Number(value))}>
