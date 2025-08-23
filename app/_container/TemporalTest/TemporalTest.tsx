@@ -7,10 +7,6 @@ import { Card } from '@/components/ui/card';
 const TemporalTest = () => {
   const nowPlainDateTime = Temporal.Now.plainDateTimeISO();
   const nowZonedDateTime = Temporal.Now.zonedDateTimeISO();
-  const nowPlainWithOffset = nowZonedDateTime
-    .toInstant()
-    .toZonedDateTimeISO(nowZonedDateTime.timeZoneId)
-    .toPlainDateTime();
   const plainDateTimeUTC = nowZonedDateTime.toInstant().toZonedDateTimeISO('UTC').toPlainDateTime();
   const duration = plainDateTimeUTC.until(nowPlainDateTime, { largestUnit: 'years' });
 
