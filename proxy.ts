@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { FALLBACK_LANG, LANGUAGE_COOKIE, SUPPORTED_LNGS, setLanguageCookie } from '@/lib/i18n';
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   // 이미 언어 쿠키가 설정되어 있는지 확인
   const existingLocale = request.cookies.get(LANGUAGE_COOKIE)?.value;
 
