@@ -26,9 +26,19 @@ const nextConfig = {
       dynamic: 0,
       static: 180,
     },
-    forceSwcTransforms: true,
     // Lingui SWC 플러그인 설정
     swcPlugins: [['@lingui/swc-plugin', {}]],
+  },
+
+  // Turbopack 설정 (Next.js 16+)
+  turbopack: {
+    rules: {
+      // Lingui .po 파일 로더 설정 (Turbopack용)
+      '*.po': {
+        loaders: ['@lingui/loader'],
+        as: '*.js',
+      },
+    },
   },
 
   reactStrictMode: true,
@@ -37,7 +47,7 @@ const nextConfig = {
 
   sassOptions: {
     includePaths: [path.join(__dirname, 'styles')],
-    prependData: "@use 'styles/common/variables' as *;",
+    prependData: "@use '@/styles/common/variables' as *;",
   },
 
   webpack(config, { isServer, dev }) {
