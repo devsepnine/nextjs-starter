@@ -7,14 +7,13 @@ pnpm-debug.log*
 
 # Environment files
 .env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
+.env.*
+!.env.example
 
 # Git
 .git/
 .gitignore
+.gitattributes
 
 # IDE
 .vscode/
@@ -27,27 +26,25 @@ pnpm-debug.log*
 Thumbs.db
 
 # Logs
-logs
+logs/
 *.log
 
 # Runtime data
-pids
+pids/
 *.pid
 *.seed
 *.pid.lock
 
-# Coverage directory used by tools like istanbul
+# Coverage
 coverage/
-
-# Testing
-.nyc_output
-.coverage
+.nyc_output/
 *.lcov
 
-# Build outputs (will be copied from builder stage)
+# Build outputs (rebuilt in container)
 .next/
 out/
 build/
+dist/
 
 # Docker
 Dockerfile*
@@ -57,8 +54,52 @@ docker-compose*
 # Documentation
 README.md
 CHANGELOG.md
+LICENSE
 docs/
 
 # CI/CD
 .github/
 ci/
+
+# Linting/Formatting (not needed at runtime)
+eslint.config.*
+.eslintrc*
+prettier.config.*
+.prettierrc*
+.prettierignore
+.editorconfig
+
+# TypeScript build cache
+*.tsbuildinfo
+tsconfig.tsbuildinfo
+
+# Test files
+__tests__/
+__mocks__/
+*.test.ts
+*.test.tsx
+*.spec.ts
+*.spec.tsx
+jest.config.*
+vitest.config.*
+
+# Storybook
+.storybook/
+storybook-static/
+
+# Turbo
+.turbo/
+
+# Vercel
+.vercel/
+
+# Task Master
+.taskmaster/
+
+# Husky
+.husky/
+
+# Misc
+*.md
+!package.json
+!pnpm-lock.yaml
