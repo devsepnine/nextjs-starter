@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 import { createRequire } from 'module';
 
-import withPWA from 'next-pwa';
+import withSerwistInit from '@serwist/next';
 
 const require = createRequire(import.meta.url);
 const { version } = require('./package.json');
@@ -11,9 +11,10 @@ const withBundleAnalyzer =
     ? (await import('@next/bundle-analyzer')).default({ enabled: true })
     : (config) => config;
 
-const wp = withPWA({
+const withSerwist = withSerwistInit({
+  swSrc: 'app/sw.ts',
+  swDest: 'public/sw.js',
   disable: process.env.NODE_ENV === 'development',
-  dest: 'public',
 });
 
 const nextConfig = {
@@ -103,5 +104,5 @@ const nextConfig = {
   },
 };
 
-// 설정 조합: 번들분석기 → PWA → Next.js 설정
-export default withBundleAnalyzer(wp(nextConfig));
+// 설정 조합: 번들분석기 → Serwist → Next.js 설정
+export default withBundleAnalyzer(withSerwist(nextConfig));
