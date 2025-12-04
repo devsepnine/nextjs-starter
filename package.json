@@ -10,7 +10,7 @@
     "format": "prettier --write .",
     "analyze": "ANALYZE=true npm run build",
     "lingui:extract": "lingui extract --clean",
-    "lingui:compile": "lingui compile",
+    "lingui:compile": "lingui compile --typescript",
     "lingui:watch": "lingui extract --watch"
   },
   "type": "module",
