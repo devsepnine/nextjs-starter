@@ -51,3 +51,4 @@ pnpm-debug.log*
 # PWA generated files
 /public/sw.js
 /public/workbox-*.js
+/next-env.d.ts
