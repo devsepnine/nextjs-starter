@@ -1,7 +1,8 @@
 'use client';
 
-import { useLingui } from '@lingui/react/macro';
 import { useState } from 'react';
+
+import { useLingui } from '@lingui/react/macro';
 
 import { AnimatedNumber } from '@/components/template/AnimatedNumber';
 import { Button } from '@/components/ui/button';

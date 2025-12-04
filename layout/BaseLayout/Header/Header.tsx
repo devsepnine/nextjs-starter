@@ -1,11 +1,12 @@
-import { msg } from '@lingui/core/macro';
-import { Icon } from '@iconify/react';
 import Link from 'next/link';
+
+import { Icon } from '@iconify/react';
+import { msg } from '@lingui/core/macro';
 
 import { ThemeSwitch } from '@/components/template/ThemeSwitch/ThemeSwitch';
 import { Button } from '@/components/ui/button';
-import { getServerTranslations } from '@/lib/server-locale';
 import { UserMenu } from '@/layout/BaseLayout/Header/UserMenu/UserMenu';
+import { getServerTranslations } from '@/lib/server-locale';
 
 import styles from './Header.module.scss';
 
