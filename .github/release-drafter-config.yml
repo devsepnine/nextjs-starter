@@ -1,26 +1,72 @@
 name-template: 'v$RESOLVED_VERSION'
 tag-template: 'v$RESOLVED_VERSION'
+
+# Autolabeler: automatically label PRs based on branch name or title
+autolabeler:
+  - label: 'enhancement'
+    branch:
+      - '/^feat(ure)?\//'
+    title:
+      - '/^feat(\(.+\))?:/'
+  - label: 'bug'
+    branch:
+      - '/^fix\//'
+      - '/^bugfix\//'
+      - '/^hotfix\//'
+    title:
+      - '/^fix(\(.+\))?:/'
+  - label: 'maintenance'
+    branch:
+      - '/^chore\//'
+      - '/^refactor\//'
+      - '/^style\//'
+    title:
+      - '/^(chore|refactor|style)(\(.+\))?:/'
+  - label: 'documentation'
+    branch:
+      - '/^docs\//'
+    title:
+      - '/^docs(\(.+\))?:/'
+  - label: 'test'
+    branch:
+      - '/^test\//'
+    title:
+      - '/^test(\(.+\))?:/'
+
 categories:
-  - title: '🚀 Features'
+  - title: 'Features'
     labels:
       - 'enhancement'
-  - title: '🐛 Bug Fixes'
+  - title: 'Bug Fixes'
     labels:
       - 'bug'
-  - title: '🔧 Maintenance'
+  - title: 'Maintenance'
     labels:
       - 'maintenance'
+  - title: 'Documentation'
+    labels:
+      - 'documentation'
+  - title: 'Tests'
+    labels:
+      - 'test'
+  - title: 'Other Changes'
+    labels:
+      - '*'
+
 change-template: '- $TITLE @$AUTHOR (#$NUMBER)'
-change-title-escapes: '\<*_&' # You can add # and @ to disable mentions, and add ` to disable code blocks.
+change-title-escapes: '\<*_&'
+
 template: |
   ## What's Changed
 
   $CHANGES
-no-changes-template: 'No Change! 🐵'
-include-labels:
-  - 'enhancement'
-  - 'bug'
-  - 'maintenance'
+
+no-changes-template: 'No changes.'
+
+exclude-labels:
+  - 'skip-changelog'
+  - 'dependencies'
+
 version-resolver:
   major:
     labels:
@@ -28,7 +74,10 @@ version-resolver:
   minor:
     labels:
       - 'minor'
+      - 'enhancement'
   patch:
     labels:
       - 'patch'
+      - 'bug'
+      - 'maintenance'
   default: patch
