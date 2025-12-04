@@ -21,7 +21,7 @@ msgstr "追加"
 msgid "boop"
 msgstr "ブープ"
 
-#: app/_container/NumberAnimate/NumberAnimate.tsx:81
+#: app/_container/NumberAnimate/NumberAnimate.tsx:82
 msgid "Center"
 msgstr "中央"
 
@@ -29,8 +29,8 @@ msgstr "中央"
 msgid "Hello Next.js"
 msgstr "こんにちは Next.js"
 
-#: app/_container/NumberAnimate/NumberAnimate.tsx:70
-#: app/_container/NumberAnimate/NumberAnimate.tsx:73
+#: app/_container/NumberAnimate/NumberAnimate.tsx:71
+#: app/_container/NumberAnimate/NumberAnimate.tsx:74
 msgid "Input"
 msgstr "入力"
 
@@ -38,7 +38,7 @@ msgstr "入力"
 msgid "Just Sample Design"
 msgstr "サンプルデザインデモ"
 
-#: app/_container/NumberAnimate/NumberAnimate.tsx:80
+#: app/_container/NumberAnimate/NumberAnimate.tsx:81
 msgid "Left"
 msgstr "左"
 
@@ -50,11 +50,11 @@ msgstr "改善点やフィードバックがあれば教えてください！"
 msgid "pop"
 msgstr "ポップ"
 
-#: app/_container/NumberAnimate/NumberAnimate.tsx:82
+#: app/_container/NumberAnimate/NumberAnimate.tsx:83
 msgid "Right"
 msgstr "右"
 
-#: layout/BaseLayout/Header/Header.tsx:20
+#: layout/BaseLayout/Header/Header.tsx:21
 msgid "Starter kit"
 msgstr "スターターキット"
 

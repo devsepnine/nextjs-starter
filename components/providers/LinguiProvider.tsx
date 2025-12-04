@@ -1,10 +1,10 @@
 'use client';
 
-import { I18nProvider } from '@lingui/react';
 import { ReactNode, useEffect, useState } from 'react';
 
-import { i18n, loadMessages } from '@/lib/i18n';
+import { I18nProvider } from '@lingui/react';
 
+import { i18n, loadMessages } from '@/lib/i18n';
 import type { Locales } from '@/lib/i18n';
 
 interface LinguiProviderProps {

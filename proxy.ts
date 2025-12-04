@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+
 import { FALLBACK_LANG, LANGUAGE_COOKIE, SUPPORTED_LNGS, setLanguageCookie } from '@/lib/i18n';
 
 export function proxy(request: NextRequest) {

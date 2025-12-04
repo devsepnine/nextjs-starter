@@ -1,7 +1,8 @@
 'use client';
 
-import { div as MotionDiv } from 'motion/react-client';
 import { useRouter } from 'next/navigation';
+
+import { div as MotionDiv } from 'motion/react-client';
 
 import SecondClientComponent from '@/app/second/_container/SecondClientComponent/SecondClientComponent';
 import { Button } from '@/components/ui/button';

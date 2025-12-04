@@ -1,16 +1,13 @@
 'use client';
 
 import { ThemeProvider as NextThemesProvider, ThemeProviderProps } from 'next-themes';
-import * as React from 'react';
-import { useEffect } from 'react';
+
+import { useIsClient } from '@/hooks/useIsClient';
 
 export function ThemeProvider({ children, ...props }: Readonly<ThemeProviderProps>) {
-  const [isMount, setIsMount] = React.useState(false);
-  useEffect(() => {
-    setIsMount(true);
-  }, []);
+  const isClient = useIsClient();
 
-  if (!isMount) {
+  if (!isClient) {
     return null;
   }
 
