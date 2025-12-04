@@ -21,7 +21,7 @@ msgstr "新增"
 msgid "boop"
 msgstr "啵"
 
-#: app/_container/NumberAnimate/NumberAnimate.tsx:81
+#: app/_container/NumberAnimate/NumberAnimate.tsx:82
 msgid "Center"
 msgstr "置中"
 
@@ -29,8 +29,8 @@ msgstr "置中"
 msgid "Hello Next.js"
 msgstr "你好 Next.js"
 
-#: app/_container/NumberAnimate/NumberAnimate.tsx:70
-#: app/_container/NumberAnimate/NumberAnimate.tsx:73
+#: app/_container/NumberAnimate/NumberAnimate.tsx:71
+#: app/_container/NumberAnimate/NumberAnimate.tsx:74
 msgid "Input"
 msgstr "輸入"
 
@@ -38,7 +38,7 @@ msgstr "輸入"
 msgid "Just Sample Design"
 msgstr "範例設計展示"
 
-#: app/_container/NumberAnimate/NumberAnimate.tsx:80
+#: app/_container/NumberAnimate/NumberAnimate.tsx:81
 msgid "Left"
 msgstr "靠左"
 
@@ -50,11 +50,11 @@ msgstr "如有任何改善建議或回饋，請告訴我，我會採納的！"
 msgid "pop"
 msgstr "彈出"
 
-#: app/_container/NumberAnimate/NumberAnimate.tsx:82
+#: app/_container/NumberAnimate/NumberAnimate.tsx:83
 msgid "Right"
 msgstr "靠右"
 
-#: layout/BaseLayout/Header/Header.tsx:20
+#: layout/BaseLayout/Header/Header.tsx:21
 msgid "Starter kit"
 msgstr "起始套件"
 
