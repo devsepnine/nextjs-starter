@@ -1,4 +1,4 @@
-FROM node:22-slim AS builder
+FROM node:24.11.0-slim AS builder
 
 WORKDIR /usr/src/app
 
@@ -18,7 +18,7 @@ RUN pnpm i --frozen-lockfile --ignore-scripts \
     && echo "Build completed"
 
 
-FROM node:22-slim AS runner
+FROM node:24.11.0-slim AS runner
 
 WORKDIR /usr/src/app
 
