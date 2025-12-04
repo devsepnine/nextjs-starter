@@ -21,7 +21,7 @@ msgstr "추가"
 msgid "boop"
 msgstr "부프"
 
-#: app/_container/NumberAnimate/NumberAnimate.tsx:81
+#: app/_container/NumberAnimate/NumberAnimate.tsx:82
 msgid "Center"
 msgstr "중앙"
 
@@ -29,8 +29,8 @@ msgstr "중앙"
 msgid "Hello Next.js"
 msgstr "안녕하세요 Next.js"
 
-#: app/_container/NumberAnimate/NumberAnimate.tsx:70
-#: app/_container/NumberAnimate/NumberAnimate.tsx:73
+#: app/_container/NumberAnimate/NumberAnimate.tsx:71
+#: app/_container/NumberAnimate/NumberAnimate.tsx:74
 msgid "Input"
 msgstr "입력"
 
@@ -38,7 +38,7 @@ msgstr "입력"
 msgid "Just Sample Design"
 msgstr "샘플 디자인 데모"
 
-#: app/_container/NumberAnimate/NumberAnimate.tsx:80
+#: app/_container/NumberAnimate/NumberAnimate.tsx:81
 msgid "Left"
 msgstr "왼쪽"
 
@@ -50,11 +50,11 @@ msgstr "개선사항이나 피드백을 알려주시면 반영하겠습니다!"
 msgid "pop"
 msgstr "팝"
 
-#: app/_container/NumberAnimate/NumberAnimate.tsx:82
+#: app/_container/NumberAnimate/NumberAnimate.tsx:83
 msgid "Right"
 msgstr "오른쪽"
 
-#: layout/BaseLayout/Header/Header.tsx:20
+#: layout/BaseLayout/Header/Header.tsx:21
 msgid "Starter kit"
 msgstr "스타터 키트"
 
