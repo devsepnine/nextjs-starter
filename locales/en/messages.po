@@ -21,7 +21,7 @@ msgstr "Add"
 msgid "boop"
 msgstr "boop"
 
-#: app/_container/NumberAnimate/NumberAnimate.tsx:81
+#: app/_container/NumberAnimate/NumberAnimate.tsx:82
 msgid "Center"
 msgstr "Center"
 
@@ -29,8 +29,8 @@ msgstr "Center"
 msgid "Hello Next.js"
 msgstr "Hello Next.js"
 
-#: app/_container/NumberAnimate/NumberAnimate.tsx:70
-#: app/_container/NumberAnimate/NumberAnimate.tsx:73
+#: app/_container/NumberAnimate/NumberAnimate.tsx:71
+#: app/_container/NumberAnimate/NumberAnimate.tsx:74
 msgid "Input"
 msgstr "Input"
 
@@ -38,7 +38,7 @@ msgstr "Input"
 msgid "Just Sample Design"
 msgstr "Just Sample Design"
 
-#: app/_container/NumberAnimate/NumberAnimate.tsx:80
+#: app/_container/NumberAnimate/NumberAnimate.tsx:81
 msgid "Left"
 msgstr "Left"
 
@@ -50,11 +50,11 @@ msgstr "Please let me know any improvements or feedback, and I will incorporate 
 msgid "pop"
 msgstr "pop"
 
-#: app/_container/NumberAnimate/NumberAnimate.tsx:82
+#: app/_container/NumberAnimate/NumberAnimate.tsx:83
 msgid "Right"
 msgstr "Right"
 
-#: layout/BaseLayout/Header/Header.tsx:20
+#: layout/BaseLayout/Header/Header.tsx:21
 msgid "Starter kit"
 msgstr "Starter kit"
 

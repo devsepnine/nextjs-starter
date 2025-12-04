@@ -1,5 +1,5 @@
 ![image](/.github/image.png)
-[demo](https://nextjs-starter.codenyang.com)
+[demo](https://nextjs-starter.hibicanvas.com)
 
 # Features
 

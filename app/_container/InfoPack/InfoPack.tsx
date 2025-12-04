@@ -1,5 +1,6 @@
-import { Icon } from '@iconify/react';
 import Link from 'next/link';
+
+import { Icon } from '@iconify/react';
 
 import { Card } from '@/components/ui/card';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';

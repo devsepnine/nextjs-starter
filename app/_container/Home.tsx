@@ -1,5 +1,6 @@
-import { div as MotionDiv } from 'motion/react-client';
 import dynamic from 'next/dynamic';
+
+import { div as MotionDiv } from 'motion/react-client';
 
 const InfoPack = dynamic(() => import('@/app/_container/InfoPack/InfoPack'));
 const NumberAnimate = dynamic(() => import('@/app/_container/NumberAnimate/NumberAnimate'));
