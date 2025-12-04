@@ -6,7 +6,7 @@ const eslintConfig = [
   ...nextCoreWebVitals,
   eslintConfigPrettier,
   {
-    ignores: ['locales/*/messages.js'],
+    ignores: ['locales/*/messages.ts'],
   },
   {
     plugins: {
