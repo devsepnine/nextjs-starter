@@ -1,12 +1,8 @@
 /** @type {import('next').NextConfig} */
 import { createRequire } from 'module';
-import path from 'path';
-import { fileURLToPath } from 'url';
 
 import withPWA from 'next-pwa';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
 const require = createRequire(import.meta.url);
 const { version } = require('./package.json');
 
@@ -46,7 +42,6 @@ const nextConfig = {
   poweredByHeader: false, // X-Powered-By Header remove
 
   sassOptions: {
-    includePaths: [path.join(__dirname, 'styles')],
     prependData: "@use '@/styles/common/variables' as *;",
   },
 

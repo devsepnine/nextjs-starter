@@ -3,8 +3,6 @@
 import { Icon } from '@iconify/react';
 import { clsx } from 'clsx';
 import { useTheme } from 'next-themes';
-import * as React from 'react';
-import { useEffect, useState } from 'react';
 
 import { Button } from '@/components/ui/button';
 import {
@@ -13,19 +11,15 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
+import { useIsClient } from '@/hooks/useIsClient';
 
 import styles from './ThemeSwitch.module.scss';
 
 export function ThemeSwitch() {
-  const [mounted, setMounted] = useState(false);
+  const isClient = useIsClient();
   const { setTheme } = useTheme();
 
-  // useEffect only runs on the client, so now we can safely show the UI
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  if (!mounted) {
+  if (!isClient) {
     return null;
   }
 
