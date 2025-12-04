@@ -6,15 +6,17 @@
     "dev": "next dev",
     "build": "lingui extract --clean && lingui compile && next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint:fix": "npx eslint --fix",
     "format": "prettier --write .",
     "analyze": "ANALYZE=true npm run build",
     "lingui:extract": "lingui extract --clean",
     "lingui:compile": "lingui compile --typescript",
-    "lingui:watch": "lingui extract --watch"
+    "lingui:watch": "lingui extract --watch",
+    "lingui:extract_and_compile": "pnpm run lingui:extract && pnpm run lingui:compile"
   },
   "type": "module",
   "dependencies": {
+    "@iconify/react": "^6.0.2",
     "@lingui/core": "^5.6.1",
     "@lingui/loader": "^5.6.1",
     "@lingui/macro": "^5.6.1",
@@ -44,7 +46,6 @@
   },
   "devDependencies": {
     "@hibicanvas/prettier-config": "^1.0.57",
-    "@iconify/react": "^6.0.2",
     "@lingui/cli": "^5.6.1",
     "@lingui/swc-plugin": "^5.6.1",
     "@next/bundle-analyzer": "^16.0.7",
