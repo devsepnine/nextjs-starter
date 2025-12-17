@@ -1,6 +1,6 @@
 {
   "name": "starter-pack",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -33,8 +33,8 @@
     "@tailwindcss/postcss": "^4.1.18",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
-    "lucide-react": "^0.555.0",
-    "motion": "^12.23.25",
+    "lucide-react": "^0.561.0",
+    "motion": "^12.23.26",
     "next": "^16.0.10",
     "next-themes": "^0.4.6",
     "postcss": "^8.5.6",
@@ -46,11 +46,11 @@
     "zustand": "^5.0.9"
   },
   "devDependencies": {
+    "@babel/core": "^7.28.5",
     "@hibicanvas/prettier-config": "^1.0.57",
     "@lingui/cli": "^5.7.0",
-    "@lingui/swc-plugin": "^5.9.0",
     "@next/bundle-analyzer": "^16.0.10",
-    "@types/node": "^25.0.2",
+    "@types/node": "^25.0.3",
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
     "eslint": "^9.39.2",
