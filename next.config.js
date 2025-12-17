@@ -23,8 +23,6 @@ const nextConfig = {
       dynamic: 0,
       static: 180,
     },
-    // Lingui SWC 플러그인 설정
-    swcPlugins: [['@lingui/swc-plugin', {}]],
   },
 
   // Turbopack 설정 (Next.js 16+)
