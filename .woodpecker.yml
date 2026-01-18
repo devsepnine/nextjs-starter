@@ -1,0 +1,16 @@
+when:
+  - event: push
+    branch: master
+
+clone:
+  git:
+    image: woodpeckerci/plugin-git
+
+steps:
+  - name: build-and-deploy
+    image: docker:cli
+    commands:
+      - cd ci
+      - docker compose up -d --build --force-recreate
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock

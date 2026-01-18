@@ -1,72 +1,54 @@
 name-template: 'v$RESOLVED_VERSION'
 tag-template: 'v$RESOLVED_VERSION'
-
-# Autolabeler: automatically label PRs based on branch name or title
-autolabeler:
-  - label: 'enhancement'
-    branch:
-      - '/^feat(ure)?\//'
-    title:
-      - '/^feat(\(.+\))?:/'
-  - label: 'bug'
-    branch:
-      - '/^fix\//'
-      - '/^bugfix\//'
-      - '/^hotfix\//'
-    title:
-      - '/^fix(\(.+\))?:/'
-  - label: 'maintenance'
-    branch:
-      - '/^chore\//'
-      - '/^refactor\//'
-      - '/^style\//'
-    title:
-      - '/^(chore|refactor|style)(\(.+\))?:/'
-  - label: 'documentation'
-    branch:
-      - '/^docs\//'
-    title:
-      - '/^docs(\(.+\))?:/'
-  - label: 'test'
-    branch:
-      - '/^test\//'
-    title:
-      - '/^test(\(.+\))?:/'
-
 categories:
-  - title: 'Features'
+  - title: '🚀 Features'
     labels:
+      - 'feat'
       - 'enhancement'
-  - title: 'Bug Fixes'
+  - title: '🐛 Bug Fixes'
     labels:
+      - 'fix'
       - 'bug'
-  - title: 'Maintenance'
+  - title: '🔧 Maintenance'
     labels:
+      - 'chore'
+      - 'refactor'
       - 'maintenance'
-  - title: 'Documentation'
+  - title: '📝 Documentation'
     labels:
-      - 'documentation'
-  - title: 'Tests'
+      - 'docs'
+  - title: '🎨 Styling'
     labels:
-      - 'test'
-  - title: 'Other Changes'
+      - 'style'
+  - title: '📦 Other Changes'
     labels:
       - '*'
-
-change-template: '- $TITLE @$AUTHOR (#$NUMBER)'
+change-template: '- $TITLE'
 change-title-escapes: '\<*_&'
-
+autolabeler:
+  - label: 'feat'
+    title:
+      - '/^feat(\(.*\))?:/i'
+  - label: 'fix'
+    title:
+      - '/^fix(\(.*\))?:/i'
+  - label: 'chore'
+    title:
+      - '/^chore(\(.*\))?:/i'
+  - label: 'refactor'
+    title:
+      - '/^refactor(\(.*\))?:/i'
+  - label: 'docs'
+    title:
+      - '/^docs(\(.*\))?:/i'
+  - label: 'style'
+    title:
+      - '/^style(\(.*\))?:/i'
 template: |
   ## What's Changed
 
   $CHANGES
-
-no-changes-template: 'No changes.'
-
-exclude-labels:
-  - 'skip-changelog'
-  - 'dependencies'
-
+no-changes-template: 'No Change! 🐵'
 version-resolver:
   major:
     labels:
@@ -74,10 +56,7 @@ version-resolver:
   minor:
     labels:
       - 'minor'
-      - 'enhancement'
   patch:
     labels:
       - 'patch'
-      - 'bug'
-      - 'maintenance'
   default: patch
