@@ -60,7 +60,7 @@ msgstr "スターターキット"
 
 #: app/_container/Zustand/ZustandSample.tsx:61
 msgid "Subtract"
-msgstr "削除"
+msgstr "引く"
 
 #: app/_container/Hello/Hello.tsx:18
 msgid "This is a project configured for convenient and fast start of next.js projects."

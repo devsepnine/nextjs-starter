@@ -15,7 +15,7 @@ msgstr ""
 
 #: app/_container/Zustand/ZustandSample.tsx:39
 msgid "Add"
-msgstr "추가"
+msgstr "더하기"
 
 #: app/_container/Something/Something.tsx:21
 msgid "boop"
