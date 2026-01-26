@@ -1,6 +1,6 @@
 'use client';
 
-import { Temporal } from 'temporal-polyfill';
+import { Temporal } from '@js-temporal/polyfill';
 
 import { Card } from '@/components/ui/card';
 
