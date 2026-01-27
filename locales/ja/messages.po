@@ -33,35 +33,35 @@ msgstr "中央"
 
 #: app/temporal/_container/Temporal.tsx:402
 msgid "Current Date"
-msgstr ""
+msgstr "現在の日付"
 
 #: app/temporal/_container/Temporal.tsx:272
 msgid "Date Calculations"
-msgstr ""
+msgstr "日付計算"
 
 #: app/temporal/_container/Temporal.tsx:397
 msgid "Date Details"
-msgstr ""
+msgstr "日付の詳細"
 
 #: app/temporal/_container/Temporal.tsx:352
 msgid "Date Formats"
-msgstr ""
+msgstr "日付形式"
 
 #: app/temporal/_container/Temporal.tsx:368
 msgid "Date Only"
-msgstr ""
+msgstr "日付のみ"
 
 #: app/temporal/_container/Temporal.tsx:416
 msgid "Day"
-msgstr ""
+msgstr "日"
 
 #: app/temporal/_container/Temporal.tsx:424
 msgid "Day of Year"
-msgstr ""
+msgstr "年間通算日"
 
 #: app/temporal/_container/Temporal.tsx:222
 msgid "Days until {nextYear}"
-msgstr ""
+msgstr "{nextYear}年まで"
 
 #: app/temporal/_container/Temporal.tsx:50
 msgid "Dubai"
@@ -69,19 +69,19 @@ msgstr "ドバイ"
 
 #: app/temporal/_container/Temporal.tsx:338
 msgid "Duration"
-msgstr ""
+msgstr "所要時間"
 
 #: app/temporal/_container/Temporal.tsx:281
 msgid "Duration between start and end time"
-msgstr ""
+msgstr "開始時刻と終了時刻の間の時間"
 
 #: app/temporal/_container/Temporal.tsx:327
 msgid "End"
-msgstr ""
+msgstr "終了"
 
 #: app/temporal/_container/Temporal.tsx:295
 msgid "End Time"
-msgstr ""
+msgstr "終了時刻"
 
 #: app/temporal/_container/Temporal.tsx:126
 msgid "Fri"
@@ -89,7 +89,7 @@ msgstr "金"
 
 #: app/temporal/_container/Temporal.tsx:146
 msgid "Go Home"
-msgstr ""
+msgstr "ホームに戻る"
 
 #: app/_container/Hello/Hello.tsx:11
 msgid "Hello Next.js"
@@ -118,15 +118,15 @@ msgstr "ロンドン"
 
 #: app/temporal/_container/Temporal.tsx:358
 msgid "Long Format"
-msgstr ""
+msgstr "長い形式"
 
 #: app/temporal/_container/Temporal.tsx:278
 msgid "Meeting Duration"
-msgstr ""
+msgstr "会議時間"
 
 #: app/temporal/_container/Temporal.tsx:141
 msgid "Modern date/time handling with @js-temporal/polyfill"
-msgstr ""
+msgstr "@js-temporal/polyfillによる最新の日付/時刻処理"
 
 #: app/temporal/_container/Temporal.tsx:126
 msgid "Mon"
@@ -134,11 +134,11 @@ msgstr "月"
 
 #: app/temporal/_container/Temporal.tsx:412
 msgid "Month"
-msgstr ""
+msgstr "月"
 
 #: app/temporal/_container/Temporal.tsx:385
 msgid "Month-Day"
-msgstr ""
+msgstr "月-日"
 
 #: app/temporal/_container/Temporal.tsx:46
 #: app/temporal/_container/Temporal.tsx:123
@@ -160,7 +160,7 @@ msgstr "ポップ"
 
 #: app/temporal/_container/Temporal.tsx:212
 msgid "Quick Stats"
-msgstr ""
+msgstr "クイック統計"
 
 #: app/_container/NumberAnimate/NumberAnimate.tsx:93
 msgid "Right"
@@ -176,7 +176,7 @@ msgstr "タイムゾーンを選択"
 
 #: app/temporal/_container/Temporal.tsx:445
 msgid "Select Timezone"
-msgstr ""
+msgstr "タイムゾーンを選択"
 
 #: app/temporal/_container/Temporal.tsx:44
 #: app/temporal/_container/Temporal.tsx:121
@@ -185,7 +185,7 @@ msgstr "ソウル"
 
 #: app/temporal/_container/Temporal.tsx:243
 msgid "Set Date"
-msgstr ""
+msgstr "日付を設定"
 
 #: app/temporal/_container/Temporal.tsx:48
 msgid "Shanghai"
@@ -198,11 +198,11 @@ msgstr "{0}から"
 
 #: app/temporal/_container/Temporal.tsx:306
 msgid "Start"
-msgstr ""
+msgstr "開始"
 
 #: app/temporal/_container/Temporal.tsx:287
 msgid "Start Time"
-msgstr ""
+msgstr "開始時刻"
 
 #: layout/BaseLayout/Header/Header.tsx:21
 msgid "Starter kit"
@@ -230,19 +230,19 @@ msgstr "木"
 
 #: app/temporal/_container/Temporal.tsx:439
 msgid "Time difference from selected timezone"
-msgstr ""
+msgstr "選択したタイムゾーンとの時差"
 
 #: app/temporal/_container/Temporal.tsx:373
 msgid "Time Only"
-msgstr ""
+msgstr "時刻のみ"
 
 #: app/temporal/_container/Temporal.tsx:437
 msgid "Timezone Difference"
-msgstr ""
+msgstr "タイムゾーンの差"
 
 #: app/temporal/_container/Temporal.tsx:403
 msgid "Today's Details"
-msgstr ""
+msgstr "今日の詳細"
 
 #: app/temporal/_container/Temporal.tsx:45
 #: app/temporal/_container/Temporal.tsx:122
@@ -264,24 +264,24 @@ msgstr "水"
 
 #: app/temporal/_container/Temporal.tsx:428
 msgid "Week"
-msgstr ""
+msgstr "週"
 
 #: app/temporal/_container/Temporal.tsx:420
 msgid "Weekday"
-msgstr ""
+msgstr "曜日"
 
 #: app/temporal/_container/Temporal.tsx:261
 msgid "Working Days This Month"
-msgstr ""
+msgstr "今月の営業日"
 
 #: app/temporal/_container/Temporal.tsx:181
 msgid "World Clocks"
-msgstr ""
+msgstr "世界時計"
 
 #: app/temporal/_container/Temporal.tsx:408
 msgid "Year"
-msgstr ""
+msgstr "年"
 
 #: app/temporal/_container/Temporal.tsx:380
 msgid "Year-Month"
-msgstr ""
+msgstr "年-月"
