@@ -6,7 +6,8 @@ import { useCallback, useState } from 'react';
 
 import { Icon } from '@iconify/react';
 import { Temporal } from '@js-temporal/polyfill';
-import { Trans, useLingui } from '@lingui/react/macro';
+import { msg } from '@lingui/core/macro';
+import { useLingui } from '@lingui/react/macro';
 import { div as MotionDiv } from 'motion/react-client';
 
 import { Badge } from '@/components/ui/badge';
@@ -137,14 +138,12 @@ const TemporalExample = () => {
           <div>
             <h1 className="text-4xl font-bold mb-2">Temporal API</h1>
             <p className="text-muted-foreground">
-              <Trans id="temporal.description">
-                Modern date/time handling with @js-temporal/polyfill
-              </Trans>
+              {t(msg`Modern date/time handling with @js-temporal/polyfill`)}
             </p>
           </div>
           <Button onClick={goHome} variant="outline">
             <Icon icon="mdi:home" className="mr-2" />
-            <Trans id="temporal.goHome">Go Home</Trans>
+            {t(msg`Go Home`)}
           </Button>
         </div>
       </header>
@@ -179,7 +178,7 @@ const TemporalExample = () => {
       <section className="mb-12">
         <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
           <Icon icon="mdi:earth" width={28} height={28} />
-          <Trans id="temporal.worldClocks">World Clocks</Trans>
+          {t(msg`World Clocks`)}
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {worldClocks.map((city) => (
@@ -210,7 +209,7 @@ const TemporalExample = () => {
       <section className="mb-12">
         <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
           <Icon icon="mdi:chart-box" width={28} height={28} />
-          <Trans id="temporal.quickStats">Quick Stats</Trans>
+          {t(msg`Quick Stats`)}
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <Card className="hover:shadow-lg transition-shadow">
@@ -220,7 +219,7 @@ const TemporalExample = () => {
               </div>
               <div className="text-5xl font-bold mb-2">D-{daysUntilNewYear}</div>
               <p className="text-sm text-muted-foreground">
-                <Trans id="temporal.daysUntilNewYear">Days until {nextYear}</Trans>
+                {t(msg`Days until ${nextYear}`)}
               </p>
             </CardContent>
           </Card>
@@ -241,9 +240,7 @@ const TemporalExample = () => {
                 </p>
               </div>
               <div className="space-y-2">
-                <label className="text-xs text-muted-foreground">
-                  <Trans id="temporal.setDate">Set Date</Trans>
-                </label>
+                <label className="text-xs text-muted-foreground">{t(msg`Set Date`)}</label>
                 <Input
                   type="date"
                   value={projectStartDate}
@@ -261,7 +258,7 @@ const TemporalExample = () => {
               </div>
               <div className="text-5xl font-bold mb-2">{workingDaysThisMonth}</div>
               <p className="text-sm text-muted-foreground">
-                <Trans id="temporal.workingDaysThisMonth">Working Days This Month</Trans>
+                {t(msg`Working Days This Month`)}
               </p>
             </CardContent>
           </Card>
@@ -272,24 +269,22 @@ const TemporalExample = () => {
       <section className="mb-12">
         <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
           <Icon icon="mdi:calculator" width={28} height={28} />
-          <Trans id="temporal.dateCalculations">Date Calculations</Trans>
+          {t(msg`Date Calculations`)}
         </h2>
         <Card>
           <CardHeader>
             <CardTitle className="flex items-center gap-2">
               <Icon icon="mdi:timelapse" width={20} height={20} />
-              <Trans id="temporal.meetingDuration">Meeting Duration</Trans>
+              {t(msg`Meeting Duration`)}
             </CardTitle>
             <CardDescription>
-              <Trans id="temporal.meetingDescription">Duration between start and end time</Trans>
+              {t(msg`Duration between start and end time`)}
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="space-y-2">
-                <label className="text-sm font-medium">
-                  <Trans id="temporal.startTime">Start Time</Trans>
-                </label>
+                <label className="text-sm font-medium">{t(msg`Start Time`)}</label>
                 <Input
                   type="time"
                   value={meetingStartTime}
@@ -297,9 +292,7 @@ const TemporalExample = () => {
                 />
               </div>
               <div className="space-y-2">
-                <label className="text-sm font-medium">
-                  <Trans id="temporal.endTime">End Time</Trans>
-                </label>
+                <label className="text-sm font-medium">{t(msg`End Time`)}</label>
                 <Input
                   type="time"
                   value={meetingEndTime}
@@ -310,9 +303,7 @@ const TemporalExample = () => {
 
             <div className="flex flex-col md:flex-row items-center justify-center gap-6 pt-4">
               <div className="text-center">
-                <p className="text-sm text-muted-foreground mb-2">
-                  <Trans id="temporal.start">Start</Trans>
-                </p>
+                <p className="text-sm text-muted-foreground mb-2">{t(msg`Start`)}</p>
                 <div className="flex items-center gap-2 text-2xl font-mono font-bold">
                   <Icon icon="mdi:clock-start" className="text-green-500" />
                   {meetingStart.toString().slice(0, 5)}
@@ -333,9 +324,7 @@ const TemporalExample = () => {
               />
 
               <div className="text-center">
-                <p className="text-sm text-muted-foreground mb-2">
-                  <Trans id="temporal.end">End</Trans>
-                </p>
+                <p className="text-sm text-muted-foreground mb-2">{t(msg`End`)}</p>
                 <div className="flex items-center gap-2 text-2xl font-mono font-bold">
                   <Icon icon="mdi:clock-end" className="text-red-500" />
                   {meetingEnd.toString().slice(0, 5)}
@@ -346,9 +335,7 @@ const TemporalExample = () => {
               <div className="md:hidden w-16 h-px bg-border" />
 
               <div className="text-center">
-                <p className="text-sm text-muted-foreground mb-2">
-                  <Trans id="temporal.duration">Duration</Trans>
-                </p>
+                <p className="text-sm text-muted-foreground mb-2">{t(msg`Duration`)}</p>
                 <div className="text-3xl font-bold text-primary">
                   {t`${meetingDuration.hours}h ${meetingDuration.minutes}m`}
                 </div>
@@ -362,15 +349,13 @@ const TemporalExample = () => {
       <section className="mb-12">
         <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
           <Icon icon="mdi:format-text" width={28} height={28} />
-          <Trans id="temporal.dateFormats">Date Formats</Trans>
+          {t(msg`Date Formats`)}
         </h2>
         <Card>
           <CardContent className="p-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <p className="text-sm text-muted-foreground mb-2">
-                  <Trans id="temporal.longFormat">Long Format</Trans>
-                </p>
+                <p className="text-sm text-muted-foreground mb-2">{t(msg`Long Format`)}</p>
                 <p className="text-xl font-semibold">{formattedDate}</p>
               </div>
 
@@ -380,32 +365,24 @@ const TemporalExample = () => {
               </div>
 
               <div>
-                <p className="text-sm text-muted-foreground mb-2">
-                  <Trans id="temporal.dateOnly">Date Only</Trans>
-                </p>
+                <p className="text-sm text-muted-foreground mb-2">{t(msg`Date Only`)}</p>
                 <p className="text-xl font-mono font-bold">{now.toPlainDate().toString()}</p>
               </div>
 
               <div>
-                <p className="text-sm text-muted-foreground mb-2">
-                  <Trans id="temporal.timeOnly">Time Only</Trans>
-                </p>
+                <p className="text-sm text-muted-foreground mb-2">{t(msg`Time Only`)}</p>
                 <p className="text-xl font-mono font-bold">
                   {now.toPlainTime().toString().slice(0, 8)}
                 </p>
               </div>
 
               <div>
-                <p className="text-sm text-muted-foreground mb-2">
-                  <Trans id="temporal.yearMonth">Year-Month</Trans>
-                </p>
+                <p className="text-sm text-muted-foreground mb-2">{t(msg`Year-Month`)}</p>
                 <p className="text-xl font-mono font-bold">{now.toPlainYearMonth().toString()}</p>
               </div>
 
               <div>
-                <p className="text-sm text-muted-foreground mb-2">
-                  <Trans id="temporal.monthDay">Month-Day</Trans>
-                </p>
+                <p className="text-sm text-muted-foreground mb-2">{t(msg`Month-Day`)}</p>
                 <p className="text-xl font-mono font-bold">{now.toPlainMonthDay().toString()}</p>
               </div>
             </div>
@@ -417,54 +394,38 @@ const TemporalExample = () => {
       <section className="mb-12">
         <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
           <Icon icon="mdi:calendar-today" width={28} height={28} />
-          <Trans id="temporal.dateDetails">Date Details</Trans>
+          {t(msg`Date Details`)}
         </h2>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           <Card>
             <CardHeader>
-              <CardTitle>
-                <Trans id="temporal.currentDate">Current Date</Trans>
-              </CardTitle>
-              <CardDescription>
-                <Trans id="temporal.todayDetails">Today's Details</Trans>
-              </CardDescription>
+              <CardTitle>{t(msg`Current Date`)}</CardTitle>
+              <CardDescription>{t(msg`Today's Details`)}</CardDescription>
             </CardHeader>
             <CardContent>
               <div className="grid grid-cols-3 gap-4">
                 <div className="text-center p-4 bg-muted rounded-lg">
-                  <p className="text-xs text-muted-foreground mb-1">
-                    <Trans id="temporal.year">Year</Trans>
-                  </p>
+                  <p className="text-xs text-muted-foreground mb-1">{t(msg`Year`)}</p>
                   <p className="text-2xl font-bold">{today.year}</p>
                 </div>
                 <div className="text-center p-4 bg-muted rounded-lg">
-                  <p className="text-xs text-muted-foreground mb-1">
-                    <Trans id="temporal.month">Month</Trans>
-                  </p>
+                  <p className="text-xs text-muted-foreground mb-1">{t(msg`Month`)}</p>
                   <p className="text-2xl font-bold">{today.month}</p>
                 </div>
                 <div className="text-center p-4 bg-muted rounded-lg">
-                  <p className="text-xs text-muted-foreground mb-1">
-                    <Trans id="temporal.day">Day</Trans>
-                  </p>
+                  <p className="text-xs text-muted-foreground mb-1">{t(msg`Day`)}</p>
                   <p className="text-2xl font-bold">{today.day}</p>
                 </div>
                 <div className="text-center p-4 bg-muted rounded-lg">
-                  <p className="text-xs text-muted-foreground mb-1">
-                    <Trans id="temporal.weekday">Weekday</Trans>
-                  </p>
+                  <p className="text-xs text-muted-foreground mb-1">{t(msg`Weekday`)}</p>
                   <p className="text-2xl font-bold">{weekdays[today.dayOfWeek - 1]}</p>
                 </div>
                 <div className="text-center p-4 bg-muted rounded-lg">
-                  <p className="text-xs text-muted-foreground mb-1">
-                    <Trans id="temporal.dayOfYear">Day of Year</Trans>
-                  </p>
+                  <p className="text-xs text-muted-foreground mb-1">{t(msg`Day of Year`)}</p>
                   <p className="text-2xl font-bold">{today.dayOfYear}</p>
                 </div>
                 <div className="text-center p-4 bg-muted rounded-lg">
-                  <p className="text-xs text-muted-foreground mb-1">
-                    <Trans id="temporal.weekOfYear">Week</Trans>
-                  </p>
+                  <p className="text-xs text-muted-foreground mb-1">{t(msg`Week`)}</p>
                   <p className="text-2xl font-bold">{today.weekOfYear}</p>
                 </div>
               </div>
@@ -473,19 +434,15 @@ const TemporalExample = () => {
 
           <Card>
             <CardHeader>
-              <CardTitle>
-                <Trans id="temporal.timezoneDifference">Timezone Difference</Trans>
-              </CardTitle>
+              <CardTitle>{t(msg`Timezone Difference`)}</CardTitle>
               <CardDescription>
-                <Trans id="temporal.timezoneDescription">
-                  Time difference from selected timezone
-                </Trans>
+                {t(msg`Time difference from selected timezone`)}
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="mb-4">
                 <label className="text-sm font-medium mb-2 block">
-                  <Trans id="temporal.selectTimezone">Select Timezone</Trans>
+                  {t(msg`Select Timezone`)}
                 </label>
                 <Select value={selectedTimezone} onValueChange={setSelectedTimezone}>
                   <SelectTrigger>

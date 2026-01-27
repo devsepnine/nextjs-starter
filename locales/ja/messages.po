@@ -15,7 +15,7 @@ msgstr ""
 
 #. placeholder {0}: meetingDuration.hours
 #. placeholder {1}: meetingDuration.minutes
-#: app/temporal/_container/Temporal.tsx:363
+#: app/temporal/_container/Temporal.tsx:340
 msgid "{0}h {1}m"
 msgstr "{0}時間{1}分"
 
@@ -31,78 +31,65 @@ msgstr "ブープ"
 msgid "Center"
 msgstr "中央"
 
-#. js-lingui-explicit-id
-#: app/temporal/_container/Temporal.tsx:436
-msgid "temporal.currentDate"
-msgstr "現在の日付"
+#: app/temporal/_container/Temporal.tsx:402
+msgid "Current Date"
+msgstr ""
 
-#. js-lingui-explicit-id
-#: app/temporal/_container/Temporal.tsx:285
-msgid "temporal.dateCalculations"
-msgstr "日付計算"
+#: app/temporal/_container/Temporal.tsx:272
+msgid "Date Calculations"
+msgstr ""
 
-#. js-lingui-explicit-id
-#: app/temporal/_container/Temporal.tsx:430
-msgid "temporal.dateDetails"
-msgstr "日付詳細"
+#: app/temporal/_container/Temporal.tsx:397
+msgid "Date Details"
+msgstr ""
 
-#. js-lingui-explicit-id
-#: app/temporal/_container/Temporal.tsx:375
-msgid "temporal.dateFormats"
-msgstr "日付形式"
+#: app/temporal/_container/Temporal.tsx:352
+msgid "Date Formats"
+msgstr ""
 
-#. js-lingui-explicit-id
-#: app/temporal/_container/Temporal.tsx:394
-msgid "temporal.dateOnly"
-msgstr "日付のみ"
+#: app/temporal/_container/Temporal.tsx:368
+msgid "Date Only"
+msgstr ""
 
-#. js-lingui-explicit-id
-#: app/temporal/_container/Temporal.tsx:458
-msgid "temporal.day"
-msgstr "日"
+#: app/temporal/_container/Temporal.tsx:416
+msgid "Day"
+msgstr ""
 
-#. js-lingui-explicit-id
-#: app/temporal/_container/Temporal.tsx:472
-msgid "temporal.dayOfYear"
-msgstr "年間通算日"
+#: app/temporal/_container/Temporal.tsx:424
+msgid "Day of Year"
+msgstr ""
 
-#. js-lingui-explicit-id
-#: app/temporal/_container/Temporal.tsx:231
-msgid "temporal.daysUntilNewYear"
-msgstr "新年まであと{0}日"
+#: app/temporal/_container/Temporal.tsx:222
+msgid "Days until {nextYear}"
+msgstr ""
 
-#: app/temporal/_container/Temporal.tsx:49
+#: app/temporal/_container/Temporal.tsx:50
 msgid "Dubai"
 msgstr "ドバイ"
 
-#. js-lingui-explicit-id
-#: app/temporal/_container/Temporal.tsx:360
-msgid "temporal.duration"
-msgstr "所要時間"
+#: app/temporal/_container/Temporal.tsx:338
+msgid "Duration"
+msgstr ""
 
-#. js-lingui-explicit-id
-#: app/temporal/_container/Temporal.tsx:294
-msgid "temporal.meetingDescription"
-msgstr "開始時刻と終了時刻の間の所要時間"
+#: app/temporal/_container/Temporal.tsx:281
+msgid "Duration between start and end time"
+msgstr ""
 
-#. js-lingui-explicit-id
-#: app/temporal/_container/Temporal.tsx:347
-msgid "temporal.end"
-msgstr "終了"
+#: app/temporal/_container/Temporal.tsx:327
+msgid "End"
+msgstr ""
 
-#. js-lingui-explicit-id
-#: app/temporal/_container/Temporal.tsx:311
-msgid "temporal.endTime"
-msgstr "終了時刻"
+#: app/temporal/_container/Temporal.tsx:295
+msgid "End Time"
+msgstr ""
 
-#: app/temporal/_container/Temporal.tsx:130
+#: app/temporal/_container/Temporal.tsx:126
 msgid "Fri"
 msgstr "金"
 
-#. js-lingui-explicit-id
-#: app/temporal/_container/Temporal.tsx:155
-msgid "temporal.goHome"
-msgstr "ホームへ"
+#: app/temporal/_container/Temporal.tsx:146
+msgid "Go Home"
+msgstr ""
 
 #: app/_container/Hello/Hello.tsx:11
 msgid "Hello Next.js"
@@ -117,7 +104,7 @@ msgstr "入力"
 msgid "Just Sample Design"
 msgstr "サンプルデザインデモ"
 
-#: app/temporal/_container/Temporal.tsx:50
+#: app/temporal/_container/Temporal.tsx:51
 msgid "LA"
 msgstr "LA"
 
@@ -125,50 +112,45 @@ msgstr "LA"
 msgid "Left"
 msgstr "左"
 
-#: app/temporal/_container/Temporal.tsx:46
+#: app/temporal/_container/Temporal.tsx:47
 msgid "London"
 msgstr "ロンドン"
 
-#. js-lingui-explicit-id
-#: app/temporal/_container/Temporal.tsx:382
-msgid "temporal.longFormat"
-msgstr "長い形式"
+#: app/temporal/_container/Temporal.tsx:358
+msgid "Long Format"
+msgstr ""
 
-#. js-lingui-explicit-id
-#: app/temporal/_container/Temporal.tsx:291
-msgid "temporal.meetingDuration"
-msgstr "会議時間"
+#: app/temporal/_container/Temporal.tsx:278
+msgid "Meeting Duration"
+msgstr ""
 
-#. js-lingui-explicit-id
-#: app/temporal/_container/Temporal.tsx:148
-msgid "temporal.description"
-msgstr "@js-temporal/polyfillによるモダンな日付/時刻処理"
+#: app/temporal/_container/Temporal.tsx:141
+msgid "Modern date/time handling with @js-temporal/polyfill"
+msgstr ""
 
 #: app/temporal/_container/Temporal.tsx:126
 msgid "Mon"
 msgstr "月"
 
-#. js-lingui-explicit-id
-#: app/temporal/_container/Temporal.tsx:452
-msgid "temporal.month"
-msgstr "月"
+#: app/temporal/_container/Temporal.tsx:412
+msgid "Month"
+msgstr ""
 
-#. js-lingui-explicit-id
-#: app/temporal/_container/Temporal.tsx:417
-msgid "temporal.monthDay"
-msgstr "月-日"
+#: app/temporal/_container/Temporal.tsx:385
+msgid "Month-Day"
+msgstr ""
 
-#: app/temporal/_container/Temporal.tsx:45
-#: app/temporal/_container/Temporal.tsx:122
-#: app/temporal/_container/Temporal.tsx:546
+#: app/temporal/_container/Temporal.tsx:46
+#: app/temporal/_container/Temporal.tsx:123
+#: app/temporal/_container/Temporal.tsx:492
 msgid "New York"
 msgstr "ニューヨーク"
 
-#: app/temporal/_container/Temporal.tsx:48
+#: app/temporal/_container/Temporal.tsx:49
 msgid "Paris"
 msgstr "パリ"
 
-#: app/_container/Hello/Hello.tsx:13
+#: app/_container/Hello/Hello.tsx:16
 msgid "Please let me know any improvements or feedback, and I will incorporate them."
 msgstr "改善点やフィードバックがあれば教えてください！"
 
@@ -176,56 +158,51 @@ msgstr "改善点やフィードバックがあれば教えてください！"
 msgid "pop"
 msgstr "ポップ"
 
-#. js-lingui-explicit-id
-#: app/temporal/_container/Temporal.tsx:221
-msgid "temporal.quickStats"
-msgstr "クイック統計"
+#: app/temporal/_container/Temporal.tsx:212
+msgid "Quick Stats"
+msgstr ""
 
 #: app/_container/NumberAnimate/NumberAnimate.tsx:93
 msgid "Right"
 msgstr "右"
 
-#: app/temporal/_container/Temporal.tsx:131
+#: app/temporal/_container/Temporal.tsx:126
 msgid "Sat"
 msgstr "土"
 
-#: app/temporal/_container/Temporal.tsx:502
+#: app/temporal/_container/Temporal.tsx:449
 msgid "Select timezone"
 msgstr "タイムゾーンを選択"
 
-#. js-lingui-explicit-id
-#: app/temporal/_container/Temporal.tsx:498
-msgid "temporal.selectTimezone"
-msgstr "タイムゾーン選択"
+#: app/temporal/_container/Temporal.tsx:445
+msgid "Select Timezone"
+msgstr ""
 
-#: app/temporal/_container/Temporal.tsx:43
-#: app/temporal/_container/Temporal.tsx:120
+#: app/temporal/_container/Temporal.tsx:44
+#: app/temporal/_container/Temporal.tsx:121
 msgid "Seoul"
 msgstr "ソウル"
 
-#. js-lingui-explicit-id
-#: app/temporal/_container/Temporal.tsx:255
-msgid "temporal.setDate"
-msgstr "日付設定"
+#: app/temporal/_container/Temporal.tsx:243
+msgid "Set Date"
+msgstr ""
 
-#: app/temporal/_container/Temporal.tsx:47
+#: app/temporal/_container/Temporal.tsx:48
 msgid "Shanghai"
 msgstr "上海"
 
 #. placeholder {0}: projectStart.toString()
-#: app/temporal/_container/Temporal.tsx:249
+#: app/temporal/_container/Temporal.tsx:238
 msgid "Since {0}"
 msgstr "{0}から"
 
-#. js-lingui-explicit-id
-#: app/temporal/_container/Temporal.tsx:324
-msgid "temporal.start"
-msgstr "開始"
+#: app/temporal/_container/Temporal.tsx:306
+msgid "Start"
+msgstr ""
 
-#. js-lingui-explicit-id
-#: app/temporal/_container/Temporal.tsx:301
-msgid "temporal.startTime"
-msgstr "開始時刻"
+#: app/temporal/_container/Temporal.tsx:287
+msgid "Start Time"
+msgstr ""
 
 #: layout/BaseLayout/Header/Header.tsx:21
 msgid "Starter kit"
@@ -235,86 +212,76 @@ msgstr "スターターキット"
 msgid "Subtract"
 msgstr "引く"
 
-#: app/temporal/_container/Temporal.tsx:132
+#: app/temporal/_container/Temporal.tsx:126
 msgid "Sun"
 msgstr "日"
 
-#: app/temporal/_container/Temporal.tsx:51
+#: app/temporal/_container/Temporal.tsx:52
 msgid "Sydney"
 msgstr "シドニー"
 
-#: app/_container/Hello/Hello.tsx:12
+#: app/_container/Hello/Hello.tsx:13
 msgid "This is a project configured for convenient and fast start of next.js projects."
 msgstr "便利で高速な Next.js プロジェクト開始のために構成されたスターターテンプレートです。"
 
-#: app/temporal/_container/Temporal.tsx:129
+#: app/temporal/_container/Temporal.tsx:126
 msgid "Thu"
 msgstr "木"
 
-#. js-lingui-explicit-id
-#: app/temporal/_container/Temporal.tsx:492
-msgid "temporal.timezoneDescription"
-msgstr "選択したタイムゾーンとの時差"
-
-#. js-lingui-explicit-id
-#: app/temporal/_container/Temporal.tsx:401
-msgid "temporal.timeOnly"
-msgstr "時刻のみ"
-
-#. js-lingui-explicit-id
-#: app/temporal/_container/Temporal.tsx:489
-msgid "temporal.timezoneDifference"
-msgstr "時差"
-
-#. js-lingui-explicit-id
 #: app/temporal/_container/Temporal.tsx:439
-msgid "temporal.todayDetails"
-msgstr "今日の詳細情報"
+msgid "Time difference from selected timezone"
+msgstr ""
 
-#: app/temporal/_container/Temporal.tsx:44
-#: app/temporal/_container/Temporal.tsx:121
+#: app/temporal/_container/Temporal.tsx:373
+msgid "Time Only"
+msgstr ""
+
+#: app/temporal/_container/Temporal.tsx:437
+msgid "Timezone Difference"
+msgstr ""
+
+#: app/temporal/_container/Temporal.tsx:403
+msgid "Today's Details"
+msgstr ""
+
+#: app/temporal/_container/Temporal.tsx:45
+#: app/temporal/_container/Temporal.tsx:122
 msgid "Tokyo"
 msgstr "東京"
 
-#: app/temporal/_container/Temporal.tsx:127
+#: app/temporal/_container/Temporal.tsx:126
 msgid "Tue"
 msgstr "火"
 
 #. placeholder {0}: projectStart.toString()
-#: app/temporal/_container/Temporal.tsx:250
+#: app/temporal/_container/Temporal.tsx:239
 msgid "Until {0}"
 msgstr "{0}まで"
 
-#: app/temporal/_container/Temporal.tsx:128
+#: app/temporal/_container/Temporal.tsx:126
 msgid "Wed"
 msgstr "水"
 
-#. js-lingui-explicit-id
-#: app/temporal/_container/Temporal.tsx:478
-msgid "temporal.weekOfYear"
-msgstr "週"
+#: app/temporal/_container/Temporal.tsx:428
+msgid "Week"
+msgstr ""
 
-#. js-lingui-explicit-id
-#: app/temporal/_container/Temporal.tsx:464
-msgid "temporal.weekday"
-msgstr "曜日"
+#: app/temporal/_container/Temporal.tsx:420
+msgid "Weekday"
+msgstr ""
 
-#. js-lingui-explicit-id
-#: app/temporal/_container/Temporal.tsx:274
-msgid "temporal.workingDaysThisMonth"
-msgstr "今月の営業日"
+#: app/temporal/_container/Temporal.tsx:261
+msgid "Working Days This Month"
+msgstr ""
 
-#. js-lingui-explicit-id
-#: app/temporal/_container/Temporal.tsx:190
-msgid "temporal.worldClocks"
-msgstr "世界時計"
+#: app/temporal/_container/Temporal.tsx:181
+msgid "World Clocks"
+msgstr ""
 
-#. js-lingui-explicit-id
-#: app/temporal/_container/Temporal.tsx:446
-msgid "temporal.year"
-msgstr "年"
+#: app/temporal/_container/Temporal.tsx:408
+msgid "Year"
+msgstr ""
 
-#. js-lingui-explicit-id
-#: app/temporal/_container/Temporal.tsx:410
-msgid "temporal.yearMonth"
-msgstr "年-月"
+#: app/temporal/_container/Temporal.tsx:380
+msgid "Year-Month"
+msgstr ""
