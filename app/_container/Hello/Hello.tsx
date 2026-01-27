@@ -9,8 +9,12 @@ export async function Hello() {
   return (
     <HelloClient
       title={t(msg`Hello Next.js`)}
-      description={t(msg`This is a project configured for convenient and fast start of next.js projects.`)}
-      subDescription={t(msg`Please let me know any improvements or feedback, and I will incorporate them.`)}
+      description={t(
+        msg`This is a project configured for convenient and fast start of next.js projects.`
+      )}
+      subDescription={t(
+        msg`Please let me know any improvements or feedback, and I will incorporate them.`
+      )}
     />
   );
 }

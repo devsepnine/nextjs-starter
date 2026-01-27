@@ -9,7 +9,6 @@ const ZustandSample = dynamic(() => import('@/app/_container/Zustand/ZustandSamp
 const GoSecondPage = dynamic(() => import('@/app/_container/GoSecondPage/GoSecondPage'));
 
 import { Hello } from '@/app/_container/Hello/Hello';
-import TemporalTest from '@/app/_container/TemporalTest/TemporalTest';
 
 import styles from './Home.module.scss';
 
@@ -70,14 +69,6 @@ export function Home() {
         transition={createTransition(0.6)}
       >
         <GoSecondPage />
-      </MotionDiv>
-      <MotionDiv
-        className={'w-full h-full'}
-        initial={MOTION_INITIAL}
-        animate={MOTION_ANIMATE}
-        transition={createTransition(0.7)}
-      >
-        <TemporalTest />
       </MotionDiv>
     </div>
   );

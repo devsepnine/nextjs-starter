@@ -4,9 +4,9 @@ import { useRouter } from 'next/navigation';
 
 import { useCallback, useState } from 'react';
 
-import { Trans, useLingui } from '@lingui/react/macro';
 import { Icon } from '@iconify/react';
 import { Temporal } from '@js-temporal/polyfill';
+import { Trans, useLingui } from '@lingui/react/macro';
 import { div as MotionDiv } from 'motion/react-client';
 
 import { Badge } from '@/components/ui/badge';
@@ -122,15 +122,7 @@ const TemporalExample = () => {
     { name: t`New York`, time: newYorkTime, emoji: '🇺🇸' },
   ];
 
-  const weekdays = [
-    t`Mon`,
-    t`Tue`,
-    t`Wed`,
-    t`Thu`,
-    t`Fri`,
-    t`Sat`,
-    t`Sun`,
-  ];
+  const weekdays = [t`Mon`, t`Tue`, t`Wed`, t`Thu`, t`Fri`, t`Sat`, t`Sun`];
 
   return (
     <MotionDiv
@@ -228,9 +220,7 @@ const TemporalExample = () => {
               </div>
               <div className="text-5xl font-bold mb-2">D-{daysUntilNewYear}</div>
               <p className="text-sm text-muted-foreground">
-                <Trans id="temporal.daysUntilNewYear">
-                  Days until {nextYear}
-                </Trans>
+                <Trans id="temporal.daysUntilNewYear">Days until {nextYear}</Trans>
               </p>
             </CardContent>
           </Card>
@@ -463,9 +453,7 @@ const TemporalExample = () => {
                   <p className="text-xs text-muted-foreground mb-1">
                     <Trans id="temporal.weekday">Weekday</Trans>
                   </p>
-                  <p className="text-2xl font-bold">
-                    {weekdays[today.dayOfWeek - 1]}
-                  </p>
+                  <p className="text-2xl font-bold">{weekdays[today.dayOfWeek - 1]}</p>
                 </div>
                 <div className="text-center p-4 bg-muted rounded-lg">
                   <p className="text-xs text-muted-foreground mb-1">
@@ -489,7 +477,9 @@ const TemporalExample = () => {
                 <Trans id="temporal.timezoneDifference">Timezone Difference</Trans>
               </CardTitle>
               <CardDescription>
-                <Trans id="temporal.timezoneDescription">Time difference from selected timezone</Trans>
+                <Trans id="temporal.timezoneDescription">
+                  Time difference from selected timezone
+                </Trans>
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
@@ -542,16 +532,16 @@ const TemporalExample = () => {
                   </span>
                   <Icon icon="mdi:arrow-right" className="mx-2 text-muted-foreground" />
                   <span className="text-2xl">🇺🇸</span>
-                  <span className="font-semibold">
-                    {t`New York`}
-                  </span>
+                  <span className="font-semibold">{t`New York`}</span>
                 </div>
                 <span className="text-xl font-bold font-mono">
-                  {(selectedTime.offsetNanoseconds - newYorkTime.offsetNanoseconds) / 3600000000000 >
+                  {(selectedTime.offsetNanoseconds - newYorkTime.offsetNanoseconds) /
+                    3600000000000 >
                   0
                     ? '+'
                     : ''}
-                  {(selectedTime.offsetNanoseconds - newYorkTime.offsetNanoseconds) / 3600000000000}h
+                  {(selectedTime.offsetNanoseconds - newYorkTime.offsetNanoseconds) / 3600000000000}
+                  h
                 </span>
               </div>
             </CardContent>
