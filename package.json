@@ -15,7 +15,8 @@
     "lingui:extract": "lingui extract --clean",
     "lingui:compile": "lingui compile --typescript",
     "lingui:watch": "lingui extract --watch",
-    "lingui:extract_and_compile": "pnpm run lingui:extract && pnpm run lingui:compile"
+    "lingui:extract_and_compile": "pnpm run lingui:extract && pnpm run lingui:compile",
+    "prepare": "husky"
   },
   "type": "module",
   "dependencies": {
@@ -60,6 +61,8 @@
     "eslint-config-next": "^16.1.4",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-unused-imports": "^4.3.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.7",
     "prettier": "^3.8.1",
     "sass": "^1.97.3",
     "serwist": "^9.5.0",
@@ -73,5 +76,14 @@
     "> 0.5%",
     "last 2 versions",
     "not dead"
-  ]
+  ],
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md,css,scss}": [
+      "prettier --write"
+    ]
+  }
 }
