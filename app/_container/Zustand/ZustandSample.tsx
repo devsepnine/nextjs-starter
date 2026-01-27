@@ -7,14 +7,19 @@ import { motion } from 'motion/react';
 import { AnimatedNumber } from '@/components/template/AnimatedNumber';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
-import { decrease, increase, useSampleStore } from '@/store/sampleStore';
+import { sampleActions, useSampleStore } from '@/store/sampleStore';
 
 import styles from './Zustand.module.scss';
+
+// Hoist motion animation configs outside component to prevent recreation on every render
+const MOTION_HOVER = { scale: 1.1, transition: { duration: 0.2 } };
+const MOTION_TAP = { scale: 0.8, transition: { duration: 0.2 } };
 
 const ZustandSample = () => {
   const { t } = useLingui();
 
-  const { number } = useSampleStore();
+  const number = useSampleStore((state) => state.number);
+  const { increase, decrease } = sampleActions;
 
   return (
     <Card className={styles['root']}>
@@ -25,10 +30,7 @@ const ZustandSample = () => {
           <AnimatedNumber value={number.toString()} />
         </div>
         <div className={styles['button-area']}>
-          <motion.div
-            whileHover={{ scale: 1.1, transition: { duration: 0.2 } }}
-            whileTap={{ scale: 0.8 }}
-          >
+          <motion.div whileHover={MOTION_HOVER} whileTap={MOTION_TAP}>
             <Button
               size={'sm'}
               variant={'default'}
@@ -39,13 +41,7 @@ const ZustandSample = () => {
               {t`Add`.toUpperCase()}
             </Button>
           </motion.div>
-          <motion.div
-            whileHover={{ scale: 1.1, transition: { duration: 0.2 } }}
-            whileTap={{
-              scale: 0.8,
-              transition: { duration: 0.2 },
-            }}
-          >
+          <motion.div whileHover={MOTION_HOVER} whileTap={MOTION_TAP}>
             <Button
               size={'sm'}
               variant={'destructive'}

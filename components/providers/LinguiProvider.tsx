@@ -30,7 +30,7 @@ export default function LinguiProvider({ children, locale }: Readonly<LinguiProv
       setIsLoaded(true);
     }
 
-    initializeI18n().then();
+    initializeI18n();
   }, [locale]);
 
   // 메시지가 로드되기 전에는 null 반환 (깜빡임 방지)

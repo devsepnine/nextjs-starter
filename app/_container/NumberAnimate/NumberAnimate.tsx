@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 
 import { useLingui } from '@lingui/react/macro';
 
@@ -18,6 +18,9 @@ import {
 import { NUM_REGEX } from '@/lib/constants';
 import { cn } from '@/lib/utils';
 
+// Hoist size options outside component to prevent recreation on every render
+const SIZE_OPTIONS = [1, 1.5, 2, 2.5, 3] as const;
+
 const NumberAnimate = () => {
   const { t } = useLingui();
   const [tempNumber, setTempNumber] = useState<string>('0');
@@ -26,7 +29,7 @@ const NumberAnimate = () => {
   const [position, setPosition] = useState<string>('justify-end');
   const [size, setSize] = useState<number>(1.5);
 
-  const handleInput = () => {
+  const handleInput = useCallback(() => {
     const value = tempNumber;
 
     if (NUM_REGEX.test(value)) {
@@ -34,7 +37,23 @@ const NumberAnimate = () => {
     } else {
       setNumber('0');
     }
-  };
+  }, [tempNumber]);
+
+  const handleChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value;
+    if (NUM_REGEX.test(value) || value === '') {
+      setTempNumber(value);
+    }
+  }, []);
+
+  const handleKeyDown = useCallback(
+    (e: React.KeyboardEvent<HTMLInputElement>) => {
+      if (e.key === 'Enter') {
+        handleInput();
+      }
+    },
+    [handleInput]
+  );
 
   return (
     <Card className={'w-full h-full p-4'}>
@@ -54,17 +73,8 @@ const NumberAnimate = () => {
             type={'text'}
             className={'h-10 col-span-6 sm:col-span-4'}
             value={tempNumber}
-            onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
-              const value = e.target.value;
-              if (NUM_REGEX.test(value) || value === '') {
-                setTempNumber(value);
-              }
-            }}
-            onKeyDown={(e: React.KeyboardEvent<HTMLInputElement>) => {
-              if (e.key === 'Enter') {
-                handleInput();
-              }
-            }}
+            onChange={handleChange}
+            onKeyDown={handleKeyDown}
           />
           <Button
             onClick={handleInput}
@@ -88,7 +98,7 @@ const NumberAnimate = () => {
               <SelectValue placeholder={'Size'} />
             </SelectTrigger>
             <SelectContent>
-              {[1, 1.5, 2, 2.5, 3].map((s) => (
+              {SIZE_OPTIONS.map((s) => (
                 <SelectItem key={s} value={s.toString()}>
                   {s}x
                 </SelectItem>
