@@ -9,68 +9,66 @@ const ZustandSample = dynamic(() => import('@/app/_container/Zustand/ZustandSamp
 const GoSecondPage = dynamic(() => import('@/app/_container/GoSecondPage/GoSecondPage'));
 
 import { Hello } from '@/app/_container/Hello/Hello';
-import TemporalTest from '@/app/_container/TemporalTest/TemporalTest';
 
 import styles from './Home.module.scss';
+
+// Hoist animation configs outside component to prevent recreation on every render
+const MOTION_INITIAL = { opacity: 0, y: -20 };
+const MOTION_ANIMATE = { opacity: 1, y: 0 };
+const MOTION_TRANSITION_BASE = { duration: 0.5, ease: 'easeInOut' as const };
+
+const createTransition = (delay: number) => ({ ...MOTION_TRANSITION_BASE, delay });
 
 export function Home() {
   return (
     <div className={styles['root']}>
       <MotionDiv
         className={'md:col-span-2'}
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.1 }}
+        initial={MOTION_INITIAL}
+        animate={MOTION_ANIMATE}
+        transition={createTransition(0.1)}
       >
         <Hello />
       </MotionDiv>
       <MotionDiv
         className={'w-full h-full bp:col-span-2'}
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.2 }}
+        initial={MOTION_INITIAL}
+        animate={MOTION_ANIMATE}
+        transition={createTransition(0.2)}
       >
         <InfoPack />
       </MotionDiv>
       <MotionDiv
         className={'w-full h-full'}
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.3 }}
+        initial={MOTION_INITIAL}
+        animate={MOTION_ANIMATE}
+        transition={createTransition(0.3)}
       >
         <Something />
       </MotionDiv>
       <MotionDiv
         className={'w-full h-full'}
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.4 }}
+        initial={MOTION_INITIAL}
+        animate={MOTION_ANIMATE}
+        transition={createTransition(0.4)}
       >
         <ZustandSample />
       </MotionDiv>
       <MotionDiv
         className={'w-full h-full'}
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.5 }}
+        initial={MOTION_INITIAL}
+        animate={MOTION_ANIMATE}
+        transition={createTransition(0.5)}
       >
         <NumberAnimate />
       </MotionDiv>
       <MotionDiv
         className={'w-full h-full'}
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.6 }}
+        initial={MOTION_INITIAL}
+        animate={MOTION_ANIMATE}
+        transition={createTransition(0.6)}
       >
         <GoSecondPage />
-      </MotionDiv>
-      <MotionDiv
-        className={'w-full h-full'}
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.7 }}
-      >
-        <TemporalTest />
       </MotionDiv>
     </div>
   );
