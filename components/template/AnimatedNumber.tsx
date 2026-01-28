@@ -7,6 +7,9 @@ import { motion, useSpring, useTransform } from 'motion/react';
 
 import { cn } from '@/lib/utils';
 
+// Hoist digit array outside component to prevent recreation on every render
+const DIGITS = Array.from({ length: 10 }, (_, i) => i);
+
 export interface AnimatedNumberProps {
   value: string;
   fontSize?: number; // rem
@@ -86,7 +89,7 @@ const Digit = ({ value, height }: DigitProps) => {
       style={{ height: `${height}rem` }}
       className="overflow-hidden relative w-[1ch] tabular-nums"
     >
-      {[...Array(10).keys()].map((i) => (
+      {DIGITS.map((i) => (
         <MotionNumber key={i} mv={animatedValue} number={i} height={height} />
       ))}
     </div>

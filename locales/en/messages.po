@@ -13,55 +13,275 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: app/_container/Zustand/ZustandSample.tsx:39
+#. placeholder {0}: meetingDuration.hours
+#. placeholder {1}: meetingDuration.minutes
+#: app/temporal/_container/Temporal.tsx:340
+msgid "{0}h {1}m"
+msgstr "{0}h {1}m"
+
+#: app/_container/Zustand/ZustandSample.tsx:41
 msgid "Add"
 msgstr "Add"
 
-#: app/_container/Something/Something.tsx:21
+#: app/_container/Something/Something.tsx:13
 msgid "boop"
 msgstr "boop"
 
-#: app/_container/NumberAnimate/NumberAnimate.tsx:82
+#: app/_container/NumberAnimate/NumberAnimate.tsx:92
 msgid "Center"
 msgstr "Center"
 
-#: app/_container/Hello/Hello.tsx:15
+#: app/temporal/_container/Temporal.tsx:402
+msgid "Current Date"
+msgstr "Current Date"
+
+#: app/temporal/_container/Temporal.tsx:272
+msgid "Date Calculations"
+msgstr "Date Calculations"
+
+#: app/temporal/_container/Temporal.tsx:397
+msgid "Date Details"
+msgstr "Date Details"
+
+#: app/temporal/_container/Temporal.tsx:352
+msgid "Date Formats"
+msgstr "Date Formats"
+
+#: app/temporal/_container/Temporal.tsx:368
+msgid "Date Only"
+msgstr "Date Only"
+
+#: app/temporal/_container/Temporal.tsx:416
+msgid "Day"
+msgstr "Day"
+
+#: app/temporal/_container/Temporal.tsx:424
+msgid "Day of Year"
+msgstr "Day of Year"
+
+#: app/temporal/_container/Temporal.tsx:222
+msgid "Days until {nextYear}"
+msgstr "Days until {nextYear}"
+
+#: app/temporal/_container/Temporal.tsx:50
+msgid "Dubai"
+msgstr "Dubai"
+
+#: app/temporal/_container/Temporal.tsx:338
+msgid "Duration"
+msgstr "Duration"
+
+#: app/temporal/_container/Temporal.tsx:281
+msgid "Duration between start and end time"
+msgstr "Duration between start and end time"
+
+#: app/temporal/_container/Temporal.tsx:327
+msgid "End"
+msgstr "End"
+
+#: app/temporal/_container/Temporal.tsx:295
+msgid "End Time"
+msgstr "End Time"
+
+#: app/temporal/_container/Temporal.tsx:126
+msgid "Fri"
+msgstr "Fri"
+
+#: app/temporal/_container/Temporal.tsx:146
+msgid "Go Home"
+msgstr "Go Home"
+
+#: app/_container/Hello/Hello.tsx:11
 msgid "Hello Next.js"
 msgstr "Hello Next.js"
 
-#: app/_container/NumberAnimate/NumberAnimate.tsx:71
-#: app/_container/NumberAnimate/NumberAnimate.tsx:74
+#: app/_container/NumberAnimate/NumberAnimate.tsx:81
+#: app/_container/NumberAnimate/NumberAnimate.tsx:84
 msgid "Input"
 msgstr "Input"
 
-#: app/_container/Something/Something.tsx:17
+#: app/_container/Something/Something.tsx:12
 msgid "Just Sample Design"
 msgstr "Just Sample Design"
 
-#: app/_container/NumberAnimate/NumberAnimate.tsx:81
+#: app/temporal/_container/Temporal.tsx:51
+msgid "LA"
+msgstr "LA"
+
+#: app/_container/NumberAnimate/NumberAnimate.tsx:91
 msgid "Left"
 msgstr "Left"
 
-#: app/_container/Hello/Hello.tsx:21
+#: app/temporal/_container/Temporal.tsx:47
+msgid "London"
+msgstr "London"
+
+#: app/temporal/_container/Temporal.tsx:358
+msgid "Long Format"
+msgstr "Long Format"
+
+#: app/temporal/_container/Temporal.tsx:278
+msgid "Meeting Duration"
+msgstr "Meeting Duration"
+
+#: app/temporal/_container/Temporal.tsx:141
+msgid "Modern date/time handling with @js-temporal/polyfill"
+msgstr "Modern date/time handling with @js-temporal/polyfill"
+
+#: app/temporal/_container/Temporal.tsx:126
+msgid "Mon"
+msgstr "Mon"
+
+#: app/temporal/_container/Temporal.tsx:412
+msgid "Month"
+msgstr "Month"
+
+#: app/temporal/_container/Temporal.tsx:385
+msgid "Month-Day"
+msgstr "Month-Day"
+
+#: app/temporal/_container/Temporal.tsx:46
+#: app/temporal/_container/Temporal.tsx:123
+#: app/temporal/_container/Temporal.tsx:492
+msgid "New York"
+msgstr "New York"
+
+#: app/temporal/_container/Temporal.tsx:49
+msgid "Paris"
+msgstr "Paris"
+
+#: app/_container/Hello/Hello.tsx:16
 msgid "Please let me know any improvements or feedback, and I will incorporate them."
 msgstr "Please let me know any improvements or feedback, and I will incorporate them."
 
-#: app/_container/Something/Something.tsx:25
+#: app/_container/Something/Something.tsx:14
 msgid "pop"
 msgstr "pop"
 
-#: app/_container/NumberAnimate/NumberAnimate.tsx:83
+#: app/temporal/_container/Temporal.tsx:212
+msgid "Quick Stats"
+msgstr "Quick Stats"
+
+#: app/_container/NumberAnimate/NumberAnimate.tsx:93
 msgid "Right"
 msgstr "Right"
+
+#: app/temporal/_container/Temporal.tsx:126
+msgid "Sat"
+msgstr "Sat"
+
+#: app/temporal/_container/Temporal.tsx:449
+msgid "Select timezone"
+msgstr "Select timezone"
+
+#: app/temporal/_container/Temporal.tsx:445
+msgid "Select Timezone"
+msgstr "Select Timezone"
+
+#: app/temporal/_container/Temporal.tsx:44
+#: app/temporal/_container/Temporal.tsx:121
+msgid "Seoul"
+msgstr "Seoul"
+
+#: app/temporal/_container/Temporal.tsx:243
+msgid "Set Date"
+msgstr "Set Date"
+
+#: app/temporal/_container/Temporal.tsx:48
+msgid "Shanghai"
+msgstr "Shanghai"
+
+#. placeholder {0}: projectStart.toString()
+#: app/temporal/_container/Temporal.tsx:238
+msgid "Since {0}"
+msgstr "Since {0}"
+
+#: app/temporal/_container/Temporal.tsx:306
+msgid "Start"
+msgstr "Start"
+
+#: app/temporal/_container/Temporal.tsx:287
+msgid "Start Time"
+msgstr "Start Time"
 
 #: layout/BaseLayout/Header/Header.tsx:21
 msgid "Starter kit"
 msgstr "Starter kit"
 
-#: app/_container/Zustand/ZustandSample.tsx:61
+#: app/_container/Zustand/ZustandSample.tsx:57
 msgid "Subtract"
 msgstr "Subtract"
 
-#: app/_container/Hello/Hello.tsx:18
+#: app/temporal/_container/Temporal.tsx:126
+msgid "Sun"
+msgstr "Sun"
+
+#: app/temporal/_container/Temporal.tsx:52
+msgid "Sydney"
+msgstr "Sydney"
+
+#: app/_container/Hello/Hello.tsx:13
 msgid "This is a project configured for convenient and fast start of next.js projects."
 msgstr "This is a project configured for convenient and fast start of next.js projects."
+
+#: app/temporal/_container/Temporal.tsx:126
+msgid "Thu"
+msgstr "Thu"
+
+#: app/temporal/_container/Temporal.tsx:439
+msgid "Time difference from selected timezone"
+msgstr "Time difference from selected timezone"
+
+#: app/temporal/_container/Temporal.tsx:373
+msgid "Time Only"
+msgstr "Time Only"
+
+#: app/temporal/_container/Temporal.tsx:437
+msgid "Timezone Difference"
+msgstr "Timezone Difference"
+
+#: app/temporal/_container/Temporal.tsx:403
+msgid "Today's Details"
+msgstr "Today's Details"
+
+#: app/temporal/_container/Temporal.tsx:45
+#: app/temporal/_container/Temporal.tsx:122
+msgid "Tokyo"
+msgstr "Tokyo"
+
+#: app/temporal/_container/Temporal.tsx:126
+msgid "Tue"
+msgstr "Tue"
+
+#. placeholder {0}: projectStart.toString()
+#: app/temporal/_container/Temporal.tsx:239
+msgid "Until {0}"
+msgstr "Until {0}"
+
+#: app/temporal/_container/Temporal.tsx:126
+msgid "Wed"
+msgstr "Wed"
+
+#: app/temporal/_container/Temporal.tsx:428
+msgid "Week"
+msgstr "Week"
+
+#: app/temporal/_container/Temporal.tsx:420
+msgid "Weekday"
+msgstr "Weekday"
+
+#: app/temporal/_container/Temporal.tsx:261
+msgid "Working Days This Month"
+msgstr "Working Days This Month"
+
+#: app/temporal/_container/Temporal.tsx:181
+msgid "World Clocks"
+msgstr "World Clocks"
+
+#: app/temporal/_container/Temporal.tsx:408
+msgid "Year"
+msgstr "Year"
+
+#: app/temporal/_container/Temporal.tsx:380
+msgid "Year-Month"
+msgstr "Year-Month"

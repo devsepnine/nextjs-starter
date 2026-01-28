@@ -1,3 +1,5 @@
+'use client';
+
 import Link from 'next/link';
 
 import { Icon } from '@iconify/react';
@@ -12,22 +14,22 @@ const InfoPack = () => {
     <Card className={styles['root']}>
       <div className={styles['title']}>library list</div>
       <div className={styles['contents']}>
-        <span className={styles['chips']}>
-          <Icon icon={'logos:nextjs-icon'} width={15} height={15} /> Next.js
-        </span>
-        <span className={styles['chips']}>
-          <Icon icon={'logos:react'} width={15} height={15} />
-          React.js
-        </span>
-        <span className={styles['chips']}>
-          <Icon icon={'logos:sass'} width={15} height={15} />
-          SCSS
-        </span>
-        <span className={styles['chips']}>
-          <Icon icon={'logos:pwa'} width={15} height={15} />
-          PWA
-        </span>
         <TooltipProvider>
+          <span className={styles['chips']}>
+            <Icon icon={'logos:nextjs-icon'} width={15} height={15} /> Next.js
+          </span>
+          <span className={styles['chips']}>
+            <Icon icon={'logos:react'} width={15} height={15} />
+            React.js
+          </span>
+          <span className={styles['chips']}>
+            <Icon icon={'logos:sass'} width={15} height={15} />
+            SCSS
+          </span>
+          <span className={styles['chips']}>
+            <Icon icon={'logos:pwa'} width={15} height={15} />
+            PWA
+          </span>
           <Tooltip>
             <TooltipTrigger asChild>
               <span className={styles['chips']}>
@@ -41,19 +43,17 @@ const InfoPack = () => {
               </div>
             </TooltipContent>
           </Tooltip>
-        </TooltipProvider>
-        <span className={styles['chips']}>
-          <Icon icon={'icon-park-solid:dark-mode'} width={15} height={15} /> DarkMode
-        </span>
-        <span className={styles['chips']}>
-          <Icon icon={'material-symbols:language'} width={15} height={15} />
-          i18n
-        </span>
-        <span className={styles['chips']}>
-          <Icon icon={'icon-park-twotone:disk'} width={15} height={15} />
-          Zustand
-        </span>
-        <TooltipProvider>
+          <span className={styles['chips']}>
+            <Icon icon={'icon-park-solid:dark-mode'} width={15} height={15} /> DarkMode
+          </span>
+          <span className={styles['chips']}>
+            <Icon icon={'material-symbols:language'} width={15} height={15} />
+            i18n
+          </span>
+          <span className={styles['chips']}>
+            <Icon icon={'icon-park-twotone:disk'} width={15} height={15} />
+            Zustand
+          </span>
           <Tooltip>
             <TooltipTrigger asChild>
               <span className={styles['chips']}>
@@ -67,8 +67,6 @@ const InfoPack = () => {
               </div>
             </TooltipContent>
           </Tooltip>
-        </TooltipProvider>
-        <TooltipProvider>
           <Tooltip>
             <TooltipTrigger asChild>
               <span className={styles['chips']}>

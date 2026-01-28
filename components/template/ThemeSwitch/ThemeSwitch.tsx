@@ -1,5 +1,7 @@
 'use client';
 
+import { useCallback } from 'react';
+
 import { Icon } from '@iconify/react';
 import { clsx } from 'clsx';
 import { useTheme } from 'next-themes';
@@ -18,6 +20,18 @@ import styles from './ThemeSwitch.module.scss';
 export function ThemeSwitch() {
   const isClient = useIsClient();
   const { setTheme } = useTheme();
+
+  const handleLightTheme = useCallback(() => {
+    setTheme('light');
+  }, [setTheme]);
+
+  const handleDarkTheme = useCallback(() => {
+    setTheme('dark');
+  }, [setTheme]);
+
+  const handleSystemTheme = useCallback(() => {
+    setTheme('system');
+  }, [setTheme]);
 
   if (!isClient) {
     return null;
@@ -45,7 +59,7 @@ export function ThemeSwitch() {
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" className={styles['theme-content']}>
-        <DropdownMenuItem onClick={() => setTheme('light')} className={styles['menu']}>
+        <DropdownMenuItem onClick={handleLightTheme} className={styles['menu']}>
           <Icon
             icon={'line-md:moon-filled-alt-to-sunny-filled-loop-transition'}
             width={15}
@@ -53,7 +67,7 @@ export function ThemeSwitch() {
           />
           <span>Light</span>
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme('dark')} className={styles['menu']}>
+        <DropdownMenuItem onClick={handleDarkTheme} className={styles['menu']}>
           <Icon
             icon={'line-md:sunny-filled-loop-to-moon-filled-loop-transition'}
             width={15}
@@ -61,7 +75,7 @@ export function ThemeSwitch() {
           />
           <span>Dark</span>
         </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => setTheme('system')} className={styles['menu']}>
+        <DropdownMenuItem onClick={handleSystemTheme} className={styles['menu']}>
           <Icon icon={'line-md:cog-filled-loop'} width={15} height={15} />
           <span>System</span>
         </DropdownMenuItem>

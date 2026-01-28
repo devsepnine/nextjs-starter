@@ -13,55 +13,275 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: app/_container/Zustand/ZustandSample.tsx:39
+#. placeholder {0}: meetingDuration.hours
+#. placeholder {1}: meetingDuration.minutes
+#: app/temporal/_container/Temporal.tsx:340
+msgid "{0}h {1}m"
+msgstr "{0}小时{1}分钟"
+
+#: app/_container/Zustand/ZustandSample.tsx:41
 msgid "Add"
 msgstr "添加"
 
-#: app/_container/Something/Something.tsx:21
+#: app/_container/Something/Something.tsx:13
 msgid "boop"
 msgstr "啵"
 
-#: app/_container/NumberAnimate/NumberAnimate.tsx:82
+#: app/_container/NumberAnimate/NumberAnimate.tsx:92
 msgid "Center"
 msgstr "居中"
 
-#: app/_container/Hello/Hello.tsx:15
+#: app/temporal/_container/Temporal.tsx:402
+msgid "Current Date"
+msgstr "当前日期"
+
+#: app/temporal/_container/Temporal.tsx:272
+msgid "Date Calculations"
+msgstr "日期计算"
+
+#: app/temporal/_container/Temporal.tsx:397
+msgid "Date Details"
+msgstr "日期详情"
+
+#: app/temporal/_container/Temporal.tsx:352
+msgid "Date Formats"
+msgstr "日期格式"
+
+#: app/temporal/_container/Temporal.tsx:368
+msgid "Date Only"
+msgstr "仅日期"
+
+#: app/temporal/_container/Temporal.tsx:416
+msgid "Day"
+msgstr "日"
+
+#: app/temporal/_container/Temporal.tsx:424
+msgid "Day of Year"
+msgstr "年度第几天"
+
+#: app/temporal/_container/Temporal.tsx:222
+msgid "Days until {nextYear}"
+msgstr "距离{nextYear}年"
+
+#: app/temporal/_container/Temporal.tsx:50
+msgid "Dubai"
+msgstr "迪拜"
+
+#: app/temporal/_container/Temporal.tsx:338
+msgid "Duration"
+msgstr "持续时间"
+
+#: app/temporal/_container/Temporal.tsx:281
+msgid "Duration between start and end time"
+msgstr "开始时间和结束时间之间的持续时间"
+
+#: app/temporal/_container/Temporal.tsx:327
+msgid "End"
+msgstr "结束"
+
+#: app/temporal/_container/Temporal.tsx:295
+msgid "End Time"
+msgstr "结束时间"
+
+#: app/temporal/_container/Temporal.tsx:126
+msgid "Fri"
+msgstr "周五"
+
+#: app/temporal/_container/Temporal.tsx:146
+msgid "Go Home"
+msgstr "返回首页"
+
+#: app/_container/Hello/Hello.tsx:11
 msgid "Hello Next.js"
 msgstr "你好 Next.js"
 
-#: app/_container/NumberAnimate/NumberAnimate.tsx:71
-#: app/_container/NumberAnimate/NumberAnimate.tsx:74
+#: app/_container/NumberAnimate/NumberAnimate.tsx:81
+#: app/_container/NumberAnimate/NumberAnimate.tsx:84
 msgid "Input"
 msgstr "输入"
 
-#: app/_container/Something/Something.tsx:17
+#: app/_container/Something/Something.tsx:12
 msgid "Just Sample Design"
 msgstr "示例设计演示"
 
-#: app/_container/NumberAnimate/NumberAnimate.tsx:81
+#: app/temporal/_container/Temporal.tsx:51
+msgid "LA"
+msgstr "洛杉矶"
+
+#: app/_container/NumberAnimate/NumberAnimate.tsx:91
 msgid "Left"
 msgstr "左对齐"
 
-#: app/_container/Hello/Hello.tsx:21
+#: app/temporal/_container/Temporal.tsx:47
+msgid "London"
+msgstr "伦敦"
+
+#: app/temporal/_container/Temporal.tsx:358
+msgid "Long Format"
+msgstr "长格式"
+
+#: app/temporal/_container/Temporal.tsx:278
+msgid "Meeting Duration"
+msgstr "会议时长"
+
+#: app/temporal/_container/Temporal.tsx:141
+msgid "Modern date/time handling with @js-temporal/polyfill"
+msgstr "使用@js-temporal/polyfill的现代日期/时间处理"
+
+#: app/temporal/_container/Temporal.tsx:126
+msgid "Mon"
+msgstr "周一"
+
+#: app/temporal/_container/Temporal.tsx:412
+msgid "Month"
+msgstr "月"
+
+#: app/temporal/_container/Temporal.tsx:385
+msgid "Month-Day"
+msgstr "月-日"
+
+#: app/temporal/_container/Temporal.tsx:46
+#: app/temporal/_container/Temporal.tsx:123
+#: app/temporal/_container/Temporal.tsx:492
+msgid "New York"
+msgstr "纽约"
+
+#: app/temporal/_container/Temporal.tsx:49
+msgid "Paris"
+msgstr "巴黎"
+
+#: app/_container/Hello/Hello.tsx:16
 msgid "Please let me know any improvements or feedback, and I will incorporate them."
 msgstr "如有任何改进建议或反馈，请告诉我，我会采纳的！"
 
-#: app/_container/Something/Something.tsx:25
+#: app/_container/Something/Something.tsx:14
 msgid "pop"
 msgstr "弹出"
 
-#: app/_container/NumberAnimate/NumberAnimate.tsx:83
+#: app/temporal/_container/Temporal.tsx:212
+msgid "Quick Stats"
+msgstr "快速统计"
+
+#: app/_container/NumberAnimate/NumberAnimate.tsx:93
 msgid "Right"
 msgstr "右对齐"
+
+#: app/temporal/_container/Temporal.tsx:126
+msgid "Sat"
+msgstr "周六"
+
+#: app/temporal/_container/Temporal.tsx:449
+msgid "Select timezone"
+msgstr "选择时区"
+
+#: app/temporal/_container/Temporal.tsx:445
+msgid "Select Timezone"
+msgstr "选择时区"
+
+#: app/temporal/_container/Temporal.tsx:44
+#: app/temporal/_container/Temporal.tsx:121
+msgid "Seoul"
+msgstr "首尔"
+
+#: app/temporal/_container/Temporal.tsx:243
+msgid "Set Date"
+msgstr "设置日期"
+
+#: app/temporal/_container/Temporal.tsx:48
+msgid "Shanghai"
+msgstr "上海"
+
+#. placeholder {0}: projectStart.toString()
+#: app/temporal/_container/Temporal.tsx:238
+msgid "Since {0}"
+msgstr "自{0}起"
+
+#: app/temporal/_container/Temporal.tsx:306
+msgid "Start"
+msgstr "开始"
+
+#: app/temporal/_container/Temporal.tsx:287
+msgid "Start Time"
+msgstr "开始时间"
 
 #: layout/BaseLayout/Header/Header.tsx:21
 msgid "Starter kit"
 msgstr "起始套件"
 
-#: app/_container/Zustand/ZustandSample.tsx:61
+#: app/_container/Zustand/ZustandSample.tsx:57
 msgid "Subtract"
 msgstr "减少"
 
-#: app/_container/Hello/Hello.tsx:18
+#: app/temporal/_container/Temporal.tsx:126
+msgid "Sun"
+msgstr "周日"
+
+#: app/temporal/_container/Temporal.tsx:52
+msgid "Sydney"
+msgstr "悉尼"
+
+#: app/_container/Hello/Hello.tsx:13
 msgid "This is a project configured for convenient and fast start of next.js projects."
 msgstr "这是一个为便捷快速启动 Next.js 项目而配置的起始模板。"
+
+#: app/temporal/_container/Temporal.tsx:126
+msgid "Thu"
+msgstr "周四"
+
+#: app/temporal/_container/Temporal.tsx:439
+msgid "Time difference from selected timezone"
+msgstr "与所选时区的时差"
+
+#: app/temporal/_container/Temporal.tsx:373
+msgid "Time Only"
+msgstr "仅时间"
+
+#: app/temporal/_container/Temporal.tsx:437
+msgid "Timezone Difference"
+msgstr "时区差异"
+
+#: app/temporal/_container/Temporal.tsx:403
+msgid "Today's Details"
+msgstr "今日详情"
+
+#: app/temporal/_container/Temporal.tsx:45
+#: app/temporal/_container/Temporal.tsx:122
+msgid "Tokyo"
+msgstr "东京"
+
+#: app/temporal/_container/Temporal.tsx:126
+msgid "Tue"
+msgstr "周二"
+
+#. placeholder {0}: projectStart.toString()
+#: app/temporal/_container/Temporal.tsx:239
+msgid "Until {0}"
+msgstr "至{0}"
+
+#: app/temporal/_container/Temporal.tsx:126
+msgid "Wed"
+msgstr "周三"
+
+#: app/temporal/_container/Temporal.tsx:428
+msgid "Week"
+msgstr "周"
+
+#: app/temporal/_container/Temporal.tsx:420
+msgid "Weekday"
+msgstr "星期"
+
+#: app/temporal/_container/Temporal.tsx:261
+msgid "Working Days This Month"
+msgstr "本月工作日"
+
+#: app/temporal/_container/Temporal.tsx:181
+msgid "World Clocks"
+msgstr "世界时钟"
+
+#: app/temporal/_container/Temporal.tsx:408
+msgid "Year"
+msgstr "年"
+
+#: app/temporal/_container/Temporal.tsx:380
+msgid "Year-Month"
+msgstr "年-月"
