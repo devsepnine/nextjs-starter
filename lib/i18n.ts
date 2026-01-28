@@ -34,11 +34,29 @@ export const SUPPORTED_LANGUAGES: ILocale[] = [
     locale: 'zh-TW',
     label: '中文 (繁體)',
   },
+  {
+    language: 'ar',
+    locale: 'ar-SA',
+    label: 'العربية',
+  },
 ];
 
 export const FALLBACK_LANG = SUPPORTED_LANGUAGES[0].language;
 export const SUPPORTED_LNGS = SUPPORTED_LANGUAGES.map((locale) => locale.language);
 export type Locales = (typeof SUPPORTED_LNGS)[number];
+
+// RTL (Right-to-Left) 언어 목록
+export const RTL_LANGUAGES: Locales[] = ['ar'];
+
+// 주어진 언어가 RTL 언어인지 확인
+export function isRTL(locale: string): boolean {
+  return RTL_LANGUAGES.includes(locale as Locales);
+}
+
+// 언어에 따른 텍스트 방향 반환
+export function getTextDirection(locale: string): 'rtl' | 'ltr' {
+  return isRTL(locale) ? 'rtl' : 'ltr';
+}
 
 // 언어 쿠키명 (기존과 동일)
 export const LANGUAGE_COOKIE = 'scorn';
