@@ -1,7 +1,7 @@
 /** @type {import('@lingui/conf').LinguiConfig} */
 const config = {
-  // 지원하는 언어 목록 - 중국어를 간체/번체로 분리
-  locales: ['en', 'ko', 'ja', 'zh-cn', 'zh-tw'],
+  // 지원하는 언어 목록 - 중국어를 간체/번체로 분리, 아랍어 추가
+  locales: ['en', 'ko', 'ja', 'zh-cn', 'zh-tw', 'ar'],
 
   // 기본 언어 (fallback)
   sourceLocale: 'en',

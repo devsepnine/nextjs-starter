@@ -10,6 +10,7 @@ import LinguiProvider from '@/components/providers/LinguiProvider';
 import { BaseLayout } from '@/layout/BaseLayout/BaseLayout';
 import { ThemeProvider } from '@/layout/ThemeProvider/ThemeProvider';
 import { getLocaleFromCookie } from '@/lib/browser-locale';
+import { getTextDirection } from '@/lib/i18n';
 import { themeInitial } from '@/lib/themeInitial';
 
 export const viewport: Viewport = {
@@ -40,9 +41,11 @@ export default async function RootLayout({
   const lng = await getLocaleFromCookie();
   // initial theme
   const ti = themeInitial();
+  // RTL/LTR direction
+  const dir = getTextDirection(lng);
 
   return (
-    <html lang={lng} suppressHydrationWarning={true}>
+    <html lang={lng} dir={dir} suppressHydrationWarning={true}>
       <head>
         <link rel="preconnect" href="https://api.iconify.design" crossOrigin="anonymous" />
         <title>HIVICanvas Starter Kit</title>
