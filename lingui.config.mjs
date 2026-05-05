@@ -1,3 +1,5 @@
+import { formatter } from '@lingui/format-po';
+
 /** @type {import('@lingui/conf').LinguiConfig} */
 const config = {
   // 지원하는 언어 목록 - 중국어를 간체/번체로 분리, 아랍어 추가
@@ -16,7 +18,7 @@ const config = {
   ],
 
   // 번역 파일 포맷 (po 형식 사용)
-  format: 'po',
+  format: formatter(),
 
   // 추출할 메시지를 찾을 디렉토리들
   rootDir: '.',

@@ -15,7 +15,7 @@ msgstr ""
 
 #. placeholder {0}: meetingDuration.hours
 #. placeholder {1}: meetingDuration.minutes
-#: app/temporal/_container/Temporal.tsx:340
+#: app/temporal/_container/Temporal.tsx:334
 msgid "{0}h {1}m"
 msgstr "{0}시간 {1}분"
 
@@ -31,35 +31,35 @@ msgstr "부프"
 msgid "Center"
 msgstr "중앙"
 
-#: app/temporal/_container/Temporal.tsx:402
+#: app/temporal/_container/Temporal.tsx:400
 msgid "Current Date"
 msgstr "현재 날짜"
 
-#: app/temporal/_container/Temporal.tsx:272
+#: app/temporal/_container/Temporal.tsx:268
 msgid "Date Calculations"
 msgstr "날짜 계산"
 
-#: app/temporal/_container/Temporal.tsx:397
+#: app/temporal/_container/Temporal.tsx:395
 msgid "Date Details"
 msgstr "날짜 상세 정보"
 
-#: app/temporal/_container/Temporal.tsx:352
+#: app/temporal/_container/Temporal.tsx:346
 msgid "Date Formats"
 msgstr "날짜 형식"
 
-#: app/temporal/_container/Temporal.tsx:368
+#: app/temporal/_container/Temporal.tsx:362
 msgid "Date Only"
 msgstr "날짜만"
 
-#: app/temporal/_container/Temporal.tsx:416
+#: app/temporal/_container/Temporal.tsx:414
 msgid "Day"
 msgstr "일"
 
-#: app/temporal/_container/Temporal.tsx:424
+#: app/temporal/_container/Temporal.tsx:422
 msgid "Day of Year"
 msgstr "연중 일수"
 
-#: app/temporal/_container/Temporal.tsx:222
+#: app/temporal/_container/Temporal.tsx:221
 msgid "Days until {nextYear}"
 msgstr "{nextYear}년까지"
 
@@ -67,19 +67,19 @@ msgstr "{nextYear}년까지"
 msgid "Dubai"
 msgstr "두바이"
 
-#: app/temporal/_container/Temporal.tsx:338
+#: app/temporal/_container/Temporal.tsx:332
 msgid "Duration"
 msgstr "소요 시간"
 
-#: app/temporal/_container/Temporal.tsx:281
+#: app/temporal/_container/Temporal.tsx:276
 msgid "Duration between start and end time"
 msgstr "시작 시간과 종료 시간 사이의 시간"
 
-#: app/temporal/_container/Temporal.tsx:327
+#: app/temporal/_container/Temporal.tsx:321
 msgid "End"
 msgstr "종료"
 
-#: app/temporal/_container/Temporal.tsx:295
+#: app/temporal/_container/Temporal.tsx:289
 msgid "End Time"
 msgstr "종료 시간"
 
@@ -116,11 +116,11 @@ msgstr "왼쪽"
 msgid "London"
 msgstr "런던"
 
-#: app/temporal/_container/Temporal.tsx:358
+#: app/temporal/_container/Temporal.tsx:352
 msgid "Long Format"
 msgstr "긴 형식"
 
-#: app/temporal/_container/Temporal.tsx:278
+#: app/temporal/_container/Temporal.tsx:274
 msgid "Meeting Duration"
 msgstr "회의 시간"
 
@@ -132,17 +132,17 @@ msgstr "@js-temporal/polyfill을 사용한 최신 날짜/시간 처리"
 msgid "Mon"
 msgstr "월"
 
-#: app/temporal/_container/Temporal.tsx:412
+#: app/temporal/_container/Temporal.tsx:410
 msgid "Month"
 msgstr "월"
 
-#: app/temporal/_container/Temporal.tsx:385
+#: app/temporal/_container/Temporal.tsx:381
 msgid "Month-Day"
 msgstr "월-일"
 
 #: app/temporal/_container/Temporal.tsx:46
 #: app/temporal/_container/Temporal.tsx:123
-#: app/temporal/_container/Temporal.tsx:492
+#: app/temporal/_container/Temporal.tsx:486
 msgid "New York"
 msgstr "뉴욕"
 
@@ -170,11 +170,11 @@ msgstr "오른쪽"
 msgid "Sat"
 msgstr "토"
 
-#: app/temporal/_container/Temporal.tsx:449
+#: app/temporal/_container/Temporal.tsx:443
 msgid "Select timezone"
 msgstr "타임존 선택"
 
-#: app/temporal/_container/Temporal.tsx:445
+#: app/temporal/_container/Temporal.tsx:440
 msgid "Select Timezone"
 msgstr "타임존 선택"
 
@@ -183,7 +183,7 @@ msgstr "타임존 선택"
 msgid "Seoul"
 msgstr "서울"
 
-#: app/temporal/_container/Temporal.tsx:243
+#: app/temporal/_container/Temporal.tsx:241
 msgid "Set Date"
 msgstr "날짜 설정"
 
@@ -192,15 +192,15 @@ msgid "Shanghai"
 msgstr "상하이"
 
 #. placeholder {0}: projectStart.toString()
-#: app/temporal/_container/Temporal.tsx:238
+#: app/temporal/_container/Temporal.tsx:236
 msgid "Since {0}"
 msgstr "{0}부터"
 
-#: app/temporal/_container/Temporal.tsx:306
+#: app/temporal/_container/Temporal.tsx:300
 msgid "Start"
 msgstr "시작"
 
-#: app/temporal/_container/Temporal.tsx:287
+#: app/temporal/_container/Temporal.tsx:281
 msgid "Start Time"
 msgstr "시작 시간"
 
@@ -228,19 +228,19 @@ msgstr "편리하고 빠른 Next.js 프로젝트 시작을 위해 구성된 스�
 msgid "Thu"
 msgstr "목"
 
-#: app/temporal/_container/Temporal.tsx:439
+#: app/temporal/_container/Temporal.tsx:436
 msgid "Time difference from selected timezone"
 msgstr "선택한 타임존과의 시차"
 
-#: app/temporal/_container/Temporal.tsx:373
+#: app/temporal/_container/Temporal.tsx:367
 msgid "Time Only"
 msgstr "시간만"
 
-#: app/temporal/_container/Temporal.tsx:437
+#: app/temporal/_container/Temporal.tsx:435
 msgid "Timezone Difference"
 msgstr "타임존 차이"
 
-#: app/temporal/_container/Temporal.tsx:403
+#: app/temporal/_container/Temporal.tsx:401
 msgid "Today's Details"
 msgstr "오늘의 상세 정보"
 
@@ -254,7 +254,7 @@ msgid "Tue"
 msgstr "화"
 
 #. placeholder {0}: projectStart.toString()
-#: app/temporal/_container/Temporal.tsx:239
+#: app/temporal/_container/Temporal.tsx:237
 msgid "Until {0}"
 msgstr "{0}까지"
 
@@ -262,15 +262,15 @@ msgstr "{0}까지"
 msgid "Wed"
 msgstr "수"
 
-#: app/temporal/_container/Temporal.tsx:428
+#: app/temporal/_container/Temporal.tsx:426
 msgid "Week"
 msgstr "주"
 
-#: app/temporal/_container/Temporal.tsx:420
+#: app/temporal/_container/Temporal.tsx:418
 msgid "Weekday"
 msgstr "요일"
 
-#: app/temporal/_container/Temporal.tsx:261
+#: app/temporal/_container/Temporal.tsx:258
 msgid "Working Days This Month"
 msgstr "이번 달 근무일"
 
@@ -278,10 +278,10 @@ msgstr "이번 달 근무일"
 msgid "World Clocks"
 msgstr "세계 시계"
 
-#: app/temporal/_container/Temporal.tsx:408
+#: app/temporal/_container/Temporal.tsx:406
 msgid "Year"
 msgstr "년"
 
-#: app/temporal/_container/Temporal.tsx:380
+#: app/temporal/_container/Temporal.tsx:374
 msgid "Year-Month"
 msgstr "년-월"
