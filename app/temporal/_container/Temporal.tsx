@@ -218,9 +218,7 @@ const TemporalExample = () => {
                 <Icon icon="mdi:party-popper" width={24} height={24} className="text-primary" />
               </div>
               <div className="text-5xl font-bold mb-2">D-{daysUntilNewYear}</div>
-              <p className="text-sm text-muted-foreground">
-                {t(msg`Days until ${nextYear}`)}
-              </p>
+              <p className="text-sm text-muted-foreground">{t(msg`Days until ${nextYear}`)}</p>
             </CardContent>
           </Card>
 
@@ -257,9 +255,7 @@ const TemporalExample = () => {
                 <Icon icon="mdi:briefcase" width={24} height={24} className="text-primary" />
               </div>
               <div className="text-5xl font-bold mb-2">{workingDaysThisMonth}</div>
-              <p className="text-sm text-muted-foreground">
-                {t(msg`Working Days This Month`)}
-              </p>
+              <p className="text-sm text-muted-foreground">{t(msg`Working Days This Month`)}</p>
             </CardContent>
           </Card>
         </div>
@@ -277,9 +273,7 @@ const TemporalExample = () => {
               <Icon icon="mdi:timelapse" width={20} height={20} />
               {t(msg`Meeting Duration`)}
             </CardTitle>
-            <CardDescription>
-              {t(msg`Duration between start and end time`)}
-            </CardDescription>
+            <CardDescription>{t(msg`Duration between start and end time`)}</CardDescription>
           </CardHeader>
           <CardContent className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -378,12 +372,16 @@ const TemporalExample = () => {
 
               <div>
                 <p className="text-sm text-muted-foreground mb-2">{t(msg`Year-Month`)}</p>
-                <p className="text-xl font-mono font-bold">{now.toPlainYearMonth().toString()}</p>
+                <p className="text-xl font-mono font-bold">
+                  {now.toPlainDate().toPlainYearMonth().toString()}
+                </p>
               </div>
 
               <div>
                 <p className="text-sm text-muted-foreground mb-2">{t(msg`Month-Day`)}</p>
-                <p className="text-xl font-mono font-bold">{now.toPlainMonthDay().toString()}</p>
+                <p className="text-xl font-mono font-bold">
+                  {now.toPlainDate().toPlainMonthDay().toString()}
+                </p>
               </div>
             </div>
           </CardContent>
@@ -435,15 +433,11 @@ const TemporalExample = () => {
           <Card>
             <CardHeader>
               <CardTitle>{t(msg`Timezone Difference`)}</CardTitle>
-              <CardDescription>
-                {t(msg`Time difference from selected timezone`)}
-              </CardDescription>
+              <CardDescription>{t(msg`Time difference from selected timezone`)}</CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="mb-4">
-                <label className="text-sm font-medium mb-2 block">
-                  {t(msg`Select Timezone`)}
-                </label>
+                <label className="text-sm font-medium mb-2 block">{t(msg`Select Timezone`)}</label>
                 <Select value={selectedTimezone} onValueChange={setSelectedTimezone}>
                   <SelectTrigger>
                     <SelectValue placeholder={t`Select timezone`} />
