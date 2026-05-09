@@ -4,7 +4,6 @@ import { useCallback } from 'react';
 
 import { Icon } from '@iconify/react';
 import { clsx } from 'clsx';
-import { useTheme } from 'next-themes';
 
 import { Button } from '@/components/ui/button';
 import {
@@ -14,6 +13,7 @@ import {
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import { useIsClient } from '@/hooks/useIsClient';
+import { useTheme } from '@/layout/ThemeProvider/ThemeProvider';
 
 import styles from './ThemeSwitch.module.scss';
 

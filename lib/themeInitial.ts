@@ -5,14 +5,16 @@ export function themeInitial(): string {
       if (persistedPreferenceMode && persistedPreferenceMode !== 'system') {
         return persistedPreferenceMode;
       }
+
       const preference = window.matchMedia('(prefers-color-scheme: dark)');
       return preference.matches ? 'dark' : 'light';
     }
-    // currency theme
+
     const currentTheme = getInitialColorMode();
     const element = document.documentElement;
-    element.style.setProperty('color-scheme', currentTheme);
+    element.classList.remove('light', 'dark');
     element.classList.add(currentTheme);
+    element.style.setProperty('color-scheme', currentTheme);
   }
 
   return `(function() {
