@@ -1,5 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 
+import Script from 'next/script';
+
 import '@/styles/modern-css-reset.scss';
 import '@/styles/preset.scss';
 import '@/styles/globals.css';
@@ -51,7 +53,11 @@ export default async function RootLayout({
         <title>HIVICanvas Starter Kit</title>
       </head>
       <body>
-        <script dangerouslySetInnerHTML={{ __html: ti }} />
+        <Script
+          id="theme-initial"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{ __html: ti }}
+        />
         <LinguiProvider locale={lng}>
           <ThemeProvider>
             <BaseLayout>{children}</BaseLayout>
