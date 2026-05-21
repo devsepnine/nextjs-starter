@@ -18,6 +18,10 @@ const withSerwist = withSerwistInit({
 });
 
 const nextConfig = {
+  // Docker 배포 최적화: 필요한 파일만 추적해 .next/standalone 생성
+  // server.js로 직접 실행 가능 (pnpm install 불필요)
+  output: 'standalone',
+
   experimental: {
     staleTimes: {
       dynamic: 0,
