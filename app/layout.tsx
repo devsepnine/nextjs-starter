@@ -49,6 +49,20 @@ export default async function RootLayout({
   return (
     <html lang={lng} dir={dir} suppressHydrationWarning={true}>
       <head>
+        <link
+          rel="preload"
+          as="font"
+          type="font/woff2"
+          href="/fonts/PretendardGOV-Regular.subset.woff2"
+          crossOrigin="anonymous"
+        />
+        <link
+          rel="preload"
+          as="font"
+          type="font/woff2"
+          href="/fonts/PretendardGOV-Bold.subset.woff2"
+          crossOrigin="anonymous"
+        />
         <link rel="preconnect" href="https://api.iconify.design" crossOrigin="anonymous" />
         <title>HIVICanvas Starter Kit</title>
       </head>

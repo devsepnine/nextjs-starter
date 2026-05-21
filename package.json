@@ -53,6 +53,7 @@
     "@hibicanvas/prettier-config": "^1.0.57",
     "@lingui/cli": "^6.0.1",
     "@lingui/format-po": "^6.0.1",
+    "@lingui/swc-plugin": "^6.0.0",
     "@next/bundle-analyzer": "^16.2.6",
     "@types/node": "^25.9.1",
     "@types/react": "^19.2.15",

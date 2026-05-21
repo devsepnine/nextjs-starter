@@ -106,6 +106,9 @@ importers:
       '@lingui/format-po':
         specifier: ^6.0.1
         version: 6.0.1
+      '@lingui/swc-plugin':
+        specifier: ^6.0.0
+        version: 6.0.0(@lingui/core@6.0.1)(next@16.2.6(@babel/core@7.29.0)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)(sass@1.99.0))
       '@next/bundle-analyzer':
         specifier: ^16.2.6
         version: 16.2.6
@@ -761,6 +764,18 @@ packages:
       react: ^16.14.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
     peerDependenciesMeta:
       babel-plugin-macros:
+        optional: true
+
+  '@lingui/swc-plugin@6.0.0':
+    resolution: {integrity: sha512-Jq9DKO/lKywWJafVYAvPeydetWV6eEi0nkLUmlsjo+fMkJIZqiOx5uQBxxfK33jtVB2kWzpAO6aoH9zt6H3R/A==}
+    peerDependencies:
+      '@lingui/core': 5 || 6
+      '@swc/core': '*'
+      next: '*'
+    peerDependenciesMeta:
+      '@swc/core':
+        optional: true
+      next:
         optional: true
 
   '@messageformat/date-skeleton@1.1.0':
@@ -4005,6 +4020,12 @@ snapshots:
       react: 19.2.6
     transitivePeerDependencies:
       - supports-color
+
+  '@lingui/swc-plugin@6.0.0(@lingui/core@6.0.1)(next@16.2.6(@babel/core@7.29.0)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)(sass@1.99.0))':
+    dependencies:
+      '@lingui/core': 6.0.1
+    optionalDependencies:
+      next: 16.2.6(@babel/core@7.29.0)(react-dom@19.2.6(react@19.2.6))(react@19.2.6)(sass@1.99.0)
 
   '@messageformat/date-skeleton@1.1.0': {}
 

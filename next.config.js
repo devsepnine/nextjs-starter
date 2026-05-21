@@ -23,6 +23,7 @@ const nextConfig = {
       dynamic: 0,
       static: 180,
     },
+    swcPlugins: [['@lingui/swc-plugin', {}]],
   },
 
   // Turbopack 설정 (Next.js 16+)
@@ -69,30 +70,33 @@ const nextConfig = {
   headers: async () => {
     return [
       {
-        // 모든 페이지에 캐시 방지 헤더 적용
+        // 동적 HTML 페이지: 매 요청 revalidate하되, back/forward 시 stale을 30초간 허용
+        // stale-while-revalidate=30: 백/포워드 네비게이션 시 캐시된 HTML을 즉시 표시 후
+        // 백그라운드에서 최신 응답을 가져와 갱신 (UX 체감 속도 향상)
         headers: [
           {
             key: 'Cache-Control',
-            value: 'private, no-cache, no-store, max-age=0, must-revalidate',
+            value: 'private, no-cache, must-revalidate, stale-while-revalidate=30',
           },
         ],
         source: '/:path*',
       },
       {
+        // Next.js 청크는 contenthash가 포함되어 immutable로 장기 캐시 가능
         headers: [
           {
             key: 'Cache-Control',
-            value: 'public, max-age=86400, immutable', // 24시간 캐시
+            value: 'public, max-age=31536000, immutable',
           },
         ],
-        source: '/_next/static/chunks/:path*',
+        source: '/_next/static/:path*',
       },
       {
-        // 정적 자산에 장기 캐시 헤더 적용 (이미지, 폰트, 오디오, 비디오)
+        // 정적 자산: 1년 immutable 캐시 (이미지, 폰트 등)
         headers: [
           {
             key: 'Cache-Control',
-            value: 'public, max-age=86400, immutable', // 24시간 캐시
+            value: 'public, max-age=31536000, immutable',
           },
         ],
         source:
