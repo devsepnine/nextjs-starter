@@ -1,5 +1,3 @@
-'use client';
-
 import { Icon } from '@iconify/react';
 
 import { Button } from '@/components/ui/button';

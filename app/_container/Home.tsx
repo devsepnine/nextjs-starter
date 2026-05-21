@@ -12,10 +12,12 @@ import { Hello } from '@/app/_container/Hello/Hello';
 
 import styles from './Home.module.scss';
 
-// Hoist animation configs outside component to prevent recreation on every render
-const MOTION_INITIAL = { opacity: 0, y: -20 };
-const MOTION_ANIMATE = { opacity: 1, y: 0 };
-const MOTION_TRANSITION_BASE = { duration: 0.5, ease: 'easeInOut' as const };
+// opacity는 1로 유지 → LCP 메트릭/체감 모두 정상
+// y 슬라이드만 애니메이션하여 시각적 효과 보존
+// cascade는 짧게 (마지막 카드 안착 시간: 0.24 + 0.3 = 0.54s)
+const MOTION_INITIAL = { y: -20 };
+const MOTION_ANIMATE = { y: 0 };
+const MOTION_TRANSITION_BASE = { duration: 0.3, ease: 'easeOut' as const };
 
 const createTransition = (delay: number) => ({ ...MOTION_TRANSITION_BASE, delay });
 
@@ -26,7 +28,7 @@ export function Home() {
         className={'md:col-span-2'}
         initial={MOTION_INITIAL}
         animate={MOTION_ANIMATE}
-        transition={createTransition(0.1)}
+        transition={createTransition(0.04)}
       >
         <Hello />
       </MotionDiv>
@@ -34,7 +36,7 @@ export function Home() {
         className={'w-full h-full bp:col-span-2'}
         initial={MOTION_INITIAL}
         animate={MOTION_ANIMATE}
-        transition={createTransition(0.2)}
+        transition={createTransition(0.08)}
       >
         <InfoPack />
       </MotionDiv>
@@ -42,7 +44,7 @@ export function Home() {
         className={'w-full h-full'}
         initial={MOTION_INITIAL}
         animate={MOTION_ANIMATE}
-        transition={createTransition(0.3)}
+        transition={createTransition(0.12)}
       >
         <Something />
       </MotionDiv>
@@ -50,7 +52,7 @@ export function Home() {
         className={'w-full h-full'}
         initial={MOTION_INITIAL}
         animate={MOTION_ANIMATE}
-        transition={createTransition(0.4)}
+        transition={createTransition(0.16)}
       >
         <ZustandSample />
       </MotionDiv>
@@ -58,7 +60,7 @@ export function Home() {
         className={'w-full h-full'}
         initial={MOTION_INITIAL}
         animate={MOTION_ANIMATE}
-        transition={createTransition(0.5)}
+        transition={createTransition(0.2)}
       >
         <NumberAnimate />
       </MotionDiv>
@@ -66,7 +68,7 @@ export function Home() {
         className={'w-full h-full'}
         initial={MOTION_INITIAL}
         animate={MOTION_ANIMATE}
-        transition={createTransition(0.6)}
+        transition={createTransition(0.24)}
       >
         <GoSecondPage />
       </MotionDiv>

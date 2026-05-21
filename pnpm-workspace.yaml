@@ -1,0 +1,9 @@
+allowBuilds:
+  '@parcel/watcher': set this to true or false
+  esbuild: set this to true or false
+  sharp: set this to true or false
+  unrs-resolver: set this to true or false
+
+overrides:
+  postcss: ^8.5.15
+  webpack: ^5.106.2
