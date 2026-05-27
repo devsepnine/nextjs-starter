@@ -109,29 +109,4 @@ export function setLanguageCookie(acceptLng: string = '') {
   return detectedLang || FALLBACK_LANG;
 }
 
-// 동적으로 메시지 로드 (SWC에서 처리됨)
-export async function loadMessages(locale: Locales) {
-  try {
-    const messages = await import(`@/locales/${locale}/messages.po`);
-    i18n.load(locale, messages.messages || messages.default);
-    i18n.activate(locale);
-  } catch (error) {
-    console.warn(`Failed to load messages for ${locale}, falling back to ${FALLBACK_LANG}`, error);
-
-    try {
-      const fallbackMessages = await import(`@/locales/${FALLBACK_LANG}/messages.po`);
-      i18n.load(FALLBACK_LANG, fallbackMessages.messages || fallbackMessages.default);
-      i18n.activate(FALLBACK_LANG);
-    } catch (fallbackError) {
-      console.error(
-        `Critical error: Failed to load fallback language ${FALLBACK_LANG}`,
-        fallbackError
-      );
-      throw new Error(
-        `Failed to load any language messages. Original: ${error instanceof Error ? error.message : 'Unknown error'}, Fallback: ${fallbackError instanceof Error ? fallbackError.message : 'Unknown error'}`
-      );
-    }
-  }
-}
-
 export { i18n };
