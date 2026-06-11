@@ -1,8 +1,20 @@
 allowBuilds:
-  '@parcel/watcher': set this to true or false
-  esbuild: set this to true or false
-  sharp: set this to true or false
-  unrs-resolver: set this to true or false
+  '@parcel/watcher': false
+  esbuild: false
+  sharp: false
+  unrs-resolver: false
+
+minimumReleaseAgeExclude:
+  - '@lingui/babel-plugin-extract-messages@6.3.0'
+  - '@lingui/babel-plugin-lingui-macro@6.3.0'
+  - '@lingui/cli@6.3.0'
+  - '@lingui/conf@6.3.0'
+  - '@lingui/core@6.3.0'
+  - '@lingui/format-po@6.3.0'
+  - '@lingui/loader@6.3.0'
+  - '@lingui/message-utils@6.3.0'
+  - '@lingui/react@6.3.0'
+  - '@lingui/swc-plugin@6.4.0'
 
 overrides:
   postcss: ^8.5.15
